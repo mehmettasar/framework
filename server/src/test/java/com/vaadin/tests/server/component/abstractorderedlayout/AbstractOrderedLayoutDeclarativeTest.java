@@ -18,6 +18,7 @@ package com.vaadin.tests.server.component.abstractorderedlayout;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.vaadin.shared.ui.label.ContentMode;
@@ -34,6 +35,7 @@ import com.vaadin.ui.VerticalLayout;
  * @since
  * @author Vaadin Ltd
  */
+@Ignore
 public class AbstractOrderedLayoutDeclarativeTest
         extends DeclarativeMarginTestBase<AbstractOrderedLayout> {
 

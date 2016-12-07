@@ -33,7 +33,8 @@ public class HorizontalLayout extends AbstractOrderedLayout {
      * Constructs an empty HorizontalLayout.
      */
     public HorizontalLayout() {
-
+        setSpacing(true);
+        setMargin(false);
     }
 
     /**
