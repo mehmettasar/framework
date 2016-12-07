@@ -7,7 +7,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.data.bean.Person;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.Grid;
 
@@ -15,7 +15,7 @@ public class InitiallyDisabledGrid extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         setContent(layout);
         layout.setSizeFull();
         layout.setWidth("600px");
@@ -25,7 +25,7 @@ public class InitiallyDisabledGrid extends UI {
                 event -> grid.setEnabled(!grid.isEnabled()));
 
         layout.addComponent(button);
-        VerticalLayout l = new VerticalLayout();
+        LegacyVerticalLayout l = new LegacyVerticalLayout();
         l.setSizeFull();
         l.addComponent(grid);
 

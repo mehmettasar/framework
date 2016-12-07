@@ -18,7 +18,7 @@ package com.vaadin.tests.components.datefield;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractTestUI;
 import com.vaadin.ui.DateField;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 
 /**
@@ -30,7 +30,7 @@ public abstract class DateFieldPopupPosition extends AbstractTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         addComponent(layout);
         Label gap = new Label();
         gap.setWidth(250, Unit.PIXELS);

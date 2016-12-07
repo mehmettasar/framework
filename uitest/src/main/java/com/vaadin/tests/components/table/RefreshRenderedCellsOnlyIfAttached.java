@@ -21,7 +21,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 /**
@@ -33,7 +33,7 @@ import com.vaadin.v7.ui.Table;
  */
 public class RefreshRenderedCellsOnlyIfAttached extends AbstractReindeerTestUI {
 
-    VerticalLayout layout;
+    LegacyVerticalLayout layout;
     boolean check;
 
     /*
@@ -46,7 +46,7 @@ public class RefreshRenderedCellsOnlyIfAttached extends AbstractReindeerTestUI {
     protected void setup(VaadinRequest request) {
         getLayout().setMargin(true);
         check = false;
-        layout = new VerticalLayout();
+        layout = new LegacyVerticalLayout();
         final Label l1 = new Label("default");
         l1.setId("label");
         final Label l2 = new Label("should be: default");

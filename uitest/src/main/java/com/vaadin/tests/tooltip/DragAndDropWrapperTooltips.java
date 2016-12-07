@@ -17,7 +17,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.DragAndDropWrapper;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class DragAndDropWrapperTooltips extends AbstractReindeerTestUI {
 
@@ -32,7 +32,7 @@ public class DragAndDropWrapperTooltips extends AbstractReindeerTestUI {
     protected void setup(VaadinRequest request) {
         TestUtils.injectCSS(this, BASE + B4 + B2 + B3 + HIDEDRAGSOURCE);
 
-        VerticalLayout l = new VerticalLayout();
+        LegacyVerticalLayout l = new LegacyVerticalLayout();
         l.setWidth("400px");
         l.setHeight("100px");
         dragAndDropWrapper = new DragAndDropWrapper(cssLayout);

@@ -6,7 +6,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.shared.ui.label.ContentMode;
 import com.vaadin.v7.ui.Label;
@@ -43,7 +43,7 @@ public class TableMatchesMouseDownMouseUpElement extends AbstractReindeerTestUI 
         item.getItemProperty("Column 2").setValue(new Label("Label A"));
         item.getItemProperty("Column 3")
                 .setValue(new Label("<b>Label A</b>", ContentMode.HTML));
-        VerticalLayout l = new VerticalLayout();
+        LegacyVerticalLayout l = new LegacyVerticalLayout();
         l.setId("row-1");
         l.setHeight(100, Unit.PIXELS);
         item.getItemProperty("Column 4").setValue(l);
@@ -55,7 +55,7 @@ public class TableMatchesMouseDownMouseUpElement extends AbstractReindeerTestUI 
                 .setValue(new Label(
                         "<a style=\"color: blue\" href=\"javascript:false\">Label B</a>",
                         ContentMode.HTML));
-        l = new VerticalLayout();
+        l = new LegacyVerticalLayout();
         l.setId("row-2");
         l.setSizeFull();
         item.getItemProperty("Column 4").setValue(l);

@@ -6,10 +6,10 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.ComboBox;
@@ -22,9 +22,9 @@ public class SubWindowOrder extends TestBase {
     @Override
     protected void setup() {
         UI mainWindow = getMainWindow();
-        HorizontalLayout controlpanels = new HorizontalLayout();
+        LegacyHorizontalLayout controlpanels = new LegacyHorizontalLayout();
         for (int i = 1; i <= 5; i++) {
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             Window dialog = new Window("Dialog " + i, layout);
             layout.setSizeUndefined();

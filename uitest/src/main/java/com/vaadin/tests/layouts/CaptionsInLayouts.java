@@ -15,16 +15,13 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.NativeButton;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
-import com.vaadin.v7.ui.AbstractField;
-import com.vaadin.v7.ui.NativeSelect;
-import com.vaadin.v7.ui.TextField;
 
 public class CaptionsInLayouts extends AbstractReindeerTestUI {
 
@@ -34,13 +31,13 @@ public class CaptionsInLayouts extends AbstractReindeerTestUI {
 
     private NativeSelect layoutSelect;
     private Layout layout;
-    private VerticalLayout verticalLayout;
-    private HorizontalLayout horizontalLayout;
+    private LegacyVerticalLayout verticalLayout;
+    private LegacyHorizontalLayout horizontalLayout;
     private GridLayout gridLayout;
     private FormLayout formLayout;
     private List<AbstractField<?>> components = new ArrayList<>();
     private CssLayout cssLayout;
-    private HorizontalLayout layoutParent = new HorizontalLayout();
+    private LegacyHorizontalLayout layoutParent = new LegacyHorizontalLayout();
 
     @Override
     protected void setup(VaadinRequest request) {
@@ -165,15 +162,15 @@ public class CaptionsInLayouts extends AbstractReindeerTestUI {
     private Layout getLayout(String caption,
             Class<? extends Layout> layoutClass, String width) {
         Layout l;
-        if (layoutClass == VerticalLayout.class) {
+        if (layoutClass == LegacyVerticalLayout.class) {
             if (verticalLayout == null) {
-                verticalLayout = new VerticalLayout();
+                verticalLayout = new LegacyVerticalLayout();
                 verticalLayout.setStyleName("borders");
             }
             l = verticalLayout;
-        } else if (layoutClass == HorizontalLayout.class) {
+        } else if (layoutClass == LegacyHorizontalLayout.class) {
             if (horizontalLayout == null) {
-                horizontalLayout = new HorizontalLayout();
+                horizontalLayout = new LegacyHorizontalLayout();
                 horizontalLayout.setStyleName("borders");
             }
             l = horizontalLayout;
@@ -219,8 +216,8 @@ public class CaptionsInLayouts extends AbstractReindeerTestUI {
         layoutSelect.setItemCaptionPropertyId(CAPTION);
         layoutSelect.setNullSelectionAllowed(false);
 
-        for (Class<?> cls : new Class[] { HorizontalLayout.class,
-                VerticalLayout.class, GridLayout.class, CssLayout.class,
+        for (Class<?> cls : new Class[] { LegacyHorizontalLayout.class,
+                LegacyVerticalLayout.class, GridLayout.class, CssLayout.class,
                 FormLayout.class }) {
             for (String width : new String[] { "400px", "auto" }) {
                 Object id = layoutSelect.addItem();

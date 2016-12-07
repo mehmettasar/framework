@@ -5,7 +5,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.ui.Window.CloseEvent;
 import com.vaadin.ui.Window.CloseListener;
@@ -28,7 +28,7 @@ public class CloseSubWindow extends AbstractTestUIWithLog {
     }
 
     private Window createClosableSubWindow(final String title) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         layout.setSizeUndefined();
         final Window window = new Window(title, layout);

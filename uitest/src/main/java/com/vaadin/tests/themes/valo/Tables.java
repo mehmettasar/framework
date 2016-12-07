@@ -26,25 +26,20 @@ import com.vaadin.tests.components.TestDateField;
 import com.vaadin.ui.AbstractDateField;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.ProgressBar;
 import com.vaadin.ui.Slider;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.v7.data.Container;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.OptionGroup;
-import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.Table.Align;
 import com.vaadin.v7.ui.Table.ColumnGenerator;
 import com.vaadin.v7.ui.Table.RowHeaderMode;
 import com.vaadin.v7.ui.Table.TableDragMode;
-import com.vaadin.v7.ui.TextField;
-import com.vaadin.v7.ui.TreeTable;
 
-public class Tables extends VerticalLayout implements View {
+public class Tables extends LegacyVerticalLayout implements View {
 
     final Container normalContainer = ValoThemeUI.generateContainer(200, false);
     final Container hierarchicalContainer = ValoThemeUI.generateContainer(200,
@@ -76,7 +71,7 @@ public class Tables extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout wrap = new HorizontalLayout();
+        LegacyHorizontalLayout wrap = new LegacyHorizontalLayout();
         wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         wrap.setSpacing(true);
         addComponent(wrap);

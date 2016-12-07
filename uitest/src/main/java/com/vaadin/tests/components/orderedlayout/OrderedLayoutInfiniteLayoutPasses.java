@@ -6,10 +6,10 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 @SuppressWarnings("serial")
@@ -17,7 +17,7 @@ public class OrderedLayoutInfiniteLayoutPasses extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.addComponent(createOpenWindowButton());
         setContent(layout);
 
@@ -39,18 +39,18 @@ public class OrderedLayoutInfiniteLayoutPasses extends UI {
     }
 
     private Window createWindow() {
-        VerticalLayout contentHolder = new VerticalLayout();
+        LegacyVerticalLayout contentHolder = new LegacyVerticalLayout();
         contentHolder.addComponent(new Label("window content"));
 
         Label separator = new Label();
         separator.setWidth(100, Unit.PERCENTAGE);
         separator.addStyleName("my-separator");
 
-        HorizontalLayout buttons = new HorizontalLayout();
+        LegacyHorizontalLayout buttons = new LegacyHorizontalLayout();
         buttons.addComponent(new Button("button 1"));
         buttons.addComponent(new Button("button 2"));
 
-        VerticalLayout windowContent = new VerticalLayout();
+        LegacyVerticalLayout windowContent = new LegacyVerticalLayout();
         windowContent.setSizeFull();
         windowContent.addComponent(contentHolder);
         windowContent.addComponent(separator);

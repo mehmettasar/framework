@@ -20,7 +20,7 @@ import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Mini tutorial code for
@@ -34,7 +34,7 @@ public class DefineUITheme extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        VerticalLayout view = new VerticalLayout();
+        LegacyVerticalLayout view = new LegacyVerticalLayout();
         view.addComponent(new Label("Hello Vaadin"));
         setContent(view);
     }

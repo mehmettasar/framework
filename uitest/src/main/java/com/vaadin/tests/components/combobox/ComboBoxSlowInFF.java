@@ -4,7 +4,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.v7.ui.Table;
@@ -14,7 +14,7 @@ public class ComboBoxSlowInFF extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout lo = new VerticalLayout();
+        LegacyVerticalLayout lo = new LegacyVerticalLayout();
         lo.setSizeFull();
         final Table t = new Table();
         t.setSizeFull();

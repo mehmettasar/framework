@@ -2,7 +2,7 @@ package com.vaadin.tests.components.window;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class CenteredWindowWithUndefinedSize extends TestBase {
@@ -19,7 +19,7 @@ public class CenteredWindowWithUndefinedSize extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window centered = new Window("A window", layout);
         centered.setSizeUndefined();

@@ -22,7 +22,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.TextField;
 
@@ -36,7 +36,7 @@ public class FormLayoutResizing extends AbstractReindeerTestUI {
         cssLayout.setWidth("100%");
         FormLayout form2 = createForm("Wrap", cssLayout);
 
-        final VerticalLayout view = new VerticalLayout(form1, form2);
+        final LegacyVerticalLayout view = new LegacyVerticalLayout(form1, form2);
         view.setWidth("400px");
 
         addComponent(view);

@@ -27,7 +27,7 @@ import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.PasswordField;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Field;
 import com.vaadin.v7.ui.Tree;
 
@@ -80,7 +80,7 @@ public class CustomLayoutDemo extends com.vaadin.server.LegacyApplication
         // Create custom layout, themes/example/layout/mainLayout.html
         mainLayout = new CustomLayout("mainLayout");
         // wrap custom layout inside a panel
-        VerticalLayout customLayoutPanelLayout = new VerticalLayout();
+        LegacyVerticalLayout customLayoutPanelLayout = new LegacyVerticalLayout();
         customLayoutPanelLayout.setMargin(true);
         final Panel customLayoutPanel = new Panel(
                 "Panel containing custom layout (mainLayout.html)",
@@ -140,7 +140,7 @@ public class CustomLayoutDemo extends com.vaadin.server.LegacyApplication
      *
      */
     public void setBody(String customLayout) {
-        VerticalLayout bodyLayout = new VerticalLayout();
+        LegacyVerticalLayout bodyLayout = new LegacyVerticalLayout();
         bodyLayout.setMargin(true);
         bodyLayout.addComponent(new CustomLayout(customLayout));
         bodyPanel.setContent(bodyLayout);

@@ -10,7 +10,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class NavigatorViewBlocksBackButtonAction extends AbstractReindeerTestUI {
@@ -29,7 +29,7 @@ public class NavigatorViewBlocksBackButtonAction extends AbstractReindeerTestUI 
         navigator.navigateTo(MainView.NAME);
     }
 
-    class MainView extends VerticalLayout implements View {
+    class MainView extends LegacyVerticalLayout implements View {
 
         public static final String NAME = "mainview";
 
@@ -55,7 +55,7 @@ public class NavigatorViewBlocksBackButtonAction extends AbstractReindeerTestUI 
 
     }
 
-    class ViewWithPromptedLeave extends VerticalLayout
+    class ViewWithPromptedLeave extends LegacyVerticalLayout
             implements View, ViewChangeListener {
 
         public static final String NAME = "prompted";
@@ -85,7 +85,7 @@ public class NavigatorViewBlocksBackButtonAction extends AbstractReindeerTestUI 
                 confirmationWindow.setModal(true);
                 confirmationWindow.setClosable(true);
 
-                VerticalLayout confirmationWindowLayout = new VerticalLayout();
+                LegacyVerticalLayout confirmationWindowLayout = new LegacyVerticalLayout();
                 confirmationWindow.setContent(confirmationWindowLayout);
                 confirmationWindowLayout.setMargin(true);
                 confirmationWindowLayout.setSpacing(true);

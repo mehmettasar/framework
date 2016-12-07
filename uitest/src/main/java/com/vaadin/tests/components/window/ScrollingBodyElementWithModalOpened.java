@@ -17,7 +17,7 @@ package com.vaadin.tests.components.window;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 /**
@@ -29,12 +29,12 @@ public class ScrollingBodyElementWithModalOpened extends AbstractReindeerTestUI 
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout verticalLayout = new VerticalLayout();
+        LegacyVerticalLayout verticalLayout = new LegacyVerticalLayout();
         verticalLayout.setHeight("10000px");
 
         Window window = new Window("Caption");
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setWidth("300px");
         layout.setHeight("300px");
         window.setContent(layout);

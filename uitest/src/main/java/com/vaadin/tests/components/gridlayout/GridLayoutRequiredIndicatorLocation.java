@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 /**
@@ -49,8 +49,8 @@ public class GridLayoutRequiredIndicatorLocation extends AbstractReindeerTestUI 
         gridLayout.addStyleName("colored");
         rootLayout.addComponent(gridLayout);
 
-        // for reference, VerticalLayout does it right
-        VerticalLayout vl = createVerticalLayout(false);
+        // for reference, LegacyVerticalLayout does it right
+        LegacyVerticalLayout vl = createVerticalLayout(false);
         vl.addStyleName("allow-overflow");
         vl.addStyleName("colored");
         rootLayout.addComponent(vl);
@@ -60,14 +60,14 @@ public class GridLayoutRequiredIndicatorLocation extends AbstractReindeerTestUI 
         gridLayout2.addStyleName("colored");
         rootLayout.addComponent(gridLayout2);
 
-        VerticalLayout vl2 = createVerticalLayout(true);
+        LegacyVerticalLayout vl2 = createVerticalLayout(true);
         vl2.addStyleName("allow-overflow");
         vl2.addStyleName("colored");
         rootLayout.addComponent(vl2);
     }
 
-    private VerticalLayout createVerticalLayout(boolean useCaption) {
-        VerticalLayout vl = new VerticalLayout();
+    private LegacyVerticalLayout createVerticalLayout(boolean useCaption) {
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setWidth("320px");
 
         addLabel(vl, "200px", Alignment.MIDDLE_LEFT, useCaption);
@@ -117,8 +117,8 @@ public class GridLayoutRequiredIndicatorLocation extends AbstractReindeerTestUI 
         layout.setComponentAlignment(field, alignment);
     }
 
-    private void addLabel(VerticalLayout layout, String width,
-            Alignment alignment, boolean useCaption) {
+    private void addLabel(LegacyVerticalLayout layout, String width,
+                          Alignment alignment, boolean useCaption) {
         TextField field = new TextField(useCaption ? "caption" : null);
         field.setRequired(true);
         field.setWidth(width);

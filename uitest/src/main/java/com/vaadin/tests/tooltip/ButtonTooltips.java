@@ -4,7 +4,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class ButtonTooltips extends AbstractReindeerTestUI {
 
@@ -23,7 +23,7 @@ public class ButtonTooltips extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         Button button = new Button("One");
         button.setDescription(longDescription);
         Button button2 = new Button("Two");

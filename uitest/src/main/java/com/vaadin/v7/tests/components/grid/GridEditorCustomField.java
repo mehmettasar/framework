@@ -23,7 +23,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.tests.fieldgroup.ComplexPerson;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.v7.ui.CustomField;
 import com.vaadin.v7.ui.Grid;
@@ -48,7 +48,7 @@ public class GridEditorCustomField extends AbstractTestUIWithLog {
     }
 
     public static class CustomCitySelect extends CustomField<String> {
-        private HorizontalLayout fieldLayout;
+        private LegacyHorizontalLayout fieldLayout;
         private String[] values;
         private ComboBox cityComboBox;
 
@@ -58,7 +58,7 @@ public class GridEditorCustomField extends AbstractTestUIWithLog {
 
         @Override
         protected Component initContent() {
-            fieldLayout = new HorizontalLayout();
+            fieldLayout = new LegacyHorizontalLayout();
             fieldLayout.setWidth("100%");
 
             cityComboBox = new ComboBox();

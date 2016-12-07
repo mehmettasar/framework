@@ -1,7 +1,7 @@
 package com.vaadin.v7.tests.components.window;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Validator;
 import com.vaadin.v7.ui.Form;
@@ -15,7 +15,7 @@ public class UndefinedHeightSubWindowAndContent extends TestBase {
         subWindow.setWidth("300px");
         subWindow.center();
         subWindow.setModal(true);
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setWidth("100%");
         subWindow.setContent(layout);
 

@@ -34,11 +34,12 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
@@ -48,12 +49,7 @@ import com.vaadin.v7.data.fieldgroup.FieldGroup.CommitException;
 import com.vaadin.v7.data.util.BeanItem;
 import com.vaadin.v7.shared.ui.combobox.FilteringMode;
 import com.vaadin.v7.shared.ui.datefield.Resolution;
-import com.vaadin.v7.ui.Calendar;
 import com.vaadin.v7.ui.Calendar.TimeFormat;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.DateField;
-import com.vaadin.v7.ui.TextArea;
-import com.vaadin.v7.ui.TextField;
 import com.vaadin.v7.ui.components.calendar.CalendarComponentEvents.DateClickEvent;
 import com.vaadin.v7.ui.components.calendar.CalendarComponentEvents.EventClick;
 import com.vaadin.v7.ui.components.calendar.CalendarComponentEvents.EventClickHandler;
@@ -340,7 +336,7 @@ public class CalendarTest extends UI {
         initDisabledButton();
         initAddNewEventButton();
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setWidth("100%");
         hl.setSpacing(true);
         hl.setMargin(new MarginInfo(false, false, true, false));
@@ -358,7 +354,7 @@ public class CalendarTest extends UI {
         monthButton.setVisible(viewMode == Mode.WEEK);
         weekButton.setVisible(viewMode == Mode.DAY);
 
-        HorizontalLayout controlPanel = new HorizontalLayout();
+        LegacyHorizontalLayout controlPanel = new LegacyHorizontalLayout();
         controlPanel.setSpacing(true);
         controlPanel.setMargin(new MarginInfo(false, false, true, false));
         controlPanel.setWidth("100%");
@@ -946,7 +942,7 @@ public class CalendarTest extends UI {
 
     /* Initializes a modal window to edit schedule event. */
     private void createCalendarEventPopup() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         layout.setSpacing(true);
 
@@ -998,7 +994,7 @@ public class CalendarTest extends UI {
             }
         });
 
-        HorizontalLayout buttons = new HorizontalLayout();
+        LegacyHorizontalLayout buttons = new LegacyHorizontalLayout();
         buttons.setSpacing(true);
         buttons.addComponent(deleteEventButton);
         buttons.addComponent(applyEventButton);

@@ -44,18 +44,18 @@ import com.vaadin.ui.Upload.StartedEvent;
 import com.vaadin.ui.Upload.StartedListener;
 import com.vaadin.ui.Upload.SucceededEvent;
 import com.vaadin.ui.Upload.SucceededListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.ProgressIndicator;
 
 public class TestForStyledUpload extends LegacyApplication
         implements Upload.FinishedListener, FailedListener, SucceededListener,
         StartedListener {
 
-    Layout main = new VerticalLayout();
+    Layout main = new LegacyVerticalLayout();
 
     TmpFileBuffer buffer = new TmpFileBuffer();
 
-    VerticalLayout statusLayout = new VerticalLayout();
+    LegacyVerticalLayout statusLayout = new LegacyVerticalLayout();
     Panel status = new Panel("Uploaded file:", statusLayout);
 
     private final Upload up;

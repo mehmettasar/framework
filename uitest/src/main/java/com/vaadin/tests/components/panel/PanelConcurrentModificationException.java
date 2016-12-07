@@ -6,11 +6,11 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class PanelConcurrentModificationException extends TestBase {
 
-    private final VerticalLayout panelLayout = new VerticalLayout();
+    private final LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
     private final Panel panel = new Panel(panelLayout);
 
     @Override

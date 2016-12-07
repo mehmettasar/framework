@@ -2,7 +2,7 @@ package com.vaadin.tests.components.table;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
@@ -43,7 +43,7 @@ public class ColumnHeaderAlignments extends TestBase {
             bazTable.setFooterVisible(visible);
         });
         addComponent(footers);
-        HorizontalLayout tables = new HorizontalLayout();
+        LegacyHorizontalLayout tables = new LegacyHorizontalLayout();
         fooTable = createTable(null);
         tables.addComponent(fooTable);
         barTable = createTable("strong");

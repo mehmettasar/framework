@@ -3,7 +3,7 @@ package com.vaadin.tests.components.table;
 import com.vaadin.server.LegacyApplication;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.ui.ProgressIndicator;
@@ -24,7 +24,7 @@ public class TableFirstRowFlicker extends LegacyApplication {
         t.setSelectable(true);
         t.setContainerDataSource(buildContainer());
         mainWindow.addComponent(t);
-        ((VerticalLayout) mainWindow.getContent()).setExpandRatio(t, 1);
+        ((LegacyVerticalLayout) mainWindow.getContent()).setExpandRatio(t, 1);
 
         // Button button = new Button("Refresh");
         // button.addListener(new Button.ClickListener() {

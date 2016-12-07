@@ -21,13 +21,13 @@ import com.vaadin.server.ThemeResource;
 import com.vaadin.server.UserError;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.v7.ui.ComboBox;
 
-public class ComboBoxes extends VerticalLayout implements View {
+public class ComboBoxes extends LegacyVerticalLayout implements View {
     public ComboBoxes() {
         setMargin(true);
 
@@ -35,7 +35,7 @@ public class ComboBoxes extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);

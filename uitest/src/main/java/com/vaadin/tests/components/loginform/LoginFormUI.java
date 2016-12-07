@@ -6,19 +6,19 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LoginForm;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class LoginFormUI extends AbstractReindeerTestUI {
 
-    private HorizontalLayout loginFormLayout;
+    private LegacyHorizontalLayout loginFormLayout;
     protected LoginForm loginForm;
 
     @Override
     protected void setup(VaadinRequest request) {
-        loginFormLayout = new HorizontalLayout();
+        loginFormLayout = new LegacyHorizontalLayout();
 
         loginForm = new LoginForm();
         loginForm.setSizeUndefined();
@@ -82,7 +82,7 @@ public class LoginFormUI extends AbstractReindeerTestUI {
     }
 
     protected void login(LoginForm loginForm, String user, String password) {
-        VerticalLayout infoLayout = new VerticalLayout();
+        LegacyVerticalLayout infoLayout = new LegacyVerticalLayout();
 
         Label info = new Label(
                 "User '" + user + "', password='" + password + "' logged in");

@@ -5,16 +5,16 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class GridLayoutAlignments extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setSizeFull();
         layout.setMargin(true);
         layout.setSpacing(true);
@@ -38,7 +38,7 @@ public class GridLayoutAlignments extends UI {
 
         layout.addComponent(g);
 
-        VerticalLayout buttonLayout = new VerticalLayout();
+        LegacyVerticalLayout buttonLayout = new LegacyVerticalLayout();
         buttonLayout.addComponent(createButton(g, Alignment.TOP_LEFT));
         buttonLayout.addComponent(createButton(g, Alignment.MIDDLE_LEFT));
         buttonLayout.addComponent(createButton(g, Alignment.BOTTOM_LEFT));

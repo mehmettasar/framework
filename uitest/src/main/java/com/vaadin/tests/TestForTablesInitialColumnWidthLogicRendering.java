@@ -25,7 +25,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 /**
@@ -38,7 +38,7 @@ import com.vaadin.v7.ui.Table;
 public class TestForTablesInitialColumnWidthLogicRendering
         extends CustomComponent {
 
-    private final VerticalLayout main = new VerticalLayout();
+    private final LegacyVerticalLayout main = new LegacyVerticalLayout();
 
     public TestForTablesInitialColumnWidthLogicRendering() {
 
@@ -53,7 +53,7 @@ public class TestForTablesInitialColumnWidthLogicRendering
 
         Table t;
 
-        Layout lo = new VerticalLayout();
+        Layout lo = new LegacyVerticalLayout();
         lo.setWidth("600px");
         lo.setHeight("250px");
 

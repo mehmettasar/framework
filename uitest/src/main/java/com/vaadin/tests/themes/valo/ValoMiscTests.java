@@ -19,16 +19,16 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.InlineDateField;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TreeTable;
 
 public class ValoMiscTests extends UI {
 
-    VerticalLayout layout = new VerticalLayout();
+    LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
     public ValoMiscTests() {
         layout.setMargin(true);
@@ -36,7 +36,7 @@ public class ValoMiscTests extends UI {
         Panel p = new Panel();
         // layout.addComponent(p);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         p.setHeight("300px");
         // row.setSpacing(true);
         // row.setMargin(true);
@@ -57,7 +57,7 @@ public class ValoMiscTests extends UI {
         // layout.addComponent(p);
         p.setHeight("400px");
 
-        VerticalLayout col = new VerticalLayout();
+        LegacyVerticalLayout col = new LegacyVerticalLayout();
         col.setSizeFull();
         col.setSpacing(true);
         // row.setMargin(true);

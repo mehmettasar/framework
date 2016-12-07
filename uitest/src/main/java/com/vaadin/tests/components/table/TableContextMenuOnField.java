@@ -7,7 +7,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Link;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.TextField;
 
@@ -41,7 +41,7 @@ public class TableContextMenuOnField extends TestBase {
             public Component generateCell(Table source, Object itemId,
                     Object columnId) {
 
-                VerticalLayout layout = new VerticalLayout();
+                LegacyVerticalLayout layout = new LegacyVerticalLayout();
                 layout.addComponent(new TextField());
 
                 layout.addLayoutClickListener(new LayoutClickListener() {

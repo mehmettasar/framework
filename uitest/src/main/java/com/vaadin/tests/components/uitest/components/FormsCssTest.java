@@ -2,14 +2,14 @@ package com.vaadin.tests.components.uitest.components;
 
 import com.vaadin.tests.components.uitest.TestSampler;
 import com.vaadin.tests.util.Person;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.LoginForm;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.fieldgroup.BeanFieldGroup;
 import com.vaadin.v7.data.fieldgroup.FieldGroup;
 import com.vaadin.v7.data.util.BeanItem;
 
-public class FormsCssTest extends HorizontalLayout {
+public class FormsCssTest extends LegacyHorizontalLayout {
 
     private TestSampler parent;
     private int debugIdCounter = 0;
@@ -19,7 +19,7 @@ public class FormsCssTest extends HorizontalLayout {
         setSpacing(true);
         setWidth("100%");
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         FieldGroup fg = new BeanFieldGroup<>(Person.class);
         fg.setItemDataSource(new BeanItem<>(new Person()));
         for (Object propId : fg.getUnboundPropertyIds()) {

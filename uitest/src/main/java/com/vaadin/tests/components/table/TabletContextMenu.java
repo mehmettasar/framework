@@ -20,7 +20,7 @@ import com.vaadin.event.Action.Handler;
 import com.vaadin.event.ShortcutAction;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Table;
 
 /**
@@ -44,7 +44,7 @@ public class TabletContextMenu extends AbstractReindeerTestUI {
     protected void setup(VaadinRequest request) {
         setSizeFull();
 
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setSizeFull();
         layout.setSpacing(true);
         addComponent(layout);

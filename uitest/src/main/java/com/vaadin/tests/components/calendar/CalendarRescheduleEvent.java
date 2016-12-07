@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.ui.Calendar;
 import com.vaadin.v7.ui.components.calendar.event.BasicEvent;
@@ -49,7 +49,7 @@ public class CalendarRescheduleEvent extends AbstractReindeerTestUI {
         final BasicEvent basicEvent = new BasicEvent("event", "description",
                 from, to);
 
-        HorizontalLayout info = new HorizontalLayout();
+        LegacyHorizontalLayout info = new LegacyHorizontalLayout();
         info.setSpacing(true);
         info.setMargin(true);
         addComponent(info);

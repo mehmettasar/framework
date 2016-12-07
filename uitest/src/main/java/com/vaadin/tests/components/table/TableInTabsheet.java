@@ -6,10 +6,10 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.AbsoluteLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.Table.Align;
 import com.vaadin.v7.ui.themes.Reindeer;
@@ -18,7 +18,7 @@ public class TableInTabsheet extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout vPrinc = new VerticalLayout();
+        LegacyVerticalLayout vPrinc = new LegacyVerticalLayout();
         vPrinc.setStyleName(Reindeer.LAYOUT_BLUE);
 
         vPrinc.addComponent(title());
@@ -27,9 +27,9 @@ public class TableInTabsheet extends AbstractReindeerTestUI {
         setContent(vPrinc);
     }
 
-    private VerticalLayout title() {
+    private LegacyVerticalLayout title() {
 
-        VerticalLayout vP = new VerticalLayout();
+        LegacyVerticalLayout vP = new LegacyVerticalLayout();
         vP.setStyleName(Reindeer.LAYOUT_BLACK);
         Label tit = new Label("<h1> Tab/Table Test</h1>", ContentMode.HTML);
         vP.addComponent(tit);
@@ -37,14 +37,14 @@ public class TableInTabsheet extends AbstractReindeerTestUI {
 
     }
 
-    private VerticalLayout page() {
+    private LegacyVerticalLayout page() {
 
-        VerticalLayout vP = new VerticalLayout();
+        LegacyVerticalLayout vP = new LegacyVerticalLayout();
         vP.setStyleName(Reindeer.LAYOUT_BLUE);
         TabSheet t = new TabSheet();
         t.setWidth(1000, Unit.PIXELS);
 
-        HorizontalLayout hP = new HorizontalLayout();
+        LegacyHorizontalLayout hP = new LegacyHorizontalLayout();
         t.addTab(Ranking(), "Ranking");
         try {
 
@@ -90,9 +90,9 @@ public class TableInTabsheet extends AbstractReindeerTestUI {
 
     }
 
-    private VerticalLayout GDocs(String end) throws MalformedURLException {
+    private LegacyVerticalLayout GDocs(String end) throws MalformedURLException {
 
-        VerticalLayout vT = new VerticalLayout();
+        LegacyVerticalLayout vT = new LegacyVerticalLayout();
         vT.setHeight(500, Unit.PIXELS);
         vT.setWidth(900, Unit.PIXELS);
 

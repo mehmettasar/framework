@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 /**
@@ -31,7 +31,7 @@ public class TableToggleColumnVisibilityWidth extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         final Table table = new Table();
 

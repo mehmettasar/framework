@@ -21,7 +21,7 @@ import com.vaadin.ui.AbstractSplitPanel;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 
 /**
@@ -66,7 +66,7 @@ public class SplitPositionChange extends AbstractTestUIWithLog {
     }
 
     private Panel buildPanel(String caption) {
-        VerticalLayout pl = new VerticalLayout();
+        LegacyVerticalLayout pl = new LegacyVerticalLayout();
         pl.setMargin(true);
         pl.addComponent(new Label("content"));
         Panel panel = new Panel(caption, pl);

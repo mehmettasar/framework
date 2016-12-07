@@ -20,8 +20,8 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.shared.ui.grid.ScrollDestination;
@@ -54,12 +54,12 @@ public class GridScrolling extends AbstractReindeerTestUI {
 
         grid = new Grid(ds);
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.addComponent(grid);
         hl.setMargin(true);
         hl.setSpacing(true);
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setSpacing(true);
 
         // Add scroll buttons

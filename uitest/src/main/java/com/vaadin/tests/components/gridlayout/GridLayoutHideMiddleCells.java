@@ -22,9 +22,9 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class GridLayoutHideMiddleCells extends AbstractReindeerTestUI {
     GridLayout gridLayout;
@@ -36,8 +36,8 @@ public class GridLayoutHideMiddleCells extends AbstractReindeerTestUI {
         final int COLS = 5;
 
         final Label[][] labels = new Label[ROWS][COLS];
-        VerticalLayout mainLayout = new VerticalLayout();
-        HorizontalLayout horLayout = new HorizontalLayout();
+        LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
+        LegacyHorizontalLayout horLayout = new LegacyHorizontalLayout();
         gridLayout = new GridLayout(ROWS, COLS);
         gridLayout.setHideEmptyRowsAndColumns(true);
 

@@ -14,7 +14,7 @@ import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.PopupView;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.themes.BaseTheme;
 
 public class PopupViewOffScreen extends TestBase {
@@ -60,7 +60,7 @@ public class PopupViewOffScreen extends TestBase {
     }
 
     private Component createPopupView(String bg) {
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setSpacing(false);
         vl.setMargin(false);
         vl.setSizeFull();

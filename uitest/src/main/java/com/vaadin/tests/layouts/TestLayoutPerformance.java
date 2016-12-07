@@ -11,7 +11,7 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.NativeSelect;
 import com.vaadin.v7.ui.TextField;
 
@@ -19,7 +19,7 @@ public class TestLayoutPerformance extends TestBase {
     private NativeSelect ns;
     private int i;
     private NativeSelect ns2;
-    private VerticalLayout testarea = new VerticalLayout();
+    private LegacyVerticalLayout testarea = new LegacyVerticalLayout();
 
     @Override
     protected String getDescription() {
@@ -45,7 +45,7 @@ public class TestLayoutPerformance extends TestBase {
         ns = new NativeSelect("Select component to test");
         ns.addItem(CssLayout.class);
         ns.addItem(GridLayout.class);
-        ns.addItem(VerticalLayout.class);
+        ns.addItem(LegacyVerticalLayout.class);
         ns.setNullSelectionAllowed(false);
         ns.setValue(CssLayout.class);
 

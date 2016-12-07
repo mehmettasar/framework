@@ -3,7 +3,7 @@ package com.vaadin.tests.components.checkbox;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class CheckboxCaptionWrapping extends TestBase {
 
@@ -20,7 +20,7 @@ public class CheckboxCaptionWrapping extends TestBase {
     @Override
     protected void setup() {
         setTheme("tests-tickets");
-        VerticalLayout mainLayout = new VerticalLayout();
+        LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
         CheckBox cb = new CheckBox(
                 "Checkbox with some Incididunt ut labore et dolore magna aliqua.");
         cb.setStyleName("wrap");

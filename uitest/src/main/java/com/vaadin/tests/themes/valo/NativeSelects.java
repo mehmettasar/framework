@@ -17,15 +17,12 @@ package com.vaadin.tests.themes.valo;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.v7.ui.ListSelect;
-import com.vaadin.v7.ui.NativeSelect;
-import com.vaadin.v7.ui.TwinColSelect;
 
-public class NativeSelects extends VerticalLayout implements View {
+public class NativeSelects extends LegacyVerticalLayout implements View {
     public NativeSelects() {
         setMargin(true);
 
@@ -33,7 +30,7 @@ public class NativeSelects extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);

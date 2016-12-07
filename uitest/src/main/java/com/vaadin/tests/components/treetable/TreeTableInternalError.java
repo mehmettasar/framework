@@ -5,7 +5,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.NativeButton;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table.ColumnGenerator;
 import com.vaadin.v7.ui.TreeTable;
 
@@ -14,7 +14,7 @@ public class TreeTableInternalError extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout content = getLayout();
+        LegacyVerticalLayout content = getLayout();
         content.setSizeFull();
 
         t = new TreeTable() {

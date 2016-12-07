@@ -9,8 +9,8 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.PopupView;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class PopupViewClickShortcut extends TestBase {
@@ -41,7 +41,7 @@ public class PopupViewClickShortcut extends TestBase {
             t.addItem(new String[] { "foo " + i }, i);
         }
 
-        final Layout l = new VerticalLayout();
+        final Layout l = new LegacyVerticalLayout();
         l.setCaption(caption);
         l.setWidth(null);
 

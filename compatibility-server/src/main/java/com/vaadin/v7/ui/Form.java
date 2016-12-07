@@ -41,7 +41,6 @@ import com.vaadin.ui.CustomLayout;
 import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.HasComponents;
-import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.LegacyComponent;
 import com.vaadin.v7.data.Buffered;
@@ -196,7 +195,7 @@ public class Form extends AbstractField<Object>
     public Form(Layout formLayout, FormFieldFactory fieldFactory) {
         super();
         setLayout(formLayout);
-        setFooter(new HorizontalLayout());
+        setFooter(new LegacyHorizontalLayout());
         setFormFieldFactory(fieldFactory);
         setValidationVisible(false);
         setWidth(100, UNITS_PERCENTAGE);

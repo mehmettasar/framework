@@ -4,13 +4,13 @@ import com.vaadin.event.MouseEvents.ClickEvent;
 import com.vaadin.event.MouseEvents.ClickListener;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class PanelClickListenerRelativeCoordinates extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         Panel panel = new Panel("Panel's caption", panelLayout);
         panel.addClickListener(new ClickListener() {

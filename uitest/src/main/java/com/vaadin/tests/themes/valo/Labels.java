@@ -19,10 +19,10 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.MarginInfo;
 import com.vaadin.shared.ui.label.ContentMode;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
@@ -30,7 +30,7 @@ import com.vaadin.ui.themes.ValoTheme;
  * @since
  * @author Vaadin Ltd
  */
-public class Labels extends VerticalLayout implements View {
+public class Labels extends LegacyVerticalLayout implements View {
     public Labels() {
         setMargin(true);
 
@@ -38,11 +38,11 @@ public class Labels extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout split = new HorizontalLayout();
+        LegacyHorizontalLayout split = new LegacyHorizontalLayout();
         split.setWidth("100%");
         addComponent(split);
 
-        VerticalLayout left = new VerticalLayout();
+        LegacyVerticalLayout left = new LegacyVerticalLayout();
         left.setMargin(new MarginInfo(false, true, false, false));
         split.addComponent(left);
 
@@ -94,7 +94,7 @@ public class Labels extends VerticalLayout implements View {
         Panel p = new Panel("Additional Label Styles");
         split.addComponent(p);
 
-        VerticalLayout right = new VerticalLayout();
+        LegacyVerticalLayout right = new LegacyVerticalLayout();
         right.setSpacing(true);
         right.setMargin(true);
         p.setContent(right);

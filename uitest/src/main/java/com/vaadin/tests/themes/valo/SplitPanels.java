@@ -27,7 +27,6 @@ import com.vaadin.ui.themes.ValoTheme;
 
 public class SplitPanels extends VerticalLayout implements View {
     public SplitPanels() {
-        setMargin(true);
 
         Label h1 = new Label("Split Panels");
         h1.addStyleName(ValoTheme.LABEL_H1);

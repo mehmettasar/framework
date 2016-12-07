@@ -11,7 +11,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class PanelShouldRemoveActionHandler extends TestBase {
@@ -30,7 +30,7 @@ public class PanelShouldRemoveActionHandler extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         panel = new Panel("A panel", layout);
         layout.addComponent(new TextField());

@@ -22,15 +22,11 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.v7.ui.AbstractSelect;
-import com.vaadin.v7.ui.NativeSelect;
-import com.vaadin.v7.ui.OptionGroup;
-import com.vaadin.v7.ui.Tree;
-import com.vaadin.v7.ui.TwinColSelect;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * @author Vaadin Ltd.
@@ -44,7 +40,7 @@ public class TestForPreconfiguredComponents extends CustomComponent {
             "Smith", "Jones", "Beck", "Sheridan", "Picard", "Hill", "Fielding",
             "Einstein" };
 
-    private final VerticalLayout main = new VerticalLayout();
+    private final LegacyVerticalLayout main = new LegacyVerticalLayout();
 
     public TestForPreconfiguredComponents() {
 
@@ -142,12 +138,12 @@ public class TestForPreconfiguredComponents extends CustomComponent {
     }
 
     public Panel createTestBench(Component t) {
-        final HorizontalLayout ol = new HorizontalLayout();
+        final LegacyHorizontalLayout ol = new LegacyHorizontalLayout();
 
         ol.addComponent(t);
 
-        final HorizontalLayout ol2 = new HorizontalLayout();
-        final VerticalLayout statusLayout = new VerticalLayout();
+        final LegacyHorizontalLayout ol2 = new LegacyHorizontalLayout();
+        final LegacyVerticalLayout statusLayout = new LegacyVerticalLayout();
         final Panel status = new Panel("Events", statusLayout);
         final Button clear = new Button("clear event log");
         clear.addClickListener(new ClickListener() {

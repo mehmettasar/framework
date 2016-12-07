@@ -6,7 +6,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 @SuppressWarnings("serial")
@@ -15,7 +15,7 @@ public class UniformGridLayoutUI extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         setContent(layout);
         layout.setSpacing(true);

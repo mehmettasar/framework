@@ -7,7 +7,7 @@ import com.vaadin.event.dd.acceptcriteria.SourceIs;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.AbstractSelect.AbstractSelectTargetDetails;
 import com.vaadin.v7.ui.Table;
@@ -49,7 +49,7 @@ public class NotPaintedAcceptSource extends TestBase {
             }
         });
 
-        final HorizontalLayout horizontalLayout = new HorizontalLayout();
+        final LegacyHorizontalLayout horizontalLayout = new LegacyHorizontalLayout();
         horizontalLayout.setSpacing(true);
         horizontalLayout.addComponent(source1);
         horizontalLayout.addComponent(target);

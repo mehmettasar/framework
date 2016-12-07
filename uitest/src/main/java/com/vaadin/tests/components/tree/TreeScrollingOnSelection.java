@@ -3,7 +3,7 @@ package com.vaadin.tests.components.tree;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.HierarchicalContainer;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
@@ -37,7 +37,7 @@ public class TreeScrollingOnSelection extends TestBase {
         });
         tree.setImmediate(true);
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         Panel panel = new Panel(panelLayout);
         panelLayout.addComponent(tree);

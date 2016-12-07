@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
 
@@ -33,7 +33,7 @@ public class TabSheetInDisabledParent extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final HorizontalLayout layout = new HorizontalLayout();
+        final LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         addComponent(new Button("toggle", new ClickListener() {
 
             @Override

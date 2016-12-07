@@ -9,7 +9,7 @@ import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class TabsheetScrollIntoView extends AbstractReindeerTestUI {
 
@@ -27,7 +27,7 @@ public class TabsheetScrollIntoView extends AbstractReindeerTestUI {
             tabSheetInSplitPanel.addTab(new Label("Tab " + i), "Tab " + i);
         }
 
-        Layout buttonLayout = new VerticalLayout();
+        Layout buttonLayout = new LegacyVerticalLayout();
 
         buttonLayout
                 .addComponent(new Button("Hide TabSheet", new ClickListener() {

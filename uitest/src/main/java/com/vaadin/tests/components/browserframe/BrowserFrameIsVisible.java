@@ -9,14 +9,14 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.BrowserFrame;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 public class BrowserFrameIsVisible extends TestBase {
 
     @Override
     protected void setup() {
 
-        HorizontalLayout buttonLayout = new HorizontalLayout();
+        LegacyHorizontalLayout buttonLayout = new LegacyHorizontalLayout();
         addComponent(buttonLayout);
 
         Button page1 = new Button("Hello World");

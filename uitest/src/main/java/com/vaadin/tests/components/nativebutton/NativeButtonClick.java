@@ -19,7 +19,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.NativeButton;
 
@@ -60,7 +60,7 @@ public class NativeButtonClick extends AbstractReindeerTestUI {
                     }
                 });
 
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.addComponents(button1, button2, label1, label2);
         layout.setSpacing(true);
         addComponent(layout);

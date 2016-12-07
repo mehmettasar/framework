@@ -44,7 +44,7 @@ public class LabelStyles extends AbstractReindeerTestUI {
         }
         GridLayout layout = new GridLayout();
         p.setContent(layout);
-        // ((VerticalLayout) p.getContent()).setMargin(false);
+        // ((LegacyVerticalLayout) p.getContent()).setMargin(false);
         p.setSizeUndefined();
         layout.setSizeUndefined();
 

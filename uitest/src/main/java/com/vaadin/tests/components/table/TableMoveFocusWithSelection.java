@@ -26,7 +26,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class TableMoveFocusWithSelection extends AbstractReindeerTestUI {
@@ -44,12 +44,12 @@ public class TableMoveFocusWithSelection extends AbstractReindeerTestUI {
         t.setId("test-table");
         t.setSizeFull();
         t.setSelectable(true);
-        t.addContainerProperty("layout", VerticalLayout.class, null);
+        t.addContainerProperty("layout", LegacyVerticalLayout.class, null);
         t.addContainerProperty("string", String.class, null);
 
         for (int i = 0; i < 100; i++) {
             t.addItem(i);
-            final VerticalLayout l = new VerticalLayout();
+            final LegacyVerticalLayout l = new LegacyVerticalLayout();
             l.setId("row-" + i);
             l.setHeight(20, Unit.PIXELS);
             l.setData(i);

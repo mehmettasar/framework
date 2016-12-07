@@ -7,19 +7,19 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.NativeButton;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class GridLayoutWidthChange extends AbstractReindeerTestUI {
 
     private GridLayout generateLayout() {
-        VerticalLayout fields1 = new VerticalLayout();
+        LegacyVerticalLayout fields1 = new LegacyVerticalLayout();
 
         NativeButton nb = new NativeButton("A button");
         nb.setHeight("300px");
         fields1.addComponent(nb);
 
-        VerticalLayout fields3 = new VerticalLayout();
+        LegacyVerticalLayout fields3 = new LegacyVerticalLayout();
         fields3.addComponent(new TextField("field14"));
 
         NativeButton b = new NativeButton("A big button");

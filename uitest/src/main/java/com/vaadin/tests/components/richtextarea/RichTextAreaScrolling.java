@@ -1,8 +1,8 @@
 package com.vaadin.tests.components.richtextarea;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.RichTextArea;
 
 public class RichTextAreaScrolling extends TestBase {
@@ -24,7 +24,7 @@ public class RichTextAreaScrolling extends TestBase {
             sb.append("A long string with several lines<br/>");
         }
 
-        HorizontalLayout main = new HorizontalLayout();
+        LegacyHorizontalLayout main = new LegacyHorizontalLayout();
         main.setSpacing(true);
         addComponent(main);
 
@@ -45,7 +45,7 @@ public class RichTextAreaScrolling extends TestBase {
         second.setSizeFull();
         third.setSizeUndefined();
 
-        VerticalLayout secondLayout = new VerticalLayout();
+        LegacyVerticalLayout secondLayout = new LegacyVerticalLayout();
         secondLayout.setWidth("200px");
         secondLayout.setHeight("200px");
         secondLayout.addComponent(second);

@@ -25,7 +25,7 @@ import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Provides sample directory based on application directory. If this fails then
@@ -78,7 +78,7 @@ public class SampleDirectory {
             return file;
         }
         // Add failure notification as an Panel to main window
-        VerticalLayout errorLayout = new VerticalLayout();
+        LegacyVerticalLayout errorLayout = new LegacyVerticalLayout();
         errorLayout.setMargin(true);
         final Panel errorPanel = new Panel("Demo application error",
                 errorLayout);

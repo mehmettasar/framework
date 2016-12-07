@@ -5,7 +5,7 @@ import com.vaadin.server.UserError;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.NativeButton;
@@ -22,7 +22,7 @@ public class ButtonsTest extends com.vaadin.server.LegacyApplication {
     boolean largeIcons = false;
     boolean nativeButtons = false;
 
-    final HorizontalLayout toggles = new HorizontalLayout();
+    final LegacyHorizontalLayout toggles = new LegacyHorizontalLayout();
 
     @Override
     public void init() {
@@ -115,7 +115,7 @@ public class ButtonsTest extends com.vaadin.server.LegacyApplication {
         String[] buttonStyles = new String[] { "Normal", "Primary", "Small",
                 "Link" };
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setSpacing(true);
         hl.setMargin(true);
 

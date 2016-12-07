@@ -1,14 +1,14 @@
 package com.vaadin.tests.components.table;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class FixedHeightTable extends TestBase {
 
     private static final long serialVersionUID = -929892889178757852L;
     Table table;
-    VerticalLayout layout;
+    LegacyVerticalLayout layout;
 
     @Override
     public void setup() {

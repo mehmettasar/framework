@@ -6,7 +6,7 @@ import com.vaadin.event.FieldEvents;
 import com.vaadin.event.FieldEvents.FocusEvent;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class ComboBoxSuggestionOnDetach extends TestBase {
@@ -15,7 +15,7 @@ public class ComboBoxSuggestionOnDetach extends TestBase {
     protected void setup() {
         final Window popup = new Window();
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         layout.setSizeUndefined();
         popup.setContent(layout);

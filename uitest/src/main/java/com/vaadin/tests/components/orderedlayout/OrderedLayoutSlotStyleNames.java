@@ -2,15 +2,15 @@ package com.vaadin.tests.components.orderedlayout;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class OrderedLayoutSlotStyleNames extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
 
         Label lbl = new Label("A label");
         lbl.setStyleName("my-label");
@@ -24,7 +24,7 @@ public class OrderedLayoutSlotStyleNames extends TestBase {
 
         addComponent(vl);
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
 
         lbl = new Label("A label");
         lbl.setStyleName("my-label");
@@ -41,7 +41,7 @@ public class OrderedLayoutSlotStyleNames extends TestBase {
 
     @Override
     protected String getDescription() {
-        return "Vertical/HorizontalLayout slots should get child dependant name";
+        return "Vertical/LegacyHorizontalLayout slots should get child dependant name";
     }
 
     @Override

@@ -3,13 +3,13 @@ package com.vaadin.tests.tooltip;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class StationaryTooltip extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         Button button = new Button("Button");
         button.setDescription("description");
 

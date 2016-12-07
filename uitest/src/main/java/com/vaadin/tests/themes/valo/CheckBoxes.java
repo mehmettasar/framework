@@ -18,14 +18,14 @@ package com.vaadin.tests.themes.valo;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.OptionGroup;
 
-public class CheckBoxes extends VerticalLayout implements View {
+public class CheckBoxes extends LegacyVerticalLayout implements View {
     public CheckBoxes() {
         setMargin(true);
 
@@ -33,7 +33,7 @@ public class CheckBoxes extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);
@@ -94,7 +94,7 @@ public class CheckBoxes extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        row = new HorizontalLayout();
+        row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);

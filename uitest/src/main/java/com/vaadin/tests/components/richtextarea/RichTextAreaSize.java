@@ -1,8 +1,8 @@
 package com.vaadin.tests.components.richtextarea;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.RichTextArea;
 
 public class RichTextAreaSize extends TestBase {
@@ -19,7 +19,7 @@ public class RichTextAreaSize extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout main = new HorizontalLayout();
+        LegacyHorizontalLayout main = new LegacyHorizontalLayout();
         getMainWindow().setContent(main);
 
         RichTextArea first = new RichTextArea();
@@ -31,7 +31,7 @@ public class RichTextAreaSize extends TestBase {
         second.setSizeFull();
         third.setSizeUndefined();
 
-        VerticalLayout secondLayout = new VerticalLayout();
+        LegacyVerticalLayout secondLayout = new LegacyVerticalLayout();
         secondLayout.setWidth("200px");
         secondLayout.setHeight("200px");
         secondLayout.addComponent(second);

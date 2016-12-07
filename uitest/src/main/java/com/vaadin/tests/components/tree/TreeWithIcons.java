@@ -6,7 +6,7 @@ import com.vaadin.server.Sizeable;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.tests.util.LoremIpsum;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Panel;
 import com.vaadin.v7.ui.Tree;
 import com.vaadin.v7.ui.themes.Reindeer;
@@ -44,7 +44,7 @@ public class TreeWithIcons extends TestBase {
         t.setParent(second, first);
         t.setItemIcon(first, notCachedFolderIconLarge);
 
-        HorizontalLayout hlay = new HorizontalLayout();
+        LegacyHorizontalLayout hlay = new LegacyHorizontalLayout();
         hlay.setStyleName(Reindeer.LAYOUT_BLUE);
         hlay.addComponent(t);
         hlay.setWidth(-1, Sizeable.UNITS_PIXELS);

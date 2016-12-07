@@ -11,7 +11,7 @@ import com.vaadin.tests.components.AbstractTestUIProvider;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class LazyInitUIs extends AbstractTestUIProvider {
 
@@ -19,7 +19,7 @@ public class LazyInitUIs extends AbstractTestUIProvider {
     private static class EagerInitUI extends UI {
         @Override
         public void init(VaadinRequest request) {
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             setContent(layout);
 
@@ -44,7 +44,7 @@ public class LazyInitUIs extends AbstractTestUIProvider {
             UI uI = new UI() {
                 @Override
                 protected void init(VaadinRequest request) {
-                    VerticalLayout layout = new VerticalLayout();
+                    LegacyVerticalLayout layout = new LegacyVerticalLayout();
                     layout.setMargin(true);
                     setContent(layout);
 
@@ -61,7 +61,7 @@ public class LazyInitUIs extends AbstractTestUIProvider {
             UI uI = new UI() {
                 @Override
                 protected void init(VaadinRequest request) {
-                    VerticalLayout layout = new VerticalLayout();
+                    LegacyVerticalLayout layout = new LegacyVerticalLayout();
                     layout.setMargin(true);
                     setContent(layout);
 

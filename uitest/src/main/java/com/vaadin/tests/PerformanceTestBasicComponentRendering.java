@@ -26,16 +26,16 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.TextField;
 
 public class PerformanceTestBasicComponentRendering extends CustomComponent {
 
-    private final VerticalLayout main;
+    private final LegacyVerticalLayout main;
 
-    private final VerticalLayout testContainer;
+    private final LegacyVerticalLayout testContainer;
 
     private Date startTime;
 
@@ -47,14 +47,14 @@ public class PerformanceTestBasicComponentRendering extends CustomComponent {
 
     public PerformanceTestBasicComponentRendering() {
 
-        main = new VerticalLayout();
+        main = new LegacyVerticalLayout();
         setCompositionRoot(main);
         addInfo();
 
         result = new Label();
         main.addComponent(result);
 
-        testContainer = new VerticalLayout();
+        testContainer = new LegacyVerticalLayout();
 
         final Table t = TestForTablesInitialColumnWidthLogicRendering
                 .getTestTable(5, 200);

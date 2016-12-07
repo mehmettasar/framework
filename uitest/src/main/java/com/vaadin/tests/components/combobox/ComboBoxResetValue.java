@@ -5,9 +5,9 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.ComboBox;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class ComboBoxResetValue extends AbstractReindeerTestUI {
 
@@ -31,7 +31,7 @@ public class ComboBoxResetValue extends AbstractReindeerTestUI {
                 cbNullSelectionNotAllowed.setValue(null);
             }
         });
-        addComponents(new HorizontalLayout(new VerticalLayout(
+        addComponents(new LegacyHorizontalLayout(new LegacyVerticalLayout(
                 cbNullSelectionAllowedWithSetNullSelectionItemId,
                 cbNullSelectionAllowedWithoutNullSelectionItemId,
                 cbNullSelectionNotAllowed), b));

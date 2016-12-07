@@ -30,7 +30,7 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Notification.Type;
@@ -153,7 +153,7 @@ public abstract class AbstractBasicCrud extends AbstractTestUIWithLog {
             setRows(3);
             addComponent(errorLabel, 0, 2, getColumns() - 1, 2);
 
-            HorizontalLayout hl = new HorizontalLayout(save, cancel);
+            LegacyHorizontalLayout hl = new LegacyHorizontalLayout(save, cancel);
             hl.setSpacing(true);
             addComponent(hl);
 
@@ -269,7 +269,7 @@ public abstract class AbstractBasicCrud extends AbstractTestUIWithLog {
                 addComponent(f);
             }
 
-            HorizontalLayout hl = new HorizontalLayout(save, cancel);
+            LegacyHorizontalLayout hl = new LegacyHorizontalLayout(save, cancel);
             hl.setSpacing(true);
             addComponent(hl);
         }

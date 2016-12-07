@@ -26,14 +26,14 @@ import com.vaadin.ui.AbstractDateField;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CustomLayout;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Select;
 import com.vaadin.v7.ui.TextField;
 
@@ -66,22 +66,22 @@ public class RandomLayoutStress extends com.vaadin.server.LegacyApplication {
         setMainWindow(mainWindow);
 
         // Create horizontal ordered layout
-        VerticalLayout panelALayout = new VerticalLayout();
+        LegacyVerticalLayout panelALayout = new LegacyVerticalLayout();
         panelALayout.setMargin(true);
         final Panel panelA = new Panel(
                 "Panel containing horizontal ordered layout", panelALayout);
-        HorizontalLayout layoutA = new HorizontalLayout();
+        LegacyHorizontalLayout layoutA = new LegacyHorizontalLayout();
         // Add 4 random components
         fillLayout(layoutA, componentCountA);
         // Add layout to panel
         panelALayout.addComponent(layoutA);
 
         // Create vertical ordered layout
-        VerticalLayout panelBLayout = new VerticalLayout();
+        LegacyVerticalLayout panelBLayout = new LegacyVerticalLayout();
         panelBLayout.setMargin(true);
         final Panel panelB = new Panel(
                 "Panel containing vertical ordered layout", panelBLayout);
-        VerticalLayout layoutB = new VerticalLayout();
+        LegacyVerticalLayout layoutB = new LegacyVerticalLayout();
         // Add 4 random components
         fillLayout(layoutB, componentCountB);
         // Add layout to panel
@@ -89,7 +89,7 @@ public class RandomLayoutStress extends com.vaadin.server.LegacyApplication {
 
         // Create grid layout
         final int gridSize = (int) java.lang.Math.sqrt(componentCountC);
-        VerticalLayout panelGLayout = new VerticalLayout();
+        LegacyVerticalLayout panelGLayout = new LegacyVerticalLayout();
         panelGLayout.setMargin(true);
         final Panel panelG = new Panel("Panel containing grid layout ("
                 + gridSize + " x " + gridSize + ")", panelGLayout);
@@ -103,11 +103,11 @@ public class RandomLayoutStress extends com.vaadin.server.LegacyApplication {
         final TabSheet tabsheet = new TabSheet();
         tabsheet.setCaption(
                 "Tabsheet, above layouts are added to this component");
-        layoutA = new HorizontalLayout();
+        layoutA = new LegacyHorizontalLayout();
         // Add 4 random components
         fillLayout(layoutA, componentCountA);
         tabsheet.addTab(layoutA, "Horizontal ordered layout", null);
-        layoutB = new VerticalLayout();
+        layoutB = new LegacyVerticalLayout();
         // Add 4 random components
         fillLayout(layoutB, componentCountB);
         tabsheet.addTab(layoutB, "Vertical ordered layout", null);
@@ -117,7 +117,7 @@ public class RandomLayoutStress extends com.vaadin.server.LegacyApplication {
         tabsheet.addTab(layoutG, "Grid layout (4 x 2)", null);
 
         // Create custom layout
-        VerticalLayout panelCLayout = new VerticalLayout();
+        LegacyVerticalLayout panelCLayout = new LegacyVerticalLayout();
         panelCLayout.setMargin(true);
         final Panel panelC = new Panel("Custom layout with style exampleStyle",
                 panelCLayout);
@@ -170,7 +170,7 @@ public class RandomLayoutStress extends com.vaadin.server.LegacyApplication {
             break;
         case 5:
             // Link
-            VerticalLayout panelLayout = new VerticalLayout();
+            LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
             panelLayout.setMargin(true);
             result = new Panel(panelLayout);
             result.setCaption("Panel component " + caption);

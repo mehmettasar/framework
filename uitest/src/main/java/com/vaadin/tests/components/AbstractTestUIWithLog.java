@@ -17,7 +17,7 @@ package com.vaadin.tests.components;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.util.Log;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public abstract class AbstractTestUIWithLog extends AbstractTestUI {
 
@@ -26,7 +26,7 @@ public abstract class AbstractTestUIWithLog extends AbstractTestUI {
     @Override
     public void init(VaadinRequest request) {
         super.init(request);
-        ((VerticalLayout) getContent()).addComponent(log, 0);
+        ((LegacyVerticalLayout) getContent()).addComponent(log, 0);
     }
 
     protected void log(String message) {

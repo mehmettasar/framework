@@ -23,7 +23,7 @@ import com.vaadin.tests.components.uitest.components.WindowsCssTest;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.Window;
@@ -156,7 +156,7 @@ public class TestSampler extends TabSheet {
 
     private void createComponentLayout(String caption) {
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setSpacing(true);
         hl.setWidth("100%");
 

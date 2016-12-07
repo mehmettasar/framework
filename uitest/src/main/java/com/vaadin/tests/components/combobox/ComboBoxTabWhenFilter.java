@@ -17,7 +17,7 @@ package com.vaadin.tests.components.combobox;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.shared.ui.combobox.FilteringMode;
@@ -33,7 +33,7 @@ public class ComboBoxTabWhenFilter extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         setContent(layout);
         SlowComboBox comboBox = new SlowComboBox();

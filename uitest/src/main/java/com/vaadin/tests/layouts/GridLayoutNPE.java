@@ -5,13 +5,13 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class GridLayoutNPE extends TestBase {
 
     @Override
     protected void setup() {
-        final VerticalLayout lo = new VerticalLayout();
+        final LegacyVerticalLayout lo = new LegacyVerticalLayout();
 
         final GridLayout gl = new GridLayout(2, 1);
         gl.setSpacing(true);

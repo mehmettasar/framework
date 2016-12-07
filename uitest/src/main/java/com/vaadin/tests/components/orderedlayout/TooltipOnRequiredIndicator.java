@@ -21,8 +21,8 @@ package com.vaadin.tests.components.orderedlayout;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class TooltipOnRequiredIndicator extends AbstractReindeerTestUI {
@@ -35,7 +35,7 @@ public class TooltipOnRequiredIndicator extends AbstractReindeerTestUI {
      */
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         TextField inVertical = new TextField();
         inVertical.setRequired(true);
@@ -46,7 +46,7 @@ public class TooltipOnRequiredIndicator extends AbstractReindeerTestUI {
         layout.addComponent(inVertical);
         addComponent(layout);
 
-        HorizontalLayout horizontalLayout = new HorizontalLayout();
+        LegacyHorizontalLayout horizontalLayout = new LegacyHorizontalLayout();
 
         TextField inHorizontal = new TextField();
         inHorizontal.setRequired(true);

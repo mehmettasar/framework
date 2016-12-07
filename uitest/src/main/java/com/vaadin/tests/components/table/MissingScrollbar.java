@@ -5,8 +5,8 @@ import java.io.Serializable;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.ui.Table;
@@ -29,7 +29,7 @@ public class MissingScrollbar extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
 
         container50 = createContainer(50);
         container2 = createContainer(2);
@@ -38,7 +38,7 @@ public class MissingScrollbar extends TestBase {
         table.setContainerDataSource(container2);
         table.setPageLength(10);
 
-        VerticalLayout buttonLayout = new VerticalLayout();
+        LegacyVerticalLayout buttonLayout = new LegacyVerticalLayout();
         buttonLayout.setWidth(null);
 
         Button b = new Button("Set items to 2", new Button.ClickListener() {

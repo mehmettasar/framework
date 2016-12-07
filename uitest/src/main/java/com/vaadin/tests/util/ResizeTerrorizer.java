@@ -18,9 +18,9 @@ package com.vaadin.tests.util;
 import com.vaadin.tests.widgetset.client.ResizeTerrorizerControlConnector.ResizeTerorrizerState;
 import com.vaadin.ui.AbstractComponent;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
-public class ResizeTerrorizer extends VerticalLayout {
+public class ResizeTerrorizer extends LegacyVerticalLayout {
     private final ResizeTerrorizerControl control;
 
     public class ResizeTerrorizerControl extends AbstractComponent

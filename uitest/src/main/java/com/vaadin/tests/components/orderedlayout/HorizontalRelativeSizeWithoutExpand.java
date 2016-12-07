@@ -1,10 +1,10 @@
 package com.vaadin.tests.components.orderedlayout;
 
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.Tree;
 
@@ -13,7 +13,7 @@ public class HorizontalRelativeSizeWithoutExpand extends UI {
     @Override
     protected void init(VaadinRequest request) {
 
-        final HorizontalLayout layout = new HorizontalLayout();
+        final LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setSizeFull();
         layout.setMargin(true);
         layout.setSpacing(true);
@@ -21,7 +21,7 @@ public class HorizontalRelativeSizeWithoutExpand extends UI {
 
         Panel panel1 = new Panel("This should not be seen");
         panel1.setSizeFull();
-        VerticalLayout verticalLayout1 = new VerticalLayout();
+        LegacyVerticalLayout verticalLayout1 = new LegacyVerticalLayout();
         verticalLayout1.setSizeFull();
         Tree tree = new Tree();
         tree.setSizeFull();

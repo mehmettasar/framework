@@ -7,7 +7,7 @@ import com.vaadin.tests.util.Log;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
@@ -31,7 +31,7 @@ public class ItemClickEvents extends AbstractReindeerTestUI {
 
         log.setId("log");
 
-        HorizontalLayout ol = createHorizontalLayout(tree);
+        LegacyHorizontalLayout ol = createHorizontalLayout(tree);
         Button b = new Button("icon", new Button.ClickListener() {
             @Override
             public void buttonClick(ClickEvent event) {
@@ -69,7 +69,7 @@ public class ItemClickEvents extends AbstractReindeerTestUI {
         });
         tree.setId("tree");
 
-        HorizontalLayout ol2 = createHorizontalLayout(table);
+        LegacyHorizontalLayout ol2 = createHorizontalLayout(table);
         table.setWidth("150px");
         table.setImmediate(true);
         table.setSelectable(true);
@@ -132,8 +132,8 @@ public class ItemClickEvents extends AbstractReindeerTestUI {
 
     }
 
-    private static HorizontalLayout createHorizontalLayout(AbstractSelect c) {
-        HorizontalLayout layout = new HorizontalLayout();
+    private static LegacyHorizontalLayout createHorizontalLayout(AbstractSelect c) {
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         CheckBox b = new CheckBox("immediate");
         b.setValue(c.isImmediate());
         b.addValueChangeListener(event -> c.setImmediate(event.getValue()));

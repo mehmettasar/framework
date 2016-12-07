@@ -36,7 +36,7 @@ import com.vaadin.ui.Layout;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.util.HierarchicalContainer;
 import com.vaadin.v7.ui.Tree;
@@ -67,7 +67,7 @@ public class TestBench extends com.vaadin.server.LegacyApplication
 
     Tree menu;
 
-    VerticalLayout bodyLayout = new VerticalLayout();
+    LegacyVerticalLayout bodyLayout = new LegacyVerticalLayout();
 
     // TODO this could probably be a simple Set
     HashMap<Class<?>, String> itemCaptions = new HashMap<>();
@@ -130,7 +130,7 @@ public class TestBench extends com.vaadin.server.LegacyApplication
         menu.addListener(this);
         menu.setImmediate(true);
         menu.setNullSelectionAllowed(false);
-        VerticalLayout lo = new VerticalLayout();
+        LegacyVerticalLayout lo = new LegacyVerticalLayout();
         lo.addComponent(menu);
 
         mainWindow.getPage().addUriFragmentChangedListener(
@@ -240,7 +240,7 @@ public class TestBench extends com.vaadin.server.LegacyApplication
                 return cc;
             } catch (final Exception e1) {
                 e1.printStackTrace();
-                VerticalLayout lo = new VerticalLayout();
+                LegacyVerticalLayout lo = new LegacyVerticalLayout();
                 lo.addComponent(new Label(
                         "Cannot create application / custom component: "
                                 + e1.toString()));

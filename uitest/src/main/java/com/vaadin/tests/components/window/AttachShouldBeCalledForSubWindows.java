@@ -11,7 +11,7 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class AttachShouldBeCalledForSubWindows extends AbstractTestCase {
@@ -73,7 +73,7 @@ public class AttachShouldBeCalledForSubWindows extends AbstractTestCase {
     }
 
     private Window createSubWindow() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window w = new Window("Sub window", layout) {
             @Override

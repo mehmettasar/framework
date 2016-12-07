@@ -25,7 +25,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class PerformanceTestLabelsAndOrderedLayouts extends CustomComponent {
     private final AbstractOrderedLayout main;
@@ -41,7 +41,7 @@ public class PerformanceTestLabelsAndOrderedLayouts extends CustomComponent {
     private static final int INITIAL_COMPONENTS = 1000;
 
     public PerformanceTestLabelsAndOrderedLayouts() {
-        main = new VerticalLayout();
+        main = new LegacyVerticalLayout();
         setCompositionRoot(main);
         addInfo();
 
@@ -66,7 +66,7 @@ public class PerformanceTestLabelsAndOrderedLayouts extends CustomComponent {
                             }
                         }));
 
-        testContainer = new VerticalLayout();
+        testContainer = new LegacyVerticalLayout();
 
         for (int i = 0; i < INITIAL_COMPONENTS; i++) {
             Label l = new Label("foo" + i);

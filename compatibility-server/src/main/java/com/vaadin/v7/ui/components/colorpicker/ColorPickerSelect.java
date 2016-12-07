@@ -16,7 +16,7 @@
 package com.vaadin.v7.ui.components.colorpicker;
 
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.shared.ui.colorpicker.Color;
@@ -73,7 +73,7 @@ public class ColorPickerSelect extends CustomComponent implements
      */
     public ColorPickerSelect() {
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         setCompositionRoot(layout);
 
         setStyleName("colorselect");

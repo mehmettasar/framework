@@ -4,7 +4,7 @@ import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.themes.BaseTheme;
@@ -25,7 +25,7 @@ public class TableRowHeight2 extends AbstractReindeerTestUI {
     @SuppressWarnings("unchecked")
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout vl = new HorizontalLayout();
+        LegacyHorizontalLayout vl = new LegacyHorizontalLayout();
         vl.setSizeFull();
 
         Table table = new Table();

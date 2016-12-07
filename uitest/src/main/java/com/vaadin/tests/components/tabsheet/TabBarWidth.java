@@ -21,7 +21,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Tests the width of the tab bar, especially when using relative width for the
@@ -33,7 +33,7 @@ public class TabBarWidth extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         layout.setSpacing(true);
         layout.setWidth("500px");
@@ -71,7 +71,7 @@ public class TabBarWidth extends AbstractReindeerTestUI {
         return 12805;
     }
 
-    private void restoreOrRemoveWidths(VerticalLayout layout,
+    private void restoreOrRemoveWidths(LegacyVerticalLayout layout,
             boolean removeWidths) {
         for (Component component : layout) {
             if (component instanceof TabSheet) {

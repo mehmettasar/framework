@@ -7,11 +7,11 @@ import com.vaadin.event.LayoutEvents.LayoutClickListener;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Select;
 import com.vaadin.v7.ui.TextField;
 
@@ -35,7 +35,7 @@ public class LayoutClickListenerTest extends TestBase {
         layout.addComponent(select);
 
         // Tab content
-        VerticalLayout l1 = new VerticalLayout();
+        LegacyVerticalLayout l1 = new LegacyVerticalLayout();
         l1.setMargin(true);
         l1.addComponent(new Label("This is a label."));
         l1.addComponent(new TextField(null, "Click here"));
@@ -46,12 +46,12 @@ public class LayoutClickListenerTest extends TestBase {
         t.addTab(l1, "Tab", null);
         layout.addComponent(t);
 
-        VerticalLayout nestedLayout = new VerticalLayout();
+        LegacyVerticalLayout nestedLayout = new LegacyVerticalLayout();
         nestedLayout.addComponent(new Label("This is a label."));
         nestedLayout.addComponent(new TextField(null, "Click here"));
         nestedLayout.addComponent(new Link("Click here", null));
 
-        HorizontalLayout nestedLayout2 = new HorizontalLayout();
+        LegacyHorizontalLayout nestedLayout2 = new LegacyHorizontalLayout();
         nestedLayout2.addComponent(new Label("Deeply nested label"));
         nestedLayout.addComponent(nestedLayout2);
 

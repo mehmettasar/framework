@@ -9,7 +9,7 @@ import com.vaadin.server.VaadinSession;
 import com.vaadin.tests.components.AbstractTestUIProvider;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class UIsInMultipleTabs extends AbstractTestUIProvider {
     // No cleanup -> will leak, but shouldn't matter for tests
@@ -29,7 +29,7 @@ public class UIsInMultipleTabs extends AbstractTestUIProvider {
             int currentCount = count.incrementAndGet();
             String message = "This is UI number " + currentCount;
 
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             setContent(layout);
 

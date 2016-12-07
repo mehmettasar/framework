@@ -3,7 +3,7 @@ package com.vaadin.tests.components.table;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class TableSetUndefinedSize extends AbstractReindeerTestUI {
@@ -15,10 +15,10 @@ public class TableSetUndefinedSize extends AbstractReindeerTestUI {
         table.setSizeFull();
         addComponent(table);
 
-        HorizontalLayout widthButtons = createWidthButtons(table);
+        LegacyHorizontalLayout widthButtons = createWidthButtons(table);
         addComponent(widthButtons);
 
-        HorizontalLayout heightButtons = createHeigthButtons(table);
+        LegacyHorizontalLayout heightButtons = createHeigthButtons(table);
         addComponent(heightButtons);
 
         addComponent(createSizeUndefinedButton(table));
@@ -33,8 +33,8 @@ public class TableSetUndefinedSize extends AbstractReindeerTestUI {
         });
     }
 
-    private HorizontalLayout createWidthButtons(final Table table) {
-        HorizontalLayout layout = new HorizontalLayout();
+    private LegacyHorizontalLayout createWidthButtons(final Table table) {
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
 
         layout.addComponent(
                 new Button("width 500px", new Button.ClickListener() {
@@ -61,8 +61,8 @@ public class TableSetUndefinedSize extends AbstractReindeerTestUI {
         return layout;
     }
 
-    private HorizontalLayout createHeigthButtons(final Table table) {
-        HorizontalLayout layout = new HorizontalLayout();
+    private LegacyHorizontalLayout createHeigthButtons(final Table table) {
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
 
         layout.addComponent(
                 new Button("height 200px", new Button.ClickListener() {

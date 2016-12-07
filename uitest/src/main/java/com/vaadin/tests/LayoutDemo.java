@@ -21,13 +21,13 @@ import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Embedded;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * This example demonstrates layouts. Layouts are populated with sample Vaadin
@@ -50,14 +50,14 @@ public class LayoutDemo extends com.vaadin.server.LegacyApplication {
         //
         // Create horizontal ordered layout
         //
-        final HorizontalLayout layoutA = new HorizontalLayout();
+        final LegacyHorizontalLayout layoutA = new LegacyHorizontalLayout();
         // Add 4 panels
         fillLayout(layoutA, 4);
 
         //
         // Create vertical ordered layout
         //
-        final VerticalLayout layoutB = new VerticalLayout();
+        final LegacyVerticalLayout layoutB = new LegacyVerticalLayout();
         // Add 4 panels
         fillLayout(layoutB, 4);
 
@@ -131,7 +131,7 @@ public class LayoutDemo extends com.vaadin.server.LegacyApplication {
     }
 
     private Component getExampleComponent(String caption) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         final Panel panel = new Panel(layout);
         panel.setCaption("Panel component " + caption);

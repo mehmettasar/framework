@@ -18,7 +18,7 @@ package com.vaadin.tests;
 
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.ui.Table;
 
@@ -26,7 +26,7 @@ public class TableSelectTest extends CustomComponent
         implements Table.ValueChangeListener {
 
     public TableSelectTest() {
-        final VerticalLayout main = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
         setCompositionRoot(main);
         main.addComponent(new Label("Hello World!"));
 

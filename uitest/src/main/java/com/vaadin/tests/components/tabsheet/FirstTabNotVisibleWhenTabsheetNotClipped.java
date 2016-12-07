@@ -35,9 +35,9 @@ public class FirstTabNotVisibleWhenTabsheetNotClipped extends AbstractReindeerTe
         });
         addComponent(createClippedTabSheet());
 
-        addComponent(new Label("VerticalLayout:"));
+        addComponent(new Label("LegacyVerticalLayout:"));
         addBlock(new VerticalLayout());
-        addComponent(new Label("HorizontalLayout:"));
+        addComponent(new Label("LegacyHorizontalLayout:"));
         addBlock(new HorizontalLayout());
     }
 

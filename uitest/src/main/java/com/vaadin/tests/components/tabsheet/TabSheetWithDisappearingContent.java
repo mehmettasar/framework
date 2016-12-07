@@ -4,7 +4,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TabSheet.Tab;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class TabSheetWithDisappearingContent extends TestBase {
 
@@ -13,7 +13,7 @@ public class TabSheetWithDisappearingContent extends TestBase {
         final TabSheet t = new TabSheet();
 
         for (int i = 1; i < 4; i++) {
-            VerticalLayout v = new VerticalLayout();
+            LegacyVerticalLayout v = new LegacyVerticalLayout();
             v.addComponent(new Label("Content " + i));
             Tab tab = t.addTab(v, "Tab " + i);
             tab.setClosable(true);

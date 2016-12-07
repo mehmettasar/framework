@@ -43,23 +43,20 @@ import com.vaadin.ui.Upload;
 import com.vaadin.ui.Upload.FinishedEvent;
 import com.vaadin.ui.Upload.StartedEvent;
 import com.vaadin.ui.Upload.StartedListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
-import com.vaadin.v7.ui.AbstractField;
-import com.vaadin.v7.ui.ProgressIndicator;
-import com.vaadin.v7.ui.Select;
-import com.vaadin.v7.ui.TextField;
 
 public class TestForUpload extends CustomComponent
         implements Upload.ProgressListener {
 
     private static final long serialVersionUID = -3400119871764256575L;
 
-    Layout main = new VerticalLayout();
+    Layout main = new LegacyVerticalLayout();
 
     Buffer buffer = new MemoryBuffer();
 
-    VerticalLayout statusLayout = new VerticalLayout();
+    LegacyVerticalLayout statusLayout = new LegacyVerticalLayout();
     Panel status = new Panel("Uploaded file:", statusLayout);
 
     private final Upload up;

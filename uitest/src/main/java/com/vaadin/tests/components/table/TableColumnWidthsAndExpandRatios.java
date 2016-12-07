@@ -3,7 +3,7 @@ package com.vaadin.tests.components.table;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.v7.ui.Table;
 
@@ -24,7 +24,7 @@ public class TableColumnWidthsAndExpandRatios extends TestBase {
             table.addItem();
         }
 
-        HorizontalLayout buttons = new HorizontalLayout();
+        LegacyHorizontalLayout buttons = new LegacyHorizontalLayout();
         for (Object col : table.getContainerPropertyIds()) {
             buttons.addComponent(createResetButton(col, table));
         }

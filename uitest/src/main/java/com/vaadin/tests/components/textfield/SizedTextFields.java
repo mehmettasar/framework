@@ -3,7 +3,7 @@ package com.vaadin.tests.components.textfield;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 import com.vaadin.v7.ui.TextField;
 
@@ -15,7 +15,7 @@ public class SizedTextFields extends TestBase {
 
         TextField tf;
 
-        VerticalLayout vl;
+        LegacyVerticalLayout vl;
 
         CssLayout cssLayout = new CssLayout() {
             @Override
@@ -24,7 +24,7 @@ public class SizedTextFields extends TestBase {
             }
         };
 
-        vl = new VerticalLayout();
+        vl = new LegacyVerticalLayout();
         vl.setHeight("40px");
         vl.setWidth("200px");
 
@@ -34,7 +34,7 @@ public class SizedTextFields extends TestBase {
         vl.setCaption("Fullsize textfield in 40px height 200px width box");
         cssLayout.addComponent(vl);
 
-        vl = new VerticalLayout();
+        vl = new LegacyVerticalLayout();
         vl.setHeight("40px");
         vl.setWidth("200px");
 
@@ -45,7 +45,7 @@ public class SizedTextFields extends TestBase {
         vl.setCaption("Fullsize textarea in 100px height 200px width box");
         cssLayout.addComponent(vl);
 
-        vl = new VerticalLayout();
+        vl = new LegacyVerticalLayout();
         vl.setSizeUndefined();
 
         tf = new TextField();

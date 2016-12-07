@@ -5,7 +5,7 @@ import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.NativeButton;
@@ -14,7 +14,7 @@ public class SplitPanelExtraScrollbars extends AbstractTestCase
         implements ClickListener {
 
     private HorizontalSplitPanel sp;
-    private HorizontalLayout hl;
+    private LegacyHorizontalLayout hl;
     private Button b;
 
     @Override
@@ -23,7 +23,7 @@ public class SplitPanelExtraScrollbars extends AbstractTestCase
         sp.setSizeFull();
         sp.setSplitPosition(0, Sizeable.UNITS_PIXELS);
 
-        hl = new HorizontalLayout();
+        hl = new LegacyHorizontalLayout();
         hl.setMargin(true);
         hl.setWidth("100%");
         hl.setHeight(null);

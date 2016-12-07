@@ -29,11 +29,11 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.Embedded;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -48,7 +48,7 @@ public class TestSizeableIncomponents extends LegacyApplication {
     private ComboBox select;
     private Button prev;
     private Button next;
-    private VerticalLayout testPanelLayout;
+    private LegacyVerticalLayout testPanelLayout;
     private Panel testPanel;
 
     @Override
@@ -60,7 +60,7 @@ public class TestSizeableIncomponents extends LegacyApplication {
         setMainWindow(w);
         setTheme("tests-components");
 
-        final VerticalLayout main = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
         w.setContent(main);
 
         select = new ComboBox();
@@ -101,7 +101,7 @@ public class TestSizeableIncomponents extends LegacyApplication {
             }
         });
 
-        HorizontalLayout controllers = new HorizontalLayout();
+        LegacyHorizontalLayout controllers = new LegacyHorizontalLayout();
         controllers.addComponent(prev);
         controllers.addComponent(select);
         controllers.addComponent(next);
@@ -130,7 +130,7 @@ public class TestSizeableIncomponents extends LegacyApplication {
             }
         });
 
-        testPanelLayout = new VerticalLayout();
+        testPanelLayout = new LegacyVerticalLayout();
         testPanel = new Panel(testPanelLayout);
         testPanel.setSizeFull();
         testPanel.setStyleName("testable");
@@ -191,11 +191,11 @@ public class TestSizeableIncomponents extends LegacyApplication {
 
                                 Component c = super.getComponent();
 
-                                VerticalLayout pl = new VerticalLayout();
+                                LegacyVerticalLayout pl = new LegacyVerticalLayout();
                                 pl.setMargin(true);
                                 Panel p = new Panel(
                                         "Wrapper panel (400px*400px)", pl);
-                                p.setContent(new VerticalLayout());
+                                p.setContent(new LegacyVerticalLayout());
                                 p.setWidth("400px");
                                 p.setHeight("400px");
                                 pl.addComponent(c);

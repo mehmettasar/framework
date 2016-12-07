@@ -22,7 +22,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.ListSelect;
 
@@ -31,11 +31,11 @@ public class WebkitScrollbarTest extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout uiLayout = new VerticalLayout();
+        final LegacyVerticalLayout uiLayout = new LegacyVerticalLayout();
         uiLayout.setMargin(true);
         setContent(uiLayout);
 
-        final VerticalLayout windowLayout = new VerticalLayout();
+        final LegacyVerticalLayout windowLayout = new LegacyVerticalLayout();
 
         final Window testWindow = new Window("WebKitFail", windowLayout);
         testWindow.setWidth(300, Unit.PIXELS);

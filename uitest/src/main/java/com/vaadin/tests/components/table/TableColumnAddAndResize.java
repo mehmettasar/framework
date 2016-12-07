@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class TableColumnAddAndResize extends AbstractReindeerTestUI {
@@ -33,7 +33,7 @@ public class TableColumnAddAndResize extends AbstractReindeerTestUI {
                 { "Valtaoja", "Likes cosmology and still "
                         + "lives unlike the others above" }, };
 
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
 
         final Table table = new Table("Awesome Table");
         table.setSizeFull();

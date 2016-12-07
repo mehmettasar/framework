@@ -814,7 +814,7 @@ public class FieldGroup implements Serializable {
      * For example:
      *
      * <pre>
-     * public class MyForm extends VerticalLayout {
+     * public class MyForm extends LegacyVerticalLayout {
      * private TextField firstName = new TextField("First name");
      * &#64;PropertyId("last")
      * private TextField lastName = new TextField("Last name");

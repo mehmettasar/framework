@@ -1,7 +1,7 @@
 package com.vaadin.tests.components.table;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -18,7 +18,7 @@ public class ColumnResizeEvent extends TestBase {
     @Override
     protected void setup() {
 
-        HorizontalLayout widths = new HorizontalLayout();
+        LegacyHorizontalLayout widths = new LegacyHorizontalLayout();
         widths.setSpacing(true);
         widths.setWidth("50%");
 

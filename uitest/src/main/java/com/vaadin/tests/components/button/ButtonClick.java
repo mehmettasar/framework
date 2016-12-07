@@ -22,7 +22,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class ButtonClick extends AbstractReindeerTestUI {
 
@@ -31,7 +31,7 @@ public class ButtonClick extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout rootLayout = new VerticalLayout();
+        final LegacyVerticalLayout rootLayout = new LegacyVerticalLayout();
         final Label statusLabel = new Label("Test initialized");
         rootLayout.addComponent(new Button("Click here", new ClickListener() {
 

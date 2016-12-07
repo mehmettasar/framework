@@ -5,14 +5,14 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TreeTable;
 
 public class ProgrammaticCollapse extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         final TreeTable table = new TreeTable();
         table.setPageLength(10);
         table.addContainerProperty("A", String.class, null);

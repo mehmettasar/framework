@@ -19,7 +19,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Window;
 
 public class ModalWindowFocus extends AbstractReindeerTestUI {
@@ -41,7 +41,7 @@ public class ModalWindowFocus extends AbstractReindeerTestUI {
                 w2.setModal(true);
                 addWindow(w2);
 
-                HorizontalLayout lay = new HorizontalLayout();
+                LegacyHorizontalLayout lay = new LegacyHorizontalLayout();
                 Button buttonInWindow = new Button("Open window");
                 buttonInWindow.setId("windowButton");
                 lay.addComponent(buttonInWindow);

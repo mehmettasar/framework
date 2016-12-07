@@ -16,7 +16,7 @@
 package com.vaadin.tests.layouts.layouttester.VLayout;
 
 import com.vaadin.tests.layouts.layouttester.BaseAddReplaceMove;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  *
@@ -30,6 +30,6 @@ public class VAddReplaceMove extends BaseAddReplaceMove {
      * @param layoutClass
      */
     public VAddReplaceMove() {
-        super(VerticalLayout.class);
+        super(LegacyVerticalLayout.class);
     }
 }

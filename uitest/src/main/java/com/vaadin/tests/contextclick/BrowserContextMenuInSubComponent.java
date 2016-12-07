@@ -27,7 +27,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 
 @Widgetset(TestingWidgetSet.NAME)
@@ -37,7 +37,7 @@ public class BrowserContextMenuInSubComponent extends AbstractReindeerTestUI {
     protected void setup(VaadinRequest request) {
         Panel panel = new Panel();
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         final TextArea textArea = new TextArea();
         // Make TextArea show regular context menu instead of firing the
         // server-side event.

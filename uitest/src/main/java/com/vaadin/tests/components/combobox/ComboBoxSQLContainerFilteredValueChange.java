@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.util.sqlcontainer.SQLContainer;
@@ -20,7 +20,7 @@ public class ComboBoxSQLContainerFilteredValueChange extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         addComponent(layout);
 
         final ComboBox myCombo = new ComboBox("MyCaption");

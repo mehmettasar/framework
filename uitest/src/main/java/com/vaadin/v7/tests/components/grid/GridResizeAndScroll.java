@@ -17,7 +17,7 @@ package com.vaadin.v7.tests.components.grid;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.event.SelectionEvent;
@@ -29,7 +29,7 @@ public class GridResizeAndScroll extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
         addComponent(content);
 
         final Grid g = new Grid();

@@ -6,7 +6,7 @@ import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 @SuppressWarnings("serial")
@@ -17,7 +17,7 @@ public class ExpandingContainerVisibleRowRaceCondition extends UI {
 
     @Override
     public void init(VaadinRequest request) {
-        final VerticalLayout rootLayout = new VerticalLayout();
+        final LegacyVerticalLayout rootLayout = new LegacyVerticalLayout();
 
         rootLayout.setSpacing(true);
         rootLayout.setSizeFull();

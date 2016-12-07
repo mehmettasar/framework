@@ -24,7 +24,7 @@ import com.vaadin.tests.util.SampleDirectory;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.Tree;
 import com.vaadin.v7.ui.Tree.ExpandEvent;
@@ -55,7 +55,7 @@ public class TreeFilesystem extends com.vaadin.server.LegacyApplication
         main.addComponent(new Label("<h2>Tree demo</h2>", ContentMode.HTML));
 
         // configure file structure panel
-        VerticalLayout explorerLayout = new VerticalLayout();
+        LegacyVerticalLayout explorerLayout = new LegacyVerticalLayout();
         explorerLayout.setMargin(true);
         explorerPanel.setContent(explorerLayout);
         main.addComponent(explorerPanel);

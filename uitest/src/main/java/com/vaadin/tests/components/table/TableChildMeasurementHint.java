@@ -10,7 +10,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.HasChildMeasurementHint.ChildMeasurementHint;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.v7.ui.Table;
@@ -18,8 +18,8 @@ import com.vaadin.v7.ui.TextField;
 
 public class TableChildMeasurementHint extends AbstractReindeerTestUI {
 
-    private HorizontalLayout buttonLayout = new HorizontalLayout();
-    private HorizontalLayout layout;
+    private LegacyHorizontalLayout buttonLayout = new LegacyHorizontalLayout();
+    private LegacyHorizontalLayout layout;
     private Table table1, table2, table3;
 
     @Override
@@ -29,7 +29,7 @@ public class TableChildMeasurementHint extends AbstractReindeerTestUI {
 
     protected void initMain() {
         ((AbstractOrderedLayout) getContent()).setMargin(false);
-        layout = new HorizontalLayout();
+        layout = new LegacyHorizontalLayout();
         layout.setSpacing(true);
         layout.setMargin(false);
         layout.setSizeFull();

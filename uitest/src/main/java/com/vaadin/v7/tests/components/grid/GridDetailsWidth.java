@@ -18,8 +18,8 @@ package com.vaadin.v7.tests.components.grid;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
 import com.vaadin.v7.ui.Grid;
@@ -32,7 +32,7 @@ public class GridDetailsWidth extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
 
         final Grid grid = new Grid();
@@ -49,7 +49,7 @@ public class GridDetailsWidth extends AbstractReindeerTestUI {
 
             @Override
             public Component getDetails(RowReference rowReference) {
-                HorizontalLayout myLayout = new HorizontalLayout();
+                LegacyHorizontalLayout myLayout = new LegacyHorizontalLayout();
                 TextArea textArea1 = new TextArea();
                 TextArea textArea2 = new TextArea();
                 textArea1.setSizeFull();

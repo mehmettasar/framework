@@ -7,14 +7,14 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 @SuppressWarnings("serial")
 public class ButtonToggleIcons extends UI {
 
     @Override
     protected void init(final VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         setContent(layout);
 
         final ThemeResource iconResource = new ThemeResource(

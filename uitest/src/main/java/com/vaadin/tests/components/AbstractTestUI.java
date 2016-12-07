@@ -17,7 +17,7 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.Notification.Type;
 import com.vaadin.ui.PushConfiguration;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public abstract class AbstractTestUI extends UI {
 
@@ -28,15 +28,15 @@ public abstract class AbstractTestUI extends UI {
         Label label = new Label(getTestDescription(), ContentMode.HTML);
         label.setWidth("100%");
 
-        VerticalLayout rootLayout = new VerticalLayout();
+        LegacyVerticalLayout rootLayout = new LegacyVerticalLayout();
         rootLayout.setMargin(true);
         setContent(rootLayout);
 
-        layout = new VerticalLayout();
+        layout = new LegacyVerticalLayout();
 
         rootLayout.addComponent(label);
         rootLayout.addComponent(layout);
-        ((VerticalLayout) getContent()).setExpandRatio(layout, 1);
+        ((LegacyVerticalLayout) getContent()).setExpandRatio(layout, 1);
 
         warnIfWidgetsetMaybeNotCompiled();
 
@@ -164,9 +164,9 @@ public abstract class AbstractTestUI extends UI {
         super.setContent(content);
     }
 
-    private VerticalLayout layout;
+    private LegacyVerticalLayout layout;
 
-    protected VerticalLayout getLayout() {
+    protected LegacyVerticalLayout getLayout() {
         return layout;
     }
 

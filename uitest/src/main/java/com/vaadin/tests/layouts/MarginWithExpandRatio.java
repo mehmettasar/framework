@@ -20,11 +20,11 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.tests.util.TestUtils;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MarginWithExpandRatio extends AbstractReindeerTestUI {
 
@@ -33,11 +33,11 @@ public class MarginWithExpandRatio extends AbstractReindeerTestUI {
         TestUtils.injectCSS(this,
                 ".hugemargin { margin: 10px 20px !important; }");
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         addLayoutTest(hl);
         hl.setExpandRatio(hl.getComponent(0), 1.0f);
         hl.setExpandRatio(hl.getComponent(2), 0.5f);
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         addLayoutTest(vl);
         vl.setExpandRatio(vl.getComponent(0), 1.0f);
         vl.setExpandRatio(vl.getComponent(2), 0.5f);

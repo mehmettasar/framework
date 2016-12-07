@@ -21,11 +21,11 @@ import com.vaadin.shared.ui.colorpicker.Color;
 import com.vaadin.ui.AbstractColorPicker.PopupStyle;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.ui.ColorPicker;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
-public class ColorPickers extends VerticalLayout implements View {
+public class ColorPickers extends LegacyVerticalLayout implements View {
     public ColorPickers() {
         setMargin(true);
 
@@ -33,7 +33,7 @@ public class ColorPickers extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);

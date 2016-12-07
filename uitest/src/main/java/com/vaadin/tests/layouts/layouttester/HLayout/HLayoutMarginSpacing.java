@@ -16,7 +16,7 @@
 package com.vaadin.tests.layouts.layouttester.HLayout;
 
 import com.vaadin.tests.layouts.layouttester.BaseLayoutForSpacingMargin;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 /**
  *
@@ -30,7 +30,7 @@ public class HLayoutMarginSpacing extends BaseLayoutForSpacingMargin {
      * @param layoutClass
      */
     public HLayoutMarginSpacing() {
-        super(HorizontalLayout.class);
+        super(LegacyHorizontalLayout.class);
     }
 
 }

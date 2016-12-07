@@ -21,7 +21,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.Grid;
@@ -83,7 +83,7 @@ public class GridColumnWidthsWithoutData extends AbstractReindeerTestUI {
     }
 
     private void replaceGrid(Grid newGrid) {
-        ((VerticalLayout) grid.getParent()).replaceComponent(grid, newGrid);
+        ((LegacyVerticalLayout) grid.getParent()).replaceComponent(grid, newGrid);
         grid = newGrid;
     }
 

@@ -15,14 +15,14 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.RichTextArea;
 import com.vaadin.v7.ui.Table;
 
 public class NavigatorTest extends UI {
 
     private Log log = new Log(5);
-    private Layout naviLayout = new VerticalLayout();
+    private Layout naviLayout = new LegacyVerticalLayout();
     private TextField params = new TextField("Parameters");
 
     private Navigator navi;
@@ -126,7 +126,7 @@ public class NavigatorTest extends UI {
     @Override
     protected void init(VaadinRequest req) {
         try {
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             setContent(layout);
 

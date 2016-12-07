@@ -6,7 +6,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class ExtraWindowShown extends AbstractReindeerTestUI {
@@ -18,7 +18,7 @@ public class ExtraWindowShown extends AbstractReindeerTestUI {
             @Override
             public void buttonClick(ClickEvent event) {
 
-                VerticalLayout layout = new VerticalLayout();
+                LegacyVerticalLayout layout = new LegacyVerticalLayout();
                 layout.setMargin(true);
                 final Window w = new Window("Sub window", layout);
                 w.center();

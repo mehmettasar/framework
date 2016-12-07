@@ -4,11 +4,11 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.ui.ComboBox;
 
@@ -27,7 +27,7 @@ public class DeepComponentTrees extends TestBase {
     }
 
     private int i = 0;
-    private Class<?> currentValue = VerticalLayout.class;
+    private Class<?> currentValue = LegacyVerticalLayout.class;
 
     @Override
     protected void setup() {
@@ -38,7 +38,7 @@ public class DeepComponentTrees extends TestBase {
         Label l = new Label(
                 "This is a nice game to guess how many Layouts your FF2 (or any other browser) can deal with. Due to the worldwide attempt to decrease energy consumption, playing this game is only allowed above 60° longitude betwheen August and May (as excess energy consumed by you CPU is used to heat your room). It is considered wise to save all your work before starting the game.");
 
-        VerticalLayout rootLayout = new VerticalLayout();
+        LegacyVerticalLayout rootLayout = new LegacyVerticalLayout();
         rootLayout.setMargin(true);
         root = new Panel("Test box", rootLayout);
         root.setWidth("600px");
@@ -58,8 +58,8 @@ public class DeepComponentTrees extends TestBase {
         s.setNullSelectionAllowed(false);
         s.addItem("-- Choose value --");
         s.setValue("-- Choose value --");
-        s.addItem(VerticalLayout.class);
-        s.addItem(HorizontalLayout.class);
+        s.addItem(LegacyVerticalLayout.class);
+        s.addItem(LegacyHorizontalLayout.class);
         s.addItem(GridLayout.class);
         s.addListener(new ComboBox.ValueChangeListener() {
 
@@ -98,7 +98,7 @@ public class DeepComponentTrees extends TestBase {
     }
 
     Layout getTestLayout() {
-        Layout l = new VerticalLayout();
+        Layout l = new LegacyVerticalLayout();
         if (currentValue == GridLayout.class) {
             l = new GridLayout(1, 1);
         } else {

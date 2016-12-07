@@ -3,15 +3,15 @@ package com.vaadin.tests.components.abstractcomponent;
 import com.vaadin.data.HasValue;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class TooltipTests extends TestBase {
 
     private Panel panel;
-    private VerticalLayout layout;
+    private LegacyVerticalLayout layout;
     private Label label;
 
     @Override
@@ -26,7 +26,7 @@ public class TooltipTests extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout topLayout = new HorizontalLayout();
+        LegacyHorizontalLayout topLayout = new LegacyHorizontalLayout();
         addComponent(topLayout);
         CheckBox panelCbox = new CheckBox("Panel");
         panelCbox.addValueChangeListener(panelListener);
@@ -43,7 +43,7 @@ public class TooltipTests extends TestBase {
         panel.setId("panel");
         addComponent(panel);
 
-        layout = new VerticalLayout();
+        layout = new LegacyVerticalLayout();
         layout.setId("layout");
         layout.setMargin(true);
         layout.setSpacing(true);

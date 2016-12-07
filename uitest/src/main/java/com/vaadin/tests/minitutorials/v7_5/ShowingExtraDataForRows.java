@@ -26,7 +26,7 @@ import com.vaadin.ui.Image;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
 import com.vaadin.v7.ui.Grid;
@@ -68,7 +68,7 @@ public class ShowingExtraDataForRows extends UI {
                         });
 
                 // Wrap up all the parts into a vertical layout
-                VerticalLayout layout = new VerticalLayout(label, image,
+                LegacyVerticalLayout layout = new LegacyVerticalLayout(label, image,
                         button);
                 layout.setSpacing(true);
                 layout.setMargin(true);

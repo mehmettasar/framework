@@ -21,15 +21,15 @@ import com.vaadin.ui.AbstractDateField;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class TestForAlignments extends CustomComponent {
 
     public TestForAlignments() {
 
-        final VerticalLayout main = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
 
         final Button b1 = new Button("Right");
         final Button b2 = new Button("Left");
@@ -40,7 +40,7 @@ public class TestForAlignments extends CustomComponent {
         final AbstractDateField d1 = new TestDateField("Center aligned");
         final AbstractDateField d2 = new TestDateField("Center aligned");
 
-        final VerticalLayout vert = new VerticalLayout();
+        final LegacyVerticalLayout vert = new LegacyVerticalLayout();
         vert.addComponent(b1);
         vert.addComponent(b2);
         vert.addComponent(t1);
@@ -50,7 +50,7 @@ public class TestForAlignments extends CustomComponent {
         vert.setComponentAlignment(b2, Alignment.TOP_LEFT);
         vert.setComponentAlignment(t1, Alignment.TOP_RIGHT);
         vert.setComponentAlignment(d1, Alignment.TOP_CENTER);
-        final HorizontalLayout hori = new HorizontalLayout();
+        final LegacyHorizontalLayout hori = new LegacyHorizontalLayout();
         hori.addComponent(b3);
         hori.addComponent(b4);
         hori.addComponent(t2);

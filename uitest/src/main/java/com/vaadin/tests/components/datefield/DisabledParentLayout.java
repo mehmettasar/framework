@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.tests.components.TestDateField;
 import com.vaadin.ui.AbstractDateField;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  *
@@ -30,12 +30,12 @@ public class DisabledParentLayout extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
 
         content.setSpacing(true);
         content.setMargin(true);
 
-        final VerticalLayout pane = new VerticalLayout();
+        final LegacyVerticalLayout pane = new LegacyVerticalLayout();
         AbstractDateField dateField = new TestDateField();
         pane.addComponent(dateField);
 

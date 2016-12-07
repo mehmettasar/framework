@@ -43,7 +43,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.NativeButton;
@@ -131,7 +131,7 @@ public class FileDownloaderUI extends AbstractTestUIWithLog {
 
     public void addComponents(String caption, ConnectorResource resource,
             List<Class<? extends Component>> components) {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setCaption(caption);
         for (Class<? extends Component> cls : components) {
             try {

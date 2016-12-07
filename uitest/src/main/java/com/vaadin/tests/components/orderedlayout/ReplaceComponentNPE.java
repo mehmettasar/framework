@@ -3,13 +3,13 @@ package com.vaadin.tests.components.orderedlayout;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class ReplaceComponentNPE extends TestBase {
 
     @Override
     protected String getDescription() {
-        return "Clicking 'ReplaceComponent' should replace the 'Button' button with a VericalLayout, and move the button inside the verticalLayout. Visually this can be seen by the added margins of the VerticalLayout.";
+        return "Clicking 'ReplaceComponent' should replace the 'Button' button with a VericalLayout, and move the button inside the verticalLayout. Visually this can be seen by the added margins of the LegacyVerticalLayout.";
     }
 
     @Override
@@ -18,7 +18,7 @@ public class ReplaceComponentNPE extends TestBase {
     }
 
     final Button button = new Button("Button");
-    final VerticalLayout outer = new VerticalLayout();
+    final LegacyVerticalLayout outer = new LegacyVerticalLayout();
 
     @Override
     protected void setup() {

@@ -24,7 +24,7 @@ import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Slider;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
@@ -38,7 +38,7 @@ public class TestForWindowing extends CustomComponent {
 
     public TestForWindowing() {
 
-        final VerticalLayout main = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
 
         main.addComponent(
                 new Label("Click the button to create a new inline window."));
@@ -51,7 +51,7 @@ public class TestForWindowing extends CustomComponent {
 
                     @Override
                     public void buttonClick(ClickEvent event) {
-                        VerticalLayout layout = new VerticalLayout();
+                        LegacyVerticalLayout layout = new LegacyVerticalLayout();
                         layout.setMargin(true);
                         Window w = new Window("Testing Window", layout);
 

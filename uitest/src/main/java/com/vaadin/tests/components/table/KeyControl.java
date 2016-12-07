@@ -3,9 +3,9 @@ package com.vaadin.tests.components.table;
 import java.util.Set;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
@@ -26,12 +26,12 @@ public class KeyControl extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setSpacing(true);
         addComponent(layout);
 
         // Create read only table
-        VerticalLayout layout1 = new VerticalLayout();
+        LegacyVerticalLayout layout1 = new LegacyVerticalLayout();
         layout1.setSpacing(true);
 
         table1.setContainerDataSource(createContainer());
@@ -54,7 +54,7 @@ public class KeyControl extends TestBase {
         layout.addComponent(layout1);
 
         // Create single select table
-        VerticalLayout layout2 = new VerticalLayout();
+        LegacyVerticalLayout layout2 = new LegacyVerticalLayout();
         layout2.setSpacing(true);
 
         table2.setContainerDataSource(createContainer());
@@ -77,7 +77,7 @@ public class KeyControl extends TestBase {
         layout.addComponent(layout2);
 
         // Create multi select table
-        VerticalLayout layout3 = new VerticalLayout();
+        LegacyVerticalLayout layout3 = new LegacyVerticalLayout();
         layout3.setSpacing(true);
 
         table3.setContainerDataSource(createContainer());

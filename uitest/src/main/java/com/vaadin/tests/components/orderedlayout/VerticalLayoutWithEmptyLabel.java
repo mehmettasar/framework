@@ -8,19 +8,16 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.v7.ui.Table;
-import com.vaadin.v7.ui.TextArea;
-import com.vaadin.v7.ui.TextField;
 
 public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
 
     private static final float UPPER_BAR_HEIGHT = 42;
 
-    private final VerticalLayout rootLayout = new VerticalLayout();
+    private final LegacyVerticalLayout rootLayout = new LegacyVerticalLayout();
     private final Label subtitleLabel = new Label();
     private final String rootTitle;
 
@@ -85,7 +82,7 @@ public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
         titleLabel.setSizeUndefined();
         titleLabel.setHeight(18, Sizeable.Unit.PIXELS);
         subtitleLabel.setSizeUndefined();
-        VerticalLayout titleLayout = new VerticalLayout();
+        LegacyVerticalLayout titleLayout = new LegacyVerticalLayout();
         titleLayout.setSizeUndefined();
         titleLayout.addComponent(titleLabel);
         titleLayout.setComponentAlignment(titleLabel, Alignment.BOTTOM_CENTER);
@@ -94,7 +91,7 @@ public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
                 Alignment.BOTTOM_CENTER);
 
         // Sequence parts
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.addStyleName("pexp-main-upper-bar");
         layout.setSpacing(true);
         layout.setWidth("100%");
@@ -106,7 +103,7 @@ public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
     }
 
     protected Component buildRootSeparator() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Panel panel = new Panel(layout);
         panel.addStyleName("pexp-separator");
@@ -115,7 +112,7 @@ public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
         return panel;
     }
 
-    class MyPanel extends VerticalLayout {
+    class MyPanel extends LegacyVerticalLayout {
 
         private final Table table;
         private final Label myLabel = new Label("");
@@ -133,7 +130,7 @@ public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
             this.setHeight("100%");
 
             // Setup top layout with controls and fields
-            HorizontalLayout topLayout = new HorizontalLayout();
+            LegacyHorizontalLayout topLayout = new LegacyHorizontalLayout();
             topLayout.setSpacing(true);
 
             // Foobar Content
@@ -153,7 +150,7 @@ public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
             // smsNumber.setStyleName("pexp-fixed-width");
 
             // Phone number and button layout
-            VerticalLayout buttonNumberLayout = new VerticalLayout();
+            LegacyVerticalLayout buttonNumberLayout = new LegacyVerticalLayout();
             buttonNumberLayout.setSizeUndefined();
             buttonNumberLayout.setHeight("100%");
             buttonNumberLayout.addComponent(smsNumber);
@@ -173,7 +170,7 @@ public class VerticalLayoutWithEmptyLabel extends AbstractReindeerTestUI {
             setExpandRatio(table, 1);
 
             // Message table controls
-            VerticalLayout tableControlsLayout = new VerticalLayout();
+            LegacyVerticalLayout tableControlsLayout = new LegacyVerticalLayout();
             tableControlsLayout.setSizeUndefined();
             tableControlsLayout.setSpacing(true);
 

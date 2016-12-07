@@ -4,7 +4,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.PopupView;
 import com.vaadin.ui.PopupView.Content;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.RichTextArea;
 
 public class PopupViewWithRTE extends TestBase {
@@ -25,7 +25,7 @@ public class PopupViewWithRTE extends TestBase {
 
             RichTextArea rte = new RichTextArea();
 
-            VerticalLayout vl = new VerticalLayout();
+            LegacyVerticalLayout vl = new LegacyVerticalLayout();
 
             @Override
             public String getMinimizedValueAsHTML() {

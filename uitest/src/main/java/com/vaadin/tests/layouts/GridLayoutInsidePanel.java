@@ -4,13 +4,13 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class GridLayoutInsidePanel extends TestBase {
 
     @Override
     protected String getDescription() {
-        return "The first Panel contains a VerticalLayout, which contains a GridLayout, which contains a Label. The second panel directly contains a GridLayout, which contains a Label. Both should be rendered in the same way.";
+        return "The first Panel contains a LegacyVerticalLayout, which contains a GridLayout, which contains a Label. The second panel directly contains a GridLayout, which contains a Label. Both should be rendered in the same way.";
     }
 
     @Override
@@ -26,7 +26,7 @@ public class GridLayoutInsidePanel extends TestBase {
             gl.addComponent(
                     new Label("A label which defines the size of the GL"));
 
-            VerticalLayout pl = new VerticalLayout();
+            LegacyVerticalLayout pl = new LegacyVerticalLayout();
             pl.setMargin(true);
             pl.setSizeUndefined();
             Panel p = new Panel("Panel 1", pl);

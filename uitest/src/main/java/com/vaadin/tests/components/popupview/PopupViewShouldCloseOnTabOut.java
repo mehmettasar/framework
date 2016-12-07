@@ -4,7 +4,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.PopupView;
 import com.vaadin.ui.PopupView.Content;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 @SuppressWarnings("serial")
@@ -31,7 +31,7 @@ public class PopupViewShouldCloseOnTabOut extends TestBase {
 
             @Override
             public Component getPopupComponent() {
-                VerticalLayout vl = new VerticalLayout();
+                LegacyVerticalLayout vl = new LegacyVerticalLayout();
                 TextField field1 = new TextField();
                 field1.setValue("one");
                 field1.focus();

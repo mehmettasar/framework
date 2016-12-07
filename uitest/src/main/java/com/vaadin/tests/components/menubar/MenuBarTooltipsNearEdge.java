@@ -22,7 +22,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.Command;
 import com.vaadin.ui.MenuBar.MenuItem;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Test to see if tooltips will render in the correct locations near the edges.
@@ -38,7 +38,7 @@ public class MenuBarTooltipsNearEdge extends AbstractReindeerTestUI {
      */
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout vlayout = new VerticalLayout();
+        LegacyVerticalLayout vlayout = new LegacyVerticalLayout();
         vlayout.setSizeFull();
         vlayout.addComponent(buildMenu("Menu"));
         vlayout.setComponentAlignment(vlayout.getComponent(0),

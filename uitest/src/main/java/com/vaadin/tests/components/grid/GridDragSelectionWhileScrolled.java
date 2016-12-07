@@ -21,20 +21,20 @@ import com.vaadin.tests.components.grid.basics.DataObject;
 import com.vaadin.tests.components.grid.basics.GridBasics;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.Grid.SelectionMode;
-import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Layout;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.renderers.DateRenderer;
 import com.vaadin.ui.renderers.HtmlRenderer;
 import com.vaadin.ui.renderers.NumberRenderer;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class GridDragSelectionWhileScrolled extends AbstractTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        Layout layout = new VerticalLayout();
+        Layout layout = new LegacyVerticalLayout();
 
-        HorizontalLayout spacer = new HorizontalLayout();
+        LegacyHorizontalLayout spacer = new LegacyHorizontalLayout();
         spacer.setHeight("1000px");
         layout.addComponent(spacer);
 

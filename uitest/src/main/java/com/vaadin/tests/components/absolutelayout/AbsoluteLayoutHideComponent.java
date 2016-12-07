@@ -24,16 +24,16 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Embedded;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.PasswordField;
 import com.vaadin.v7.ui.TextField;
 
 public class AbsoluteLayoutHideComponent extends AbstractReindeerTestUI {
 
     private AbsoluteLayout mainLayout;
-    private VerticalLayout topBar = new VerticalLayout();
+    private LegacyVerticalLayout topBar = new LegacyVerticalLayout();
     private GridLayout menu;
     private TextField editEmail = new TextField();
     private PasswordField editPassword = new PasswordField();
@@ -47,7 +47,7 @@ public class AbsoluteLayoutHideComponent extends AbstractReindeerTestUI {
         topBar.setHeight("50px");
         topBar.setWidth("100%");
 
-        HorizontalLayout layoutLogin = new HorizontalLayout();
+        LegacyHorizontalLayout layoutLogin = new LegacyHorizontalLayout();
         layoutLogin.setSpacing(true);
         layoutLogin.setHeight("100%");
 

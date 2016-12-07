@@ -5,7 +5,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class ExecuteJavaScript extends AbstractTestCase {
 
@@ -16,7 +16,7 @@ public class ExecuteJavaScript extends AbstractTestCase {
 
         for (final String script : new String[] { "alert('foo');",
                 "window.print()", "document.write('foo')" }) {
-            VerticalLayout pl = new VerticalLayout();
+            LegacyVerticalLayout pl = new LegacyVerticalLayout();
             pl.setMargin(true);
             Panel p = new Panel("Example: " + script, pl);
             pl.addComponent(createScriptButton(script));

@@ -24,11 +24,11 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Image;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 @Theme("reindeer")
@@ -72,7 +72,7 @@ public class ThemeChangeOnTheFly extends AbstractTestUIWithLog {
         gl.setWidth("500px");
         gl.setHeight("800px");
 
-        HorizontalLayout images = new HorizontalLayout();
+        LegacyHorizontalLayout images = new LegacyHorizontalLayout();
         images.setSpacing(true);
 
         Label l = new Label("Chameleon theme image in caption");
@@ -90,7 +90,7 @@ public class ThemeChangeOnTheFly extends AbstractTestUIWithLog {
         getLayout().setSpacing(true);
 
         Window w = new Window();
-        w.setContent(new VerticalLayout(new Button("Button in window")));
+        w.setContent(new LegacyVerticalLayout(new Button("Button in window")));
         addWindow(w);
     }
 

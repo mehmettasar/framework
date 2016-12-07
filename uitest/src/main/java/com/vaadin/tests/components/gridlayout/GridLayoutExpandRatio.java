@@ -20,11 +20,11 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 
 public class GridLayoutExpandRatio extends AbstractReindeerTestUI {
-    HorizontalLayout layout;
+    LegacyHorizontalLayout layout;
     GridLayout gridLayout;
     GridLayout gridLayout2;
     private static final int ROWS = 5;
@@ -35,7 +35,7 @@ public class GridLayoutExpandRatio extends AbstractReindeerTestUI {
     protected void setup(VaadinRequest request) {
 
         labels = new Label[ROWS][COLS];
-        layout = new HorizontalLayout();
+        layout = new LegacyHorizontalLayout();
         gridLayout = new GridLayout(ROWS, COLS);
         gridLayout.setHideEmptyRowsAndColumns(true);
 
@@ -60,7 +60,7 @@ public class GridLayoutExpandRatio extends AbstractReindeerTestUI {
         gridLayout2.setWidth("500px");
         gridLayout2.setSpacing(true);
         addComponent(layout);
-        HorizontalLayout space = new HorizontalLayout();
+        LegacyHorizontalLayout space = new LegacyHorizontalLayout();
         space.setWidth("100px");
         layout.addComponent(gridLayout);
         layout.addComponent(space);

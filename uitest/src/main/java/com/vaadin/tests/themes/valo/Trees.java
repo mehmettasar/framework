@@ -21,16 +21,16 @@ import com.vaadin.event.dd.acceptcriteria.AcceptAll;
 import com.vaadin.event.dd.acceptcriteria.AcceptCriterion;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.ui.Tree;
 import com.vaadin.v7.ui.Tree.TreeDragMode;
 
-public class Trees extends VerticalLayout implements View {
+public class Trees extends LegacyVerticalLayout implements View {
     public Trees() {
         setMargin(true);
 
@@ -38,7 +38,7 @@ public class Trees extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);

@@ -6,7 +6,7 @@ import java.util.List;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 public class ComboboxPopupScrolling extends AbstractTestUIWithLog {
     @Override
@@ -32,7 +32,7 @@ public class ComboboxPopupScrolling extends AbstractTestUIWithLog {
         }
         combobox4.setItems(items);
 
-        HorizontalLayout hl = new HorizontalLayout(combobox, combobox2,
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout(combobox, combobox2,
                 combobox3, combobox4);
         addComponent(hl);
     }

@@ -29,11 +29,11 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.PushConfiguration;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.NativeSelect;
@@ -44,15 +44,15 @@ import com.vaadin.v7.ui.TextField;
  * @since 7.1
  * @author Vaadin Ltd
  */
-public class PushConfigurator extends VerticalLayout {
+public class PushConfigurator extends LegacyVerticalLayout {
     private NativeSelect pushMode = new NativeSelect("Push mode");
     private NativeSelect transport = new NativeSelect("Transport");
     private NativeSelect fallbackTransport = new NativeSelect("Fallback");
     private TextField parameter = new TextField("Parameter");
     private TextField value = new TextField("Value");
     private Button set = new Button("Set");
-    private HorizontalLayout paramValue = new HorizontalLayout();
-    private VerticalLayout vl = new VerticalLayout();
+    private LegacyHorizontalLayout paramValue = new LegacyHorizontalLayout();
+    private LegacyVerticalLayout vl = new LegacyVerticalLayout();
     private UI ui;
 
     private Label status = new Label("", ContentMode.PREFORMATTED);

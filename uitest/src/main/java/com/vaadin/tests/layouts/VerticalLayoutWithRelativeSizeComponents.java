@@ -8,7 +8,7 @@ public class VerticalLayoutWithRelativeSizeComponents extends TestBase {
 
     @Override
     protected String getDescription() {
-        return "A undefined wide VerticalLayout containing a 100% wide label, a Button and another identical label. The labels should be as wide as the button (400px) and there should be no extra space between the bottom of the first label and the button.";
+        return "A undefined wide LegacyVerticalLayout containing a 100% wide label, a Button and another identical label. The labels should be as wide as the button (400px) and there should be no extra space between the bottom of the first label and the button.";
     }
 
     @Override

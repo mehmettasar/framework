@@ -25,7 +25,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.fieldgroup.FieldGroup;
 import com.vaadin.v7.data.util.BeanItem;
 import com.vaadin.v7.ui.TextField;
@@ -38,7 +38,7 @@ public class BigDecimalTextField extends AbstractTestUIWithLog {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         setLocale(new Locale("fi", "FI"));
 

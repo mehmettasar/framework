@@ -6,7 +6,7 @@ import com.vaadin.ui.AbstractTextField;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TextField;
 import com.vaadin.v7.ui.TextArea;
@@ -55,7 +55,7 @@ public class SelectionAndCursorPosition extends AbstractReindeerTestUI {
         selectAll.addClickListener(event -> activeComponent.selectAll());
         fl.addComponent(selectAll);
 
-        HorizontalLayout selectRange = new HorizontalLayout();
+        LegacyHorizontalLayout selectRange = new LegacyHorizontalLayout();
         selectRange.setCaption(
                 "Select range of text ( setSelectionRange(int start, int lengt) )");
         final TextField start = new TextField("From:");
@@ -76,7 +76,7 @@ public class SelectionAndCursorPosition extends AbstractReindeerTestUI {
         selectRange.addComponent(select);
         fl.addComponent(selectRange);
 
-        HorizontalLayout setCursorPosition = new HorizontalLayout();
+        LegacyHorizontalLayout setCursorPosition = new LegacyHorizontalLayout();
         final TextField pos = new TextField("Position:");
         pos.setId(CURSOR_POS_ID);
         Button setCursorButton = new Button("set");

@@ -3,7 +3,7 @@ package com.vaadin.tests.components.window;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 /**
@@ -33,7 +33,7 @@ public class TestTooSmallSubwindowSize extends AbstractReindeerTestUI {
     }
 
     private Window createNonResizableWindow() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window w = new Window("Scroll", layout);
         Label desc = new Label("This is a new child window with a preset"
@@ -59,7 +59,7 @@ public class TestTooSmallSubwindowSize extends AbstractReindeerTestUI {
     }
 
     private Window createNonResizableWindowWithHorizontalScrollbar() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window w = new Window("Scroll", layout);
         Label desc = new Label("This is a new child window with a preset"
@@ -87,7 +87,7 @@ public class TestTooSmallSubwindowSize extends AbstractReindeerTestUI {
     }
 
     private Window createResizableWindow() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window w = new Window("Resize", layout);
         Label desc = new Label("This is a new child window with a preset"
@@ -112,7 +112,7 @@ public class TestTooSmallSubwindowSize extends AbstractReindeerTestUI {
     }
 
     private Window createResizableWindowWithHorizontalScrollbar() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window w = new Window("Resize", layout);
         Label desc = new Label("This is a new child window with a preset"

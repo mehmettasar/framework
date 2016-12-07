@@ -20,7 +20,7 @@ import com.vaadin.server.Sizeable;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalSplitPanel;
 
@@ -43,7 +43,7 @@ public class RetainSplitterPositionWhenOutOfBounds extends AbstractReindeerTestU
             splitPanel.setSecondComponent(new Label("Middle"));
             splitPanel.setSplitPosition(50, Sizeable.Unit.PERCENTAGE);
 
-            HorizontalLayout bottom = new HorizontalLayout();
+            LegacyHorizontalLayout bottom = new LegacyHorizontalLayout();
             bottom.setWidth("100%");
             bottom.addComponent(new Label("Bottom"));
 

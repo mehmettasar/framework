@@ -4,9 +4,9 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class RelativeChildrenWithoutExpand extends AbstractReindeerTestUI {
 
@@ -14,16 +14,16 @@ public class RelativeChildrenWithoutExpand extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final HorizontalLayout horizontalExpand = new HorizontalLayout();
+        final LegacyHorizontalLayout horizontalExpand = new LegacyHorizontalLayout();
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.addComponent(new Label(getTestDescription()));
         vl.setSizeFull();
 
         // Replacing default AbstractTestUI content to get the right expansions
         setContent(vl);
 
-        HorizontalLayout verticalExpand = new HorizontalLayout();
+        LegacyHorizontalLayout verticalExpand = new LegacyHorizontalLayout();
         verticalExpand.addComponent(
                 new Button("Add relative child", new Button.ClickListener() {
                     @Override
@@ -45,7 +45,7 @@ public class RelativeChildrenWithoutExpand extends AbstractReindeerTestUI {
 
     @Override
     protected String getTestDescription() {
-        return "HorizontalLayout containing relatively sized components that are not expanded should not cause infinite layout loops when scrollbars appear. Add children until the entire space is filled up.";
+        return "LegacyHorizontalLayout containing relatively sized components that are not expanded should not cause infinite layout loops when scrollbars appear. Add children until the entire space is filled up.";
     }
 
     @Override

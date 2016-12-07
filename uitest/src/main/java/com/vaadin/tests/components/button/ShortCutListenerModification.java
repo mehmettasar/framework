@@ -8,7 +8,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 @SuppressWarnings("serial")
@@ -32,7 +32,7 @@ public class ShortCutListenerModification extends TestBase
 
         for (int j = 0; j < 20; j++) {
 
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             Window window = new Window();
             window.setContent(layout);

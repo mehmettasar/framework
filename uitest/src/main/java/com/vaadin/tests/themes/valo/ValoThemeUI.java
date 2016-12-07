@@ -42,7 +42,7 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.MenuItem;
@@ -238,7 +238,7 @@ public class ValoThemeUI extends UI {
         menuItems.put("calendar", "Calendar");
         menuItems.put("forms", "Forms");
 
-        HorizontalLayout top = new HorizontalLayout();
+        LegacyHorizontalLayout top = new LegacyHorizontalLayout();
         top.setWidth("100%");
         top.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
         top.addStyleName(ValoTheme.MENU_TITLE);

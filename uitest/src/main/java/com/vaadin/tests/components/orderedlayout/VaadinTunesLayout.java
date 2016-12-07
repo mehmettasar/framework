@@ -11,12 +11,12 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.Embedded;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.Slider;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.NativeSelect;
 import com.vaadin.v7.ui.Table;
 
@@ -33,7 +33,7 @@ public class VaadinTunesLayout extends AbstractReindeerTestUI {
          */
 
         // Main (browser) window, needed in all Vaadin applications
-        VerticalLayout rootLayout = new VerticalLayout();
+        LegacyVerticalLayout rootLayout = new LegacyVerticalLayout();
         // final Window root = new Window("VaadinTunes", rootLayout);
 
         /*
@@ -47,14 +47,14 @@ public class VaadinTunesLayout extends AbstractReindeerTestUI {
         // not a working sound player.",
         // Notification.TYPE_HUMANIZED_MESSAGE);
 
-        // Our root window contains one VerticalLayout, let's make
+        // Our root window contains one LegacyVerticalLayout, let's make
         // sure it's 100% sized, and remove unwanted margins
         rootLayout.setSizeFull();
         rootLayout.setMargin(false);
 
         // Top area, containing playback and volume controls, play status, view
         // modes and search
-        HorizontalLayout top = new HorizontalLayout();
+        LegacyHorizontalLayout top = new LegacyHorizontalLayout();
         top.setWidth("100%");
         top.setMargin(new MarginInfo(false, true)); // Enable
         // horizontal
@@ -65,10 +65,10 @@ public class VaadinTunesLayout extends AbstractReindeerTestUI {
         rootLayout.addComponent(top);
 
         // Create the placeholders for all the components in the top area
-        HorizontalLayout playback = new HorizontalLayout();
-        HorizontalLayout volume = new HorizontalLayout();
-        HorizontalLayout status = new HorizontalLayout();
-        HorizontalLayout viewmodes = new HorizontalLayout();
+        LegacyHorizontalLayout playback = new LegacyHorizontalLayout();
+        LegacyHorizontalLayout volume = new LegacyHorizontalLayout();
+        LegacyHorizontalLayout status = new LegacyHorizontalLayout();
+        LegacyHorizontalLayout viewmodes = new LegacyHorizontalLayout();
         ComboBox<String> search = new ComboBox<>();
 
         // Add the components and align them properly
@@ -121,7 +121,7 @@ public class VaadinTunesLayout extends AbstractReindeerTestUI {
 
         // We'll need another layout to show currently playing track and
         // progress
-        VerticalLayout trackDetails = new VerticalLayout();
+        LegacyVerticalLayout trackDetails = new LegacyVerticalLayout();
         trackDetails.setWidth("100%");
         Label track = new Label("Track Name");
         Label album = new Label("Album Name - Artist");
@@ -180,7 +180,7 @@ public class VaadinTunesLayout extends AbstractReindeerTestUI {
 
         // Let's add some content to the sidebar
         // First, we need a layout to but all components in
-        VerticalLayout sidebar = new VerticalLayout();
+        LegacyVerticalLayout sidebar = new LegacyVerticalLayout();
         sidebar.setSizeFull();
         bottom.setFirstComponent(sidebar);
 
@@ -188,9 +188,9 @@ public class VaadinTunesLayout extends AbstractReindeerTestUI {
          * Then we need some labels and buttons, and an album cover image The
          * labels and buttons go into their own vertical layout, since we want
          * the 'sidebar' layout to be expanding (cover image in the bottom).
-         * VerticalLayout is by default 100% wide.
+         * LegacyVerticalLayout is by default 100% wide.
          */
-        VerticalLayout selections = new VerticalLayout();
+        LegacyVerticalLayout selections = new LegacyVerticalLayout();
         Label library = new Label("Library");
         Button music = new NativeButton("Music");
         music.setWidth("100%");

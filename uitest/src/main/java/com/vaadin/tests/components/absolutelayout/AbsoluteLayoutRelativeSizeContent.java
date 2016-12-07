@@ -21,7 +21,7 @@ import com.vaadin.shared.ui.MarginInfo;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.AbsoluteLayout;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Table;
 
 /**
@@ -34,7 +34,7 @@ public class AbsoluteLayoutRelativeSizeContent extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout level1 = new HorizontalLayout(
+        LegacyHorizontalLayout level1 = new LegacyHorizontalLayout(
                 createComparisonTableOnFixed(), createTableOnFixed(),
                 createHalfTableOnFixed(), createHalfTableAndFixedTableOnFixed(),
                 createHalfTableOnFull());
@@ -44,7 +44,7 @@ public class AbsoluteLayoutRelativeSizeContent extends AbstractReindeerTestUI {
                 level1.getComponent(level1.getComponentCount() - 1), 1);
         level1.setMargin(new MarginInfo(true, false, false, false));
 
-        HorizontalLayout level2 = new HorizontalLayout(createFullOnFixed(),
+        LegacyHorizontalLayout level2 = new LegacyHorizontalLayout(createFullOnFixed(),
                 createFullOnFull());
         level2.setSpacing(true);
         level2.setWidth(100, Unit.PERCENTAGE);

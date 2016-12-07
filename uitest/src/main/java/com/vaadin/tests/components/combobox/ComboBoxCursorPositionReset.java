@@ -18,14 +18,14 @@ package com.vaadin.tests.components.combobox;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 
 public class ComboBoxCursorPositionReset extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final HorizontalLayout root = new HorizontalLayout();
+        final LegacyHorizontalLayout root = new LegacyHorizontalLayout();
         root.setSizeFull();
         setContent(root);
 

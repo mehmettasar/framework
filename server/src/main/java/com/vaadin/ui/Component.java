@@ -802,7 +802,7 @@ public interface Component extends ClientConnector, Sizeable, Serializable {
      *         name.addListener(this);
      *         layout.addComponent(name);
      *
-     *         // Handle button clicks as generic events instead
+     *         // Handle button clicks as generic events insteaGd
      *         // of Button.ClickEvent events
      *         ok = new Button(&quot;OK&quot;);
      *         ok.addListener(this);

@@ -13,12 +13,12 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.ColorPicker;
 import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 @Widgetset("com.vaadin.DefaultWidgetSet")
 public class CSSInjectWithColorpicker extends UI {
@@ -49,7 +49,7 @@ public class CSSInjectWithColorpicker extends UI {
                         + "Tempor est tellus vitae, pretium condimentum facilisis sit. Sagittis "
                         + "quam, ac urna eros est cras id cras, eleifend eu mattis nec.");
 
-        VerticalLayout content = new VerticalLayout(editor);
+        LegacyVerticalLayout content = new LegacyVerticalLayout(editor);
         content.setMargin(true);
         setContent(content);
     }
@@ -66,13 +66,13 @@ public class CSSInjectWithColorpicker extends UI {
         Panel editor = new Panel("Text Editor");
         editor.setWidth("580px");
 
-        VerticalLayout panelContent = new VerticalLayout();
+        LegacyVerticalLayout panelContent = new LegacyVerticalLayout();
         panelContent.setSpacing(true);
         panelContent.setMargin(new MarginInfo(true, false, false, false));
         editor.setContent(panelContent);
 
         // Create the toolbar
-        HorizontalLayout toolbar = new HorizontalLayout();
+        LegacyHorizontalLayout toolbar = new LegacyHorizontalLayout();
         toolbar.setSpacing(true);
         toolbar.setMargin(new MarginInfo(false, false, false, true));
 

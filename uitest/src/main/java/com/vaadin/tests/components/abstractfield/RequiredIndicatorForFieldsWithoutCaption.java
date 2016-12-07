@@ -11,10 +11,10 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.ui.Field;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class RequiredIndicatorForFieldsWithoutCaption
@@ -33,8 +33,8 @@ public class RequiredIndicatorForFieldsWithoutCaption
         });
         addComponent(required);
         addComponent(createWrappedTextField(new GridLayout(2, 1)));
-        addComponent(createWrappedTextField(new VerticalLayout()));
-        addComponent(createWrappedTextField(new HorizontalLayout()));
+        addComponent(createWrappedTextField(new LegacyVerticalLayout()));
+        addComponent(createWrappedTextField(new LegacyHorizontalLayout()));
         AbsoluteLayout al = new AbsoluteLayout();
         al.setWidth("400px");
         al.setHeight("100px");
@@ -44,7 +44,7 @@ public class RequiredIndicatorForFieldsWithoutCaption
 
     /**
      * @since
-     * @param gridLayout
+     * @param container
      * @return
      */
     private Component createWrappedTextField(ComponentContainer container) {

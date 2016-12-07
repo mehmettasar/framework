@@ -24,7 +24,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet.Tab;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Test UI for Accordion: old widget should be removed from the tab.
@@ -54,7 +54,7 @@ public class AccordionAddTab extends AbstractReindeerTestUI {
     }
 
     private Component addTab(String tag) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.addComponent(new Label("On tab: " + tag));
         return new Panel(tag, layout);
     }

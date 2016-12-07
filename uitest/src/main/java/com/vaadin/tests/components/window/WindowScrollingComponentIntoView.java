@@ -5,11 +5,11 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.Table;
 
@@ -41,7 +41,7 @@ public class WindowScrollingComponentIntoView extends AbstractTestCase {
 
         final Component x9 = l2;
 
-        HorizontalLayout horizontalLayout = new HorizontalLayout();
+        LegacyHorizontalLayout horizontalLayout = new LegacyHorizontalLayout();
 
         Component l = null;
         for (int i = 0; i < 10; i++) {
@@ -52,7 +52,7 @@ public class WindowScrollingComponentIntoView extends AbstractTestCase {
         getMainWindow().addComponent(horizontalLayout);
         final Component y9 = l;
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         final Window window = new Window();
         window.setHeight("500px");
@@ -77,7 +77,7 @@ public class WindowScrollingComponentIntoView extends AbstractTestCase {
                     }
                 }));
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         Panel panel = new Panel("scrollable panel", panelLayout);
         panel.setHeight(400, Panel.UNITS_PIXELS);
@@ -94,7 +94,7 @@ public class WindowScrollingComponentIntoView extends AbstractTestCase {
 
         final Component x29 = l2;
 
-        horizontalLayout = new HorizontalLayout();
+        horizontalLayout = new LegacyHorizontalLayout();
 
         l = null;
         for (int i = 0; i < 10; i++) {
@@ -104,7 +104,7 @@ public class WindowScrollingComponentIntoView extends AbstractTestCase {
         panelLayout.addComponent(horizontalLayout);
         final Component y29 = l;
 
-        ((VerticalLayout) getMainWindow().getContent()).addComponent(
+        ((LegacyVerticalLayout) getMainWindow().getContent()).addComponent(
                 new Button("Scroll win to X9", new ClickListener() {
                     @Override
                     public void buttonClick(ClickEvent event) {
@@ -112,7 +112,7 @@ public class WindowScrollingComponentIntoView extends AbstractTestCase {
                         // window.scrollIntoView(x29);
                     }
                 }), 0);
-        ((VerticalLayout) getMainWindow().getContent()).addComponent(
+        ((LegacyVerticalLayout) getMainWindow().getContent()).addComponent(
                 new Button("Scroll win to Y9", new ClickListener() {
                     @Override
                     public void buttonClick(ClickEvent event) {

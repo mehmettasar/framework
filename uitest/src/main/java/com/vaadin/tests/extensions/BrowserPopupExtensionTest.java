@@ -29,7 +29,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.NativeButton;
@@ -85,7 +85,7 @@ public class BrowserPopupExtensionTest extends AbstractReindeerTestUI {
 
     public void addComponents(List<Class<? extends Component>> components,
             String URL) {
-        final HorizontalLayout hl = new HorizontalLayout();
+        final LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         for (Class<? extends Component> cls : components) {
             try {
                 AbstractComponent c = (AbstractComponent) cls.newInstance();

@@ -6,7 +6,7 @@ import java.util.List;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.shared.ui.grid.HeightMode;
 import com.vaadin.v7.ui.Grid;
@@ -32,7 +32,7 @@ public class GridRowHeightChange extends AbstractReindeerTestUI {
         grid.setHeightByRows(10);
 
         // create a tabsheet with one tab and place grid inside
-        VerticalLayout tab = new VerticalLayout();
+        LegacyVerticalLayout tab = new LegacyVerticalLayout();
         TabSheet tabSheet = new TabSheet();
         tabSheet.setWidthUndefined();
         tabSheet.addTab(tab, "Tab");
@@ -50,7 +50,7 @@ public class GridRowHeightChange extends AbstractReindeerTestUI {
                     }
                 });
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSpacing(true);
         layout.setSizeUndefined();
 

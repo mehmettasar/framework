@@ -36,7 +36,7 @@ import com.vaadin.ui.Notification.Type;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.Upload;
 import com.vaadin.ui.Upload.Receiver;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 /**
@@ -53,7 +53,7 @@ public class JSR286Portlet extends UI {
     Label userAgent = new Label();
     Label screenWidth = new Label();
     Label screenHeight = new Label();
-    private VerticalLayout main = new VerticalLayout();
+    private LegacyVerticalLayout main = new LegacyVerticalLayout();
 
     @Override
     protected void init(VaadinRequest request) {

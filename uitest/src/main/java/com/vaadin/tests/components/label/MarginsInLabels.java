@@ -8,13 +8,13 @@ import com.vaadin.ui.Accordion;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MarginsInLabels extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        AbstractLayout layout = new VerticalLayout();
+        AbstractLayout layout = new LegacyVerticalLayout();
         layout.addComponent(
                 new Label("<h1>Vertical layout</h1>", ContentMode.HTML));
         layout.addComponent(new Label("Next row"));

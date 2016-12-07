@@ -4,10 +4,10 @@ import com.vaadin.server.LegacyApplication;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Embedded;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.themes.Reindeer;
 
 public class LayoutRenderTimeTest extends LegacyApplication {
@@ -17,7 +17,7 @@ public class LayoutRenderTimeTest extends LegacyApplication {
         LegacyWindow main = new LegacyWindow();
         setMainWindow(main);
 
-        VerticalLayout root = new VerticalLayout();
+        LegacyVerticalLayout root = new LegacyVerticalLayout();
         root.setWidth("100%");
         main.setContent(root);
 
@@ -26,8 +26,8 @@ public class LayoutRenderTimeTest extends LegacyApplication {
         }
     }
 
-    private HorizontalLayout getRow(int i) {
-        HorizontalLayout row = new HorizontalLayout();
+    private LegacyHorizontalLayout getRow(int i) {
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         // row.setWidth("100%");
         // row.setSpacing(true);
 

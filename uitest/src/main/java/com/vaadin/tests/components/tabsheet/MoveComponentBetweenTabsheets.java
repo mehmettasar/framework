@@ -4,7 +4,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
 
@@ -53,7 +53,7 @@ public class MoveComponentBetweenTabsheets extends AbstractReindeerTestUI {
         right.addTab(r2, "R2");
         right.setWidth("400px");
 
-        getLayout().addComponent(new HorizontalLayout(left, right));
+        getLayout().addComponent(new LegacyHorizontalLayout(left, right));
     }
 
     @Override

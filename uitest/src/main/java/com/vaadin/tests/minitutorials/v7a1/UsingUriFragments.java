@@ -39,7 +39,6 @@ public class UsingUriFragments extends UI {
     @Override
     protected void init(VaadinRequest request) {
         layout = new VerticalLayout();
-        layout.setMargin(true);
         setContent(layout);
 
         Label label = new Label(

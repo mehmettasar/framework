@@ -16,7 +16,7 @@
 package com.vaadin.tests.layouts.layouttester.HLayout;
 
 import com.vaadin.tests.layouts.layouttester.BaseCaption;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 public class HCaption extends BaseCaption {
 
@@ -24,7 +24,7 @@ public class HCaption extends BaseCaption {
      * @param layoutClass
      */
     public HCaption() {
-        super(HorizontalLayout.class);
+        super(LegacyHorizontalLayout.class);
     }
 
 }

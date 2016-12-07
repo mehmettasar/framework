@@ -2,7 +2,7 @@ package com.vaadin.tests.components.table;
 
 import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -19,7 +19,7 @@ public class TableExtraScrollbars extends AbstractTestCase {
         LegacyWindow w = new LegacyWindow("Table scrollbars bug example");
         setMainWindow(w);
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setSizeFull();
         vl.addComponent(createTable());
         w.setContent(vl);

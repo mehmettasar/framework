@@ -25,7 +25,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Select;
 
 /**
@@ -48,7 +48,7 @@ public class TestSelectAndDatefieldInDeepLayouts extends CustomComponent {
         root.addComponent(getSelect());
         root.addComponent(getDateField());
 
-        final VerticalLayout p1Layout = createPanelLayout();
+        final LegacyVerticalLayout p1Layout = createPanelLayout();
         final Panel p1 = getPanel(p1Layout);
         p1.setContent(p1Layout);
         root.addComponent(p1);
@@ -66,7 +66,7 @@ public class TestSelectAndDatefieldInDeepLayouts extends CustomComponent {
         l1.addComponent(getSelect());
         l1.addComponent(getDateField());
 
-        final VerticalLayout p2Layout = createPanelLayout();
+        final LegacyVerticalLayout p2Layout = createPanelLayout();
         final Panel p2 = getPanel(p2Layout);
         l1.addComponent(p2);
 
@@ -76,14 +76,14 @@ public class TestSelectAndDatefieldInDeepLayouts extends CustomComponent {
         p2Layout.addComponent(getDateField());
     }
 
-    VerticalLayout getOrderedLayout() {
-        final VerticalLayout l = new VerticalLayout();
+    LegacyVerticalLayout getOrderedLayout() {
+        final LegacyVerticalLayout l = new LegacyVerticalLayout();
         l.setCaption(getCaption("orderedlayout"));
         return l;
     }
 
-    private VerticalLayout createPanelLayout() {
-        VerticalLayout layout = new VerticalLayout();
+    private LegacyVerticalLayout createPanelLayout() {
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         return layout;
     }

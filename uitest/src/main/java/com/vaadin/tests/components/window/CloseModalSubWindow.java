@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Item;
@@ -123,7 +123,7 @@ public class CloseModalSubWindow extends AbstractTestUIWithLog {
             ok.setData(itemId);
             Button cancel = new Button("Cancel", cancelClickListener);
 
-            HorizontalLayout l = new HorizontalLayout();
+            LegacyHorizontalLayout l = new LegacyHorizontalLayout();
             l.addComponent(ok);
             l.addComponent(cancel);
 

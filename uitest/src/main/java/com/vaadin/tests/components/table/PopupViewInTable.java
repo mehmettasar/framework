@@ -21,7 +21,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.PopupView;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class PopupViewInTable extends AbstractReindeerTestUI {
@@ -41,7 +41,7 @@ public class PopupViewInTable extends AbstractReindeerTestUI {
     }
 
     private Component createContent() {
-        VerticalLayout vl = new VerticalLayout(new Label("Hello"),
+        LegacyVerticalLayout vl = new LegacyVerticalLayout(new Label("Hello"),
                 new Button("World"));
         return vl;
     }

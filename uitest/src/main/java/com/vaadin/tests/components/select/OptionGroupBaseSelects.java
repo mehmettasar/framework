@@ -3,7 +3,7 @@ package com.vaadin.tests.components.select;
 import com.vaadin.tests.components.ComponentTestCase;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.AbstractLegacyComponent;
 import com.vaadin.v7.ui.AbstractSelect;
 import com.vaadin.v7.ui.ListSelect;
@@ -12,13 +12,13 @@ import com.vaadin.v7.ui.OptionGroup;
 import com.vaadin.v7.ui.TwinColSelect;
 
 public class OptionGroupBaseSelects
-        extends ComponentTestCase<HorizontalLayout> {
+        extends ComponentTestCase<LegacyHorizontalLayout> {
 
-    private HorizontalLayout layout;
+    private LegacyHorizontalLayout layout;
 
     @Override
-    protected Class<HorizontalLayout> getTestClass() {
-        return HorizontalLayout.class;
+    protected Class<LegacyHorizontalLayout> getTestClass() {
+        return LegacyHorizontalLayout.class;
     }
 
     @Override
@@ -45,13 +45,13 @@ public class OptionGroupBaseSelects
                 }
             }
         });
-        HorizontalLayout cbs = new HorizontalLayout();
+        LegacyHorizontalLayout cbs = new LegacyHorizontalLayout();
         cbs.setSpacing(true);
         cbs.addComponent(cb);
         cbs.addComponent(cb2);
         addComponent(cbs);
 
-        layout = new HorizontalLayout();
+        layout = new LegacyHorizontalLayout();
         layout.setSpacing(true);
         layout.addComponent(
                 createSelect(new ListSelect("List Select, enabled"), true));

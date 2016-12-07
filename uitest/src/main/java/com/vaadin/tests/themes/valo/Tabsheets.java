@@ -20,16 +20,16 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.MarginInfo;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TabSheet.SelectedTabChangeEvent;
 import com.vaadin.ui.TabSheet.SelectedTabChangeListener;
 import com.vaadin.ui.TabSheet.Tab;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
-public class Tabsheets extends VerticalLayout implements View {
+public class Tabsheets extends LegacyVerticalLayout implements View {
 
     TabSheet tabs;
 
@@ -40,7 +40,7 @@ public class Tabsheets extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout wrap = new HorizontalLayout();
+        LegacyHorizontalLayout wrap = new LegacyHorizontalLayout();
         wrap.setSpacing(true);
         wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         addComponent(wrap);
@@ -64,7 +64,7 @@ public class Tabsheets extends VerticalLayout implements View {
         h3.addStyleName(ValoTheme.LABEL_H3);
         addComponent(h3);
 
-        wrap = new HorizontalLayout();
+        wrap = new LegacyHorizontalLayout();
         wrap.setSpacing(true);
         wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         wrap.setMargin(new MarginInfo(false, false, true, false));
@@ -142,7 +142,7 @@ public class Tabsheets extends VerticalLayout implements View {
             String tabcaption = caption
                     ? sg.nextString(true) + " " + sg.nextString(false) : null;
 
-            VerticalLayout content = new VerticalLayout();
+            LegacyVerticalLayout content = new LegacyVerticalLayout();
             content.setMargin(true);
             content.setSpacing(true);
             content.addComponent(new Label("Content for tab " + i));

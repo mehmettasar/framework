@@ -7,14 +7,14 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.TextField;
 
 public class BackButtonTest extends AbstractReindeerTestUI {
 
-    private VerticalLayout layout;
+    private LegacyVerticalLayout layout;
 
     private String value = "Hello";
     private Page1 p1;
@@ -24,7 +24,7 @@ public class BackButtonTest extends AbstractReindeerTestUI {
     public void setup(VaadinRequest request) {
         getPage().setUriFragment("page1");
 
-        layout = new VerticalLayout();
+        layout = new LegacyVerticalLayout();
         addComponent(layout);
 
         p1 = new Page1();
@@ -49,7 +49,7 @@ public class BackButtonTest extends AbstractReindeerTestUI {
                 });
     }
 
-    class Page1 extends VerticalLayout {
+    class Page1 extends LegacyVerticalLayout {
         Label l = new Label();
 
         public Page1() {
@@ -79,7 +79,7 @@ public class BackButtonTest extends AbstractReindeerTestUI {
         addComponent(p1);
     }
 
-    class Page2 extends VerticalLayout {
+    class Page2 extends LegacyVerticalLayout {
         private final TextField f = new TextField();
 
         public Page2() {

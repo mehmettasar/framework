@@ -7,24 +7,24 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class WindowAndUIShortcuts extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSizeFull();
         layout.setMargin(true);
 
-        final VerticalLayout mainLayout = new VerticalLayout();
+        final LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
 
         mainLayout.addComponent(
                 new Button("Show page", new Button.ClickListener() {
                     @Override
                     public void buttonClick(Button.ClickEvent clickEvent) {
-                        final VerticalLayout pageLayout = new VerticalLayout();
+                        final LegacyVerticalLayout pageLayout = new LegacyVerticalLayout();
                         pageLayout.setSpacing(true);
 
                         pageLayout.addComponent(new Label("Page"));

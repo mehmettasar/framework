@@ -37,7 +37,7 @@ import com.vaadin.ui.Embedded;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Html5File;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
@@ -258,7 +258,7 @@ public class DDTest6 extends TestBase {
         if (file.getType().equals("image/png")) {
             Embedded embedded = new Embedded(file.getName(),
                     file.getResource());
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             Window w = new Window(file.getName(), layout);
             layout.addComponent(embedded);
@@ -285,7 +285,7 @@ public class DDTest6 extends TestBase {
             String[] split = rows[i].split(",");
             table.addItem(split, "" + i);
         }
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window w = new Window(file.getName(), layout);
         layout.setSizeUndefined();

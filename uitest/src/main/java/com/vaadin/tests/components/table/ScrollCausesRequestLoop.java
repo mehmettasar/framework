@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.tests.util.Person;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.Table;
@@ -27,7 +27,7 @@ public class ScrollCausesRequestLoop extends AbstractTestCase {
         return 8040;
     }
 
-    private static class TestView extends HorizontalLayout {
+    private static class TestView extends LegacyHorizontalLayout {
 
         TestView() {
             Table table = new Table();

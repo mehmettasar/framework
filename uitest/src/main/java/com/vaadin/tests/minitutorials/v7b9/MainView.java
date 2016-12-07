@@ -9,7 +9,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MainView extends Panel implements View {
 
@@ -19,7 +19,7 @@ public class MainView extends Panel implements View {
 
     public MainView(final Navigator navigator) {
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         Link lnk = new Link("Count",
                 new ExternalResource("#!" + CountView.NAME));

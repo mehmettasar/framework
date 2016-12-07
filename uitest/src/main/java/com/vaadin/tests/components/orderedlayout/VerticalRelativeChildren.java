@@ -2,7 +2,7 @@ package com.vaadin.tests.components.orderedlayout;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Alignment;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 
 public class VerticalRelativeChildren extends TestBase {
@@ -10,7 +10,7 @@ public class VerticalRelativeChildren extends TestBase {
     @Override
     protected void setup() {
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setWidth("300px");
 
         TextArea areaUndefined = new TextArea();

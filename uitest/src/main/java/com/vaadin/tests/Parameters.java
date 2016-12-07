@@ -30,7 +30,7 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 /**
@@ -57,7 +57,7 @@ public class Parameters extends com.vaadin.server.LegacyApplication
         // This class acts both as URI handler and parameter handler
         VaadinSession.getCurrent().addRequestHandler(this);
 
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         final Label info = new Label("To test URI and Parameter Handlers, "
                 + "add get parameters to URL. For example try examples below: ");
         info.setCaption("Usage info");
@@ -77,7 +77,7 @@ public class Parameters extends com.vaadin.server.LegacyApplication
         }
 
         // URI
-        final VerticalLayout panel1Layout = new VerticalLayout();
+        final LegacyVerticalLayout panel1Layout = new LegacyVerticalLayout();
         panel1Layout.setMargin(true);
         final Panel panel1 = new Panel("URI Handler", panel1Layout);
         context.setCaption("Last URI handler context");
@@ -88,7 +88,7 @@ public class Parameters extends com.vaadin.server.LegacyApplication
 
         params.addContainerProperty("Key", String.class, "");
         params.addContainerProperty("Value", String.class, "");
-        final VerticalLayout panel2Layout = new VerticalLayout();
+        final LegacyVerticalLayout panel2Layout = new LegacyVerticalLayout();
         panel2Layout.setMargin(true);
         final Panel panel2 = new Panel("Parameter Handler", panel2Layout);
         params.setSizeFull();

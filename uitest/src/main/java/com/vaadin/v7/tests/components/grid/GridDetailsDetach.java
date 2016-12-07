@@ -21,7 +21,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
@@ -36,7 +36,7 @@ public class GridDetailsDetach extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSizeFull();
 
         Button button = new Button("Test");
@@ -44,7 +44,7 @@ public class GridDetailsDetach extends AbstractReindeerTestUI {
         layout.setExpandRatio(button, 0f);
 
         currentGrid = generateGrid();
-        final VerticalLayout gridContainer = new VerticalLayout();
+        final LegacyVerticalLayout gridContainer = new LegacyVerticalLayout();
         gridContainer.addComponent(currentGrid);
 
         button.addClickListener(new Button.ClickListener() {
@@ -87,7 +87,7 @@ public class GridDetailsDetach extends AbstractReindeerTestUI {
             public Component getDetails(RowReference rowReference) {
                 final GridExampleBean bean = (GridExampleBean) rowReference
                         .getItemId();
-                VerticalLayout layout = new VerticalLayout(
+                LegacyVerticalLayout layout = new LegacyVerticalLayout(
                         new Label("Extra data for " + bean.getName()));
                 layout.setMargin(true);
                 return layout;

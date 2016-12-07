@@ -18,7 +18,7 @@ package com.vaadin.tests.components;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * This UI is used for testing that a tooltip is not positioned partially
@@ -37,7 +37,7 @@ public class TooltipPosition extends AbstractReindeerTestUI {
         getTooltipConfiguration().setQuickOpenDelay(0);
         getTooltipConfiguration().setCloseTimeout(1000);
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSpacing(true);
         layout.setHeight(UI.getCurrent().getPage().getBrowserWindowHeight(),
                 Unit.PIXELS);

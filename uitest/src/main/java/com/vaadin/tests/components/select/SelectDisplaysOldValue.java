@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -19,7 +19,7 @@ public class SelectDisplaysOldValue extends TestBase {
         addComponent(new DynamicSelectTestCase());
     }
 
-    public class DynamicSelectTestCase extends HorizontalLayout {
+    public class DynamicSelectTestCase extends LegacyHorizontalLayout {
 
         private static final String CONTROLLER_COMBO_BOX_CAPTION = "Master : ";
         private static final String SLAVE_COMBO_BOX_CAPTION = "Slave :";

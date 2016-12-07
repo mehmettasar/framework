@@ -5,7 +5,7 @@ import java.util.Iterator;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.HierarchicalContainer;
 import com.vaadin.v7.ui.Tree;
@@ -24,7 +24,7 @@ public class TreeHorizontalResize extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout treeLayout = new VerticalLayout();
+        LegacyVerticalLayout treeLayout = new LegacyVerticalLayout();
         treeLayout.setMargin(true);
         treeLayout.setSizeUndefined();
         Panel treePanel = new Panel(treeLayout);

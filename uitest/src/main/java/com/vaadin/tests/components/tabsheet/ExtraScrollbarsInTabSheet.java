@@ -6,7 +6,7 @@ import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.themes.Runo;
 
 @Theme("runo")
@@ -15,14 +15,14 @@ public class ExtraScrollbarsInTabSheet extends UI {
     @Override
     public void init(VaadinRequest request) {
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setSizeFull();
 
         HorizontalSplitPanel horizontalSplit = new HorizontalSplitPanel();
 
         TabSheet ts = new TabSheet();
 
-        VerticalLayout tabContent = new VerticalLayout();
+        LegacyVerticalLayout tabContent = new LegacyVerticalLayout();
         tabContent.setSizeFull();
 
         Panel p = new Panel();

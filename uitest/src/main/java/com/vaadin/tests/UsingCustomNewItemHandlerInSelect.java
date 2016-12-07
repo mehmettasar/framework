@@ -20,7 +20,7 @@ import java.util.Random;
 
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.AbstractSelect;
 import com.vaadin.v7.ui.Select;
@@ -35,7 +35,7 @@ public class UsingCustomNewItemHandlerInSelect extends CustomComponent {
 
     public UsingCustomNewItemHandlerInSelect() {
 
-        VerticalLayout pl = new VerticalLayout();
+        LegacyVerticalLayout pl = new LegacyVerticalLayout();
         pl.setMargin(true);
         final Panel panel = new Panel("Select demo", pl);
         pl.addComponent(select);

@@ -18,7 +18,7 @@ package com.vaadin.tests.themes.valo;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
@@ -26,7 +26,7 @@ import com.vaadin.ui.themes.ValoTheme;
  * @since
  * @author Vaadin Ltd
  */
-public class ValoMenuLayout extends HorizontalLayout {
+public class ValoMenuLayout extends LegacyHorizontalLayout {
 
     CssLayout contentArea = new CssLayout();
 

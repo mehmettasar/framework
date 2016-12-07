@@ -18,17 +18,12 @@ package com.vaadin.tests.themes.valo;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.label.ContentMode;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.PopupView;
+import com.vaadin.ui.*;
 import com.vaadin.ui.PopupView.Content;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.ui.VerticalLayout;
 
 public class PopupViews extends VerticalLayout implements View {
     public PopupViews() {
-        setMargin(true);
 
         Label h1 = new Label("Popup Views");
         h1.addStyleName(ValoTheme.LABEL_H1);

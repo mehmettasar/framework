@@ -21,7 +21,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 import com.vaadin.v7.ui.TextField;
 
@@ -31,7 +31,7 @@ public class EmptySpaceOnPageAfterExpandedComponent extends AbstractReindeerTest
     protected void setup(VaadinRequest request) {
         getLayout().setHeight("200px");
 
-        VerticalLayout container = new VerticalLayout();
+        LegacyVerticalLayout container = new LegacyVerticalLayout();
         container.setStyleName("mystyle");
         container.setId("container");
         container.setSpacing(true);

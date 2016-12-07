@@ -9,7 +9,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class PanelShouldNotScroll extends TestBase {
 
@@ -33,11 +33,11 @@ public class PanelShouldNotScroll extends TestBase {
         });
         pl.addComponent(addMore);
         addComponent(p);
-        ((VerticalLayout) getMainWindow().getContent()).setSizeFull();
+        ((LegacyVerticalLayout) getMainWindow().getContent()).setSizeFull();
     }
 
     private Component foo() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Panel panel = new Panel(layout);
         layout.addComponent(new Label(

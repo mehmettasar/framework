@@ -19,7 +19,7 @@ import com.vaadin.server.Page;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.MenuItem;
 import com.vaadin.ui.Notification;
@@ -34,7 +34,7 @@ public class ComboboxMenuBarAutoopen extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setSpacing(true);
         ComboBox<String> combo = new ComboBox<>();
         combo.setItems("1", "2", "3");

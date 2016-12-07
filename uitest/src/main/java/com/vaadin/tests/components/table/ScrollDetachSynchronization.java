@@ -3,9 +3,9 @@ package com.vaadin.tests.components.table;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Layout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class ScrollDetachSynchronization extends TestBase {
@@ -26,10 +26,10 @@ public class ScrollDetachSynchronization extends TestBase {
     }
 
     private Layout buildLayout() {
-        final VerticalLayout mainLayout = new VerticalLayout();
+        final LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
         mainLayout.setSizeFull();
 
-        HorizontalLayout buttonBar = new HorizontalLayout();
+        LegacyHorizontalLayout buttonBar = new LegacyHorizontalLayout();
         buttonBar.setSizeUndefined();
         Button first = new Button("First layout");
         Button second = new Button("Second layout");
@@ -39,8 +39,8 @@ public class ScrollDetachSynchronization extends TestBase {
         buttonBar.addComponent(second);
         mainLayout.addComponent(buttonBar);
 
-        final HorizontalLayout firstLayout = buildTestLayout(true);
-        final HorizontalLayout secondLayout = buildTestLayout(false);
+        final LegacyHorizontalLayout firstLayout = buildTestLayout(true);
+        final LegacyHorizontalLayout secondLayout = buildTestLayout(false);
 
         mainLayout.addComponent(firstLayout);
         mainLayout.setExpandRatio(firstLayout, 1);
@@ -68,10 +68,10 @@ public class ScrollDetachSynchronization extends TestBase {
         return mainLayout;
     }
 
-    private HorizontalLayout buildTestLayout(boolean first) {
+    private LegacyHorizontalLayout buildTestLayout(boolean first) {
         String which = first ? "First" : "Second";
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setSizeFull();
         hl.setId(which + "Layout");
 

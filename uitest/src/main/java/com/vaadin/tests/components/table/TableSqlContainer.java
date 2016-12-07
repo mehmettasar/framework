@@ -9,7 +9,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.util.sqlcontainer.SQLContainer;
@@ -25,7 +25,7 @@ public class TableSqlContainer extends AbstractReindeerTestUI {
     @Override
     protected void setup(VaadinRequest request) {
         setLocale(Locale.ENGLISH);
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         addComponent(layout);
 
         table = new Table("Table with SQLContainer");

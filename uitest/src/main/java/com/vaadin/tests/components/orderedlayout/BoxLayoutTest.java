@@ -20,14 +20,11 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
-import com.vaadin.v7.ui.AbstractField;
-import com.vaadin.v7.ui.NativeSelect;
-import com.vaadin.v7.ui.TextField;
 import com.vaadin.v7.ui.themes.Reindeer;
 
 @Theme("tests-components")
@@ -54,7 +51,7 @@ public class BoxLayoutTest extends AbstractReindeerTestUI {
     @Override
     protected void setup(VaadinRequest request) {
 
-        view = new VerticalLayout();
+        view = new LegacyVerticalLayout();
         view.setMargin(true);
         view.setSpacing(true);
 
@@ -66,7 +63,7 @@ public class BoxLayoutTest extends AbstractReindeerTestUI {
     }
 
     private Component createHorizontalTest() {
-        HorizontalLayout l = new HorizontalLayout();
+        LegacyHorizontalLayout l = new LegacyHorizontalLayout();
         l.setWidth("100%");
         l.setSpacing(true);
 
@@ -89,11 +86,11 @@ public class BoxLayoutTest extends AbstractReindeerTestUI {
     }
 
     protected AbstractOrderedLayout createControls(boolean horizontal) {
-        VerticalLayout root = new VerticalLayout();
+        LegacyVerticalLayout root = new LegacyVerticalLayout();
         root.setSpacing(true);
 
         // First row
-        HorizontalLayout header = new HorizontalLayout();
+        LegacyHorizontalLayout header = new LegacyHorizontalLayout();
         header.setSpacing(true);
         root.addComponent(header);
 
@@ -155,12 +152,12 @@ public class BoxLayoutTest extends AbstractReindeerTestUI {
         header.addComponent(removeComponent);
 
         // Second row
-        HorizontalLayout controls = new HorizontalLayout();
+        LegacyHorizontalLayout controls = new LegacyHorizontalLayout();
         controls.setSpacing(true);
         root.addComponent(controls);
 
         // Layout controls
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.addStyleName("fieldset");
         layout.setSpacing(true);
         controls.addComponent(layout);
@@ -207,7 +204,7 @@ public class BoxLayoutTest extends AbstractReindeerTestUI {
         layout.addComponent(spacing);
 
         // Cell controls
-        HorizontalLayout cell = new HorizontalLayout();
+        LegacyHorizontalLayout cell = new LegacyHorizontalLayout();
         cell.addStyleName("fieldset");
         cell.setSpacing(true);
         controls.addComponent(cell);
@@ -250,7 +247,7 @@ public class BoxLayoutTest extends AbstractReindeerTestUI {
         cell.addComponent(expand);
 
         // Component controls
-        HorizontalLayout component = new HorizontalLayout();
+        LegacyHorizontalLayout component = new LegacyHorizontalLayout();
         component.addStyleName("fieldset");
         component.setSpacing(true);
         root.addComponent(component);
@@ -367,7 +364,7 @@ public class BoxLayoutTest extends AbstractReindeerTestUI {
     }
 
     protected AbstractOrderedLayout createTestLayout(boolean horizontal) {
-        l = horizontal ? new HorizontalLayout() : new VerticalLayout();
+        l = horizontal ? new LegacyHorizontalLayout() : new LegacyVerticalLayout();
         l.setSizeUndefined();
         l.addStyleName("test");
 

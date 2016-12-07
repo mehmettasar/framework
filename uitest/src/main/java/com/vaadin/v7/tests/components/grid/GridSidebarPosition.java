@@ -18,7 +18,7 @@ package com.vaadin.v7.tests.components.grid;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractTestUI;
 import com.vaadin.ui.Alignment;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Grid;
 
 public class GridSidebarPosition extends AbstractTestUI {
@@ -29,7 +29,7 @@ public class GridSidebarPosition extends AbstractTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setSpacing(true);
         hl.setHeight("100%");
         setContent(hl);

@@ -6,19 +6,16 @@ package com.vaadin.tests;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.util.ContainerHierarchicalWrapper;
 import com.vaadin.v7.data.util.ContainerOrderedWrapper;
 import com.vaadin.v7.data.util.IndexedContainer;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.ListSelect;
-import com.vaadin.v7.ui.Table;
-import com.vaadin.v7.ui.Tree;
 import com.vaadin.v7.ui.themes.Reindeer;
 
 /**
@@ -38,17 +35,17 @@ public class TestContainerChanges extends CustomComponent {
         cont.addContainerProperty("Asd", String.class, "qwe");
         cont.addContainerProperty("Bar", String.class, "foo");
 
-        VerticalLayout main = new VerticalLayout();
+        LegacyVerticalLayout main = new LegacyVerticalLayout();
         setCompositionRoot(main);
 
         main.addComponent(new Label(
                 "The same IndexedContainer is wrapped in a ordered/hierarchical wrapper and is set as data source for all components . The buttons only affect the 'original' IndexedContainer."));
 
-        HorizontalLayout h = new HorizontalLayout();
+        LegacyHorizontalLayout h = new LegacyHorizontalLayout();
 
         main.addComponent(h);
 
-        VerticalLayout v = new VerticalLayout();
+        LegacyVerticalLayout v = new LegacyVerticalLayout();
         h.addComponent(v);
         tbl = new Table();
         tbl.setHeight("200px");
@@ -81,7 +78,7 @@ public class TestContainerChanges extends CustomComponent {
         // non-ordered container will get wrapped
         tbl2.setContainerDataSource(hierarchical);
 
-        VerticalLayout buttons = new VerticalLayout();
+        LegacyVerticalLayout buttons = new LegacyVerticalLayout();
         v.addComponent(buttons);
 
         Button b = new Button("table.commit()", new Button.ClickListener() {
@@ -177,7 +174,7 @@ public class TestContainerChanges extends CustomComponent {
                 });
         buttons.addComponent(b);
 
-        VerticalLayout pl = createPanelLayout();
+        LegacyVerticalLayout pl = createPanelLayout();
         Panel p = new Panel("Tree", pl);
         p.setStyleName(Reindeer.PANEL_LIGHT);
         h.addComponent(p);
@@ -223,8 +220,8 @@ public class TestContainerChanges extends CustomComponent {
         pl.addComponent(l);
     }
 
-    private VerticalLayout createPanelLayout() {
-        VerticalLayout pl = new VerticalLayout();
+    private LegacyVerticalLayout createPanelLayout() {
+        LegacyVerticalLayout pl = new LegacyVerticalLayout();
         pl.setMargin(true);
         return pl;
     }

@@ -17,7 +17,7 @@ package com.vaadin.tests.layouts;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractTestUI;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 
@@ -39,7 +39,7 @@ import com.vaadin.ui.TextField;
 public class HorizontalLayoutAndCaretPosition extends AbstractTestUI {
     @Override
     protected void setup(VaadinRequest request) {
-        final HorizontalLayout root = new HorizontalLayout();
+        final LegacyHorizontalLayout root = new LegacyHorizontalLayout();
         root.setSizeFull();
         addComponent(root);
         root.addComponent(new TextField());

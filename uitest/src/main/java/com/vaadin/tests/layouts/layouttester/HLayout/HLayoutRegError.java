@@ -16,7 +16,7 @@
 package com.vaadin.tests.layouts.layouttester.HLayout;
 
 import com.vaadin.tests.layouts.layouttester.BaseRegError;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 /**
  *
@@ -30,6 +30,6 @@ public class HLayoutRegError extends BaseRegError {
      * @param layoutClass
      */
     public HLayoutRegError() {
-        super(HorizontalLayout.class);
+        super(LegacyHorizontalLayout.class);
     }
 }

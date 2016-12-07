@@ -19,7 +19,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Grid;
 import com.vaadin.v7.ui.renderers.ButtonRenderer;
 import com.vaadin.v7.ui.renderers.HtmlRenderer;
@@ -62,7 +62,7 @@ public class GridRendererChange extends AbstractReindeerTestUI {
                     }
                 });
 
-        addComponent(new HorizontalLayout(button, buttonHtml, buttonText));
+        addComponent(new LegacyHorizontalLayout(button, buttonHtml, buttonText));
         addComponent(grid);
     }
 }

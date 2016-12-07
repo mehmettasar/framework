@@ -5,7 +5,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * The Application's "main" class
@@ -15,7 +15,7 @@ public class ComboBoxParentDisable extends AbstractTestUIWithLog {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         setContent(layout);
 

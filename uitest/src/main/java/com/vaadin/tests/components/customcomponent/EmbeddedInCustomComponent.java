@@ -6,13 +6,13 @@ import com.vaadin.server.ThemeResource;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Embedded;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 public class EmbeddedInCustomComponent extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
 
         hl.addComponent(wrap("An uncached image",
                 "ok.png?random=" + new Date().getTime()));

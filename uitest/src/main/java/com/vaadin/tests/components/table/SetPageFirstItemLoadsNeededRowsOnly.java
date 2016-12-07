@@ -21,7 +21,7 @@ import java.util.List;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.BeanContainer;
 import com.vaadin.v7.ui.Table;
 
@@ -41,7 +41,7 @@ public class SetPageFirstItemLoadsNeededRowsOnly extends AbstractReindeerTestUI 
      */
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         addComponent(layout);
 
         final Label label = new Label("");

@@ -5,7 +5,7 @@ import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.MenuBar;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MenuBarRunsOutOfBrowser extends AbstractTestCase {
 
@@ -25,7 +25,7 @@ public class MenuBarRunsOutOfBrowser extends AbstractTestCase {
         menuBar.addItem("123", new ThemeResource("icons/16/help.png"), null);
 
         main.addComponent(menuBar);
-        ((VerticalLayout) main.getContent()).setComponentAlignment(menuBar,
+        ((LegacyVerticalLayout) main.getContent()).setComponentAlignment(menuBar,
                 Alignment.TOP_RIGHT);
 
     }

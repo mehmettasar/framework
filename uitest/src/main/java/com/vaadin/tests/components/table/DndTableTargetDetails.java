@@ -24,7 +24,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.shared.MouseEventDetails;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.Table.TableDragMode;
@@ -86,7 +86,7 @@ public class DndTableTargetDetails extends AbstractReindeerTestUI {
                     .getTargetDetails();
             MouseEventDetails mouseDetails = details.getMouseEvent();
 
-            VerticalLayout layout = (VerticalLayout) details.getTarget().getUI()
+            LegacyVerticalLayout layout = (LegacyVerticalLayout) details.getTarget().getUI()
                     .getContent();
 
             Label name = new Label(

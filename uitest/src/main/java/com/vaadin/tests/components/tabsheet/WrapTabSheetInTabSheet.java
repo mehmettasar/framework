@@ -6,12 +6,12 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class WrapTabSheetInTabSheet extends TestBase {
     @Override
     protected void setup() {
-        final VerticalLayout mainLayout = new VerticalLayout();
+        final LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
         mainLayout.addComponent(new Label("This is main layout"));
         addComponent(mainLayout);
 

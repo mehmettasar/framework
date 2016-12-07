@@ -3,7 +3,7 @@ package com.vaadin.tests.components.splitpanel;
 import com.vaadin.server.Sizeable;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.HorizontalSplitPanel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class SplitPanelInModalWindow extends TestBase {
@@ -11,7 +11,7 @@ public class SplitPanelInModalWindow extends TestBase {
     @Override
     public void setup() {
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         final Window modalWindow = new Window("Modeless Window", vl);
         vl.setWidth(200, Sizeable.UNITS_PIXELS);
         vl.setHeight(200, Sizeable.UNITS_PIXELS);

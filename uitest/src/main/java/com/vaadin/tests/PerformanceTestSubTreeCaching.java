@@ -23,14 +23,14 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class PerformanceTestSubTreeCaching extends CustomComponent {
 
-    private final VerticalLayout main;
+    private final LegacyVerticalLayout main;
 
-    private final VerticalLayout testContainer;
+    private final LegacyVerticalLayout testContainer;
 
     private Date startTime;
 
@@ -46,7 +46,7 @@ public class PerformanceTestSubTreeCaching extends CustomComponent {
     private static final int INITIAL_COMPONENTS = 40;
 
     public PerformanceTestSubTreeCaching() {
-        main = new VerticalLayout();
+        main = new LegacyVerticalLayout();
         setCompositionRoot(main);
         addInfo();
 
@@ -72,7 +72,7 @@ public class PerformanceTestSubTreeCaching extends CustomComponent {
         result = new Label();
         main.addComponent(result);
 
-        testContainer = new VerticalLayout();
+        testContainer = new LegacyVerticalLayout();
         populateContainer(testContainer, INITIAL_COMPONENTS);
         main.addComponent(testContainer);
     }
@@ -93,7 +93,7 @@ public class PerformanceTestSubTreeCaching extends CustomComponent {
      *
      * @param testContainer2
      */
-    private void populateContainer(VerticalLayout container, int n) {
+    private void populateContainer(LegacyVerticalLayout container, int n) {
         for (int i = 0; i < n; i++) {
             // array_type array_element = [i];
             final Table t = TestForTablesInitialColumnWidthLogicRendering

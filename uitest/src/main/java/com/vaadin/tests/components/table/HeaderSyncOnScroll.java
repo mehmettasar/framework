@@ -5,7 +5,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class HeaderSyncOnScroll extends AbstractReindeerTestUI {
@@ -47,7 +47,7 @@ public class HeaderSyncOnScroll extends AbstractReindeerTestUI {
 
         addComponent(table);
 
-        HorizontalLayout buttonsLo = new HorizontalLayout();
+        LegacyHorizontalLayout buttonsLo = new LegacyHorizontalLayout();
         addComponent(buttonsLo);
 
         Button setTableWidth100 = new Button("table.setWidth(100%)",

@@ -11,7 +11,7 @@ import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * @author marc
@@ -19,33 +19,33 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class TestComponentAddAndRecursion extends CustomComponent {
     Panel p;
-    VerticalLayout pl;
+    LegacyVerticalLayout pl;
     Panel p2;
-    VerticalLayout p2l;
+    LegacyVerticalLayout p2l;
     Label l;
     Label l2;
     Panel p3;
-    VerticalLayout p3l;
+    LegacyVerticalLayout p3l;
 
     public TestComponentAddAndRecursion() {
 
-        VerticalLayout main = new VerticalLayout();
+        LegacyVerticalLayout main = new LegacyVerticalLayout();
         setCompositionRoot(main);
 
         l = new Label("A");
         l2 = new Label("B");
-        pl = new VerticalLayout();
+        pl = new LegacyVerticalLayout();
         pl.setMargin(true);
         p = new Panel("p", pl);
         pl.addComponent(l);
         pl.addComponent(l2);
         main.addComponent(p);
-        p2l = new VerticalLayout();
+        p2l = new LegacyVerticalLayout();
         p2l.setMargin(true);
         p2 = new Panel("p2", p2l);
         p2l.addComponent(l);
         main.addComponent(p2);
-        p3l = new VerticalLayout();
+        p3l = new LegacyVerticalLayout();
         p3l.setMargin(true);
         p3 = new Panel("p3", p3l);
         p2l.addComponent(p3);
@@ -65,9 +65,9 @@ public class TestComponentAddAndRecursion extends CustomComponent {
 
             @Override
             public void buttonClick(ClickEvent event) {
-                p.setContent(new VerticalLayout());
-                p2.setContent(new VerticalLayout());
-                p3.setContent(new VerticalLayout());
+                p.setContent(new LegacyVerticalLayout());
+                p2.setContent(new LegacyVerticalLayout());
+                p3.setContent(new LegacyVerticalLayout());
             }
 
         });
@@ -123,7 +123,7 @@ public class TestComponentAddAndRecursion extends CustomComponent {
 
             @Override
             public void buttonClick(ClickEvent event) {
-                VerticalLayout layout = new VerticalLayout();
+                LegacyVerticalLayout layout = new LegacyVerticalLayout();
                 Panel p = new Panel("dynamic", layout);
                 layout.addComponent(p2);
                 try {

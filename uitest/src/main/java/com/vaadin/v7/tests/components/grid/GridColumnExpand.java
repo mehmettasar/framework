@@ -23,7 +23,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.ui.Grid;
 import com.vaadin.v7.ui.Grid.Column;
@@ -54,7 +54,7 @@ public class GridColumnExpand extends AbstractReindeerTestUI {
     }
 
     private void addButtons() {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.addComponent(createButtons(firstColumn));
         layout.addComponent(createButtons(secondColumn));
         layout.setExpandRatio(layout.getComponent(1), 1);

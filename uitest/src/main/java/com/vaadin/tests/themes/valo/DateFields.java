@@ -31,15 +31,15 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.InlineDateField;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.fieldgroup.FieldGroup;
 import com.vaadin.v7.data.util.ObjectProperty;
 import com.vaadin.v7.data.util.PropertysetItem;
 
-public class DateFields extends VerticalLayout implements View {
+public class DateFields extends LegacyVerticalLayout implements View {
     public DateFields() {
         setMargin(true);
 
@@ -47,7 +47,7 @@ public class DateFields extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);

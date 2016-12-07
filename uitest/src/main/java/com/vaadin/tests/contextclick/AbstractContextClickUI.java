@@ -22,7 +22,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.ui.AbstractComponent;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 public abstract class AbstractContextClickUI<T extends AbstractComponent, E extends ContextClickEvent>
         extends AbstractTestUIWithLog {
@@ -85,8 +85,8 @@ public abstract class AbstractContextClickUI<T extends AbstractComponent, E exte
 
     protected abstract void handleContextClickEvent(E event);
 
-    protected HorizontalLayout createContextClickControls() {
-        HorizontalLayout contextClickControls = new HorizontalLayout();
+    protected LegacyHorizontalLayout createContextClickControls() {
+        LegacyHorizontalLayout contextClickControls = new LegacyHorizontalLayout();
         contextClickControls
                 .addComponent(new Button("Add/Remove default listener",
                         new ListenerHandler(defaultListener)));

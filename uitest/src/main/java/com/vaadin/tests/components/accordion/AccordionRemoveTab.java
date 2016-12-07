@@ -22,7 +22,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet.Tab;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Test UI for Accordion: tabs should stay selectable after remove tab.
@@ -37,18 +37,18 @@ public class AccordionRemoveTab extends AbstractReindeerTestUI {
         final Accordion tabs = new Accordion();
         addComponent(tabs);
         tabs.setHeight(300, Unit.PIXELS);
-        final VerticalLayout one = new VerticalLayout();
+        final LegacyVerticalLayout one = new LegacyVerticalLayout();
         one.setCaption("One");
         one.addComponent(new Label("On first tab"));
         tabs.addTab(one);
-        VerticalLayout two = new VerticalLayout();
+        LegacyVerticalLayout two = new LegacyVerticalLayout();
         two.setCaption("Two");
         two.addComponent(new Label("On second tab"));
         tabs.addTab(two);
 
         tabs.setSelectedTab(two);
 
-        VerticalLayout l = new VerticalLayout();
+        LegacyVerticalLayout l = new LegacyVerticalLayout();
         l.addComponent(new Label("On third tab"));
         Tab last = tabs.addTab(l);
         last.setCaption("Three");

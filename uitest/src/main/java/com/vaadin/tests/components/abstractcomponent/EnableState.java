@@ -5,14 +5,14 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class EnableState extends AbstractTestCase {
     @Override
     public void init() {
         LegacyWindow mainWindow = new LegacyWindow("Helloworld Application");
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         final Panel panel = new Panel("Test", panelLayout);
         final Button button = new Button("ablebutton");

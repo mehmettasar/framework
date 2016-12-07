@@ -1,12 +1,8 @@
 package com.vaadin.tests.components.tabsheet;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.Button;
+import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.v7.ui.TextField;
 
 public class TabsheetShouldUpdateHeight extends TestBase {
 

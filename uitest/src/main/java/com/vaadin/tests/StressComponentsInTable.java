@@ -22,13 +22,13 @@ import java.util.Vector;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class StressComponentsInTable extends CustomComponent {
 
     public StressComponentsInTable() {
-        final VerticalLayout main = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
         setCompositionRoot(main);
 
         main.addComponent(getTestTable(4, 1000));

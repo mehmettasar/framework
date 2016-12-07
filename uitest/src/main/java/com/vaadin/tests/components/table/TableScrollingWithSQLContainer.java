@@ -9,7 +9,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.sqlcontainer.SQLContainer;
 import com.vaadin.v7.data.util.sqlcontainer.connection.JDBCConnectionPool;
 import com.vaadin.v7.data.util.sqlcontainer.connection.SimpleJDBCConnectionPool;
@@ -73,7 +73,7 @@ public class TableScrollingWithSQLContainer extends UI {
 
             SQLContainer container = new LimitedSQLContainer(query);
 
-            final VerticalLayout rootLayout = new VerticalLayout();
+            final LegacyVerticalLayout rootLayout = new LegacyVerticalLayout();
 
             final Table table = new Table();
             table.setContainerDataSource(container);

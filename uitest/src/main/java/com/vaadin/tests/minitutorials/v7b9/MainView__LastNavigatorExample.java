@@ -6,7 +6,7 @@ import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.ExternalResource;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MainView__LastNavigatorExample extends Panel implements View {
 
@@ -16,7 +16,7 @@ public class MainView__LastNavigatorExample extends Panel implements View {
 
         Link lnk = new Link("Settings",
                 new ExternalResource("#!" + SettingsView.NAME));
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.addComponent(lnk);
         setContent(vl);
 

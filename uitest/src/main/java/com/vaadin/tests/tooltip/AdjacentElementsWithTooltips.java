@@ -19,7 +19,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.TooltipConfiguration;
 
 /**
@@ -46,7 +46,7 @@ public class AdjacentElementsWithTooltips extends AbstractReindeerTestUI {
         ttc.setCloseTimeout(200);
         ttc.setQuickOpenDelay(1000);
         ttc.setQuickOpenTimeout(1000);
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.addComponent(makeButton("first"));
         layout.addComponent(makeButton("second"));
         addComponent(layout);

@@ -21,13 +21,13 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Slider;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class SliderDisable extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
         content.setMargin(true);
         content.setSpacing(true);
 

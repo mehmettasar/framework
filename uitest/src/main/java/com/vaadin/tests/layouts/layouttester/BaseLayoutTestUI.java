@@ -29,10 +29,10 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.TextField;
 
@@ -61,7 +61,7 @@ public abstract class BaseLayoutTestUI extends AbstractReindeerTestUI {
     protected AbstractOrderedLayout l1;
     protected AbstractOrderedLayout l2;
     protected Class<? extends AbstractLayout> layoutClass;
-    protected VerticalLayout mainLayout = new VerticalLayout();
+    protected LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
 
     public BaseLayoutTestUI(Class<? extends AbstractLayout> layoutClass) {
         super();
@@ -81,9 +81,9 @@ public abstract class BaseLayoutTestUI extends AbstractReindeerTestUI {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        if (layoutClass.equals(HorizontalLayout.class)) {
+        if (layoutClass.equals(LegacyHorizontalLayout.class)) {
             setLayoutMeasures(l1, l2, "600px", "400px");
-        } else if (layoutClass.equals(VerticalLayout.class)) {
+        } else if (layoutClass.equals(LegacyVerticalLayout.class)) {
             setLayoutMeasures(l1, l2, "400px", "400px");
         } else {
             setDefaultForVertical(l1, l2);
@@ -180,7 +180,7 @@ public abstract class BaseLayoutTestUI extends AbstractReindeerTestUI {
     protected AbstractLayout createLabelsFields(
             Class<? extends AbstractComponent> compType, boolean useIcon,
             String ErrorMessage) {
-        AbstractLayout mainLayout = new VerticalLayout();
+        AbstractLayout mainLayout = new LegacyVerticalLayout();
         AbstractLayout curLayout = null;
         try {
             curLayout = layoutClass.newInstance();

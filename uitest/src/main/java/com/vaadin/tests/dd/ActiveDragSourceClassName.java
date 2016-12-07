@@ -16,7 +16,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.DragAndDropWrapper;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class ActiveDragSourceClassName extends TestBase {
 
@@ -27,7 +27,7 @@ public class ActiveDragSourceClassName extends TestBase {
     protected void setup() {
         TestUtils.injectCSS(getMainWindow(), GREENBOXES + HIDEDRAGSOURCE);
 
-        VerticalLayout l = new VerticalLayout();
+        LegacyVerticalLayout l = new LegacyVerticalLayout();
         l.setWidth("400px");
         l.setHeight("100px");
         DragAndDropWrapper pane = new DragAndDropWrapper(cssLayout);

@@ -25,7 +25,7 @@ import com.vaadin.ui.Component.Listener;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.FilesystemContainer;
 import com.vaadin.v7.data.util.FilesystemContainer.FileItem;
 import com.vaadin.v7.ui.Field;
@@ -59,7 +59,7 @@ public class TreeFilesystemContainer extends com.vaadin.server.LegacyApplication
         final LegacyWindow w = new LegacyWindow(
                 "Tree FilesystemContainer demo");
         setMainWindow(w);
-        final VerticalLayout main = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
         w.setContent(main);
         main.setMargin(true);
         main.setSpacing(true);
@@ -71,13 +71,13 @@ public class TreeFilesystemContainer extends com.vaadin.server.LegacyApplication
         main.setExpandRatio(explorerPanel, 1);
 
         // Explorer panel contains tree
-        VerticalLayout explorerLayout = new VerticalLayout();
+        LegacyVerticalLayout explorerLayout = new LegacyVerticalLayout();
         explorerLayout.setMargin(true);
         explorerPanel.setContent(explorerLayout);
         explorerLayout.addComponent(filesystem);
 
         // Property panel contains label
-        VerticalLayout propertyLayout = new VerticalLayout();
+        LegacyVerticalLayout propertyLayout = new LegacyVerticalLayout();
         propertyLayout.setMargin(true);
         propertyPanel.setContent(propertyLayout);
         propertyLayout.addComponent(fileProperties);

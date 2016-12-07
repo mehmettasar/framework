@@ -6,7 +6,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class TextFieldValueGoesMissing extends AbstractReindeerTestUI {
@@ -14,7 +14,7 @@ public class TextFieldValueGoesMissing extends AbstractReindeerTestUI {
     @SuppressWarnings("unchecked")
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout verticalLayout = new VerticalLayout();
+        final LegacyVerticalLayout verticalLayout = new LegacyVerticalLayout();
 
         final Label label1 = new Label("1");
         final Label label2 = new Label("2");

@@ -21,7 +21,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 @SuppressWarnings("serial")
@@ -32,7 +32,7 @@ public class TableSizeInTabsheet extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         setContent(layout);
 
@@ -45,7 +45,7 @@ public class TableSizeInTabsheet extends AbstractReindeerTestUI {
     public class TabComposite extends CustomComponent {
 
         public TabComposite() {
-            Layout mainLayout = new VerticalLayout();
+            Layout mainLayout = new LegacyVerticalLayout();
             addComponent(mainLayout);
             setCompositionRoot(mainLayout);
 

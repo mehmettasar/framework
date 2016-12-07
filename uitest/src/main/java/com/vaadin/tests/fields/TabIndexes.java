@@ -11,7 +11,7 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.InlineDateField;
 import com.vaadin.ui.DateField;
 import com.vaadin.ui.RichTextArea;
@@ -34,7 +34,7 @@ public class TabIndexes extends AbstractTestUIWithLog {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout buttonLayout = new HorizontalLayout();
+        LegacyHorizontalLayout buttonLayout = new LegacyHorizontalLayout();
         addComponent(buttonLayout);
         Button clearTabIndexes = new Button("Set all tab indexes to 0");
         clearTabIndexes.addClickListener(new ClickListener() {

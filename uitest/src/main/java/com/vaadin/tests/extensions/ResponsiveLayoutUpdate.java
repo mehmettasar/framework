@@ -20,7 +20,7 @@ import com.vaadin.annotations.Theme;
 import com.vaadin.server.Responsive;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 
@@ -29,7 +29,7 @@ public class ResponsiveLayoutUpdate extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.addStyleName("layout-update");
         layout.setWidth("100%");
         setContent(layout);

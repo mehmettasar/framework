@@ -26,11 +26,11 @@ import com.vaadin.ui.ColorPickerArea;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.TextField;
 
@@ -43,11 +43,11 @@ public class HtmlInCaption extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout main = new HorizontalLayout();
+        LegacyHorizontalLayout main = new LegacyHorizontalLayout();
         addComponent(main);
-        VerticalLayout components = new VerticalLayout();
+        LegacyVerticalLayout components = new LegacyVerticalLayout();
         components.setId("components");
-        VerticalLayout layouts = new VerticalLayout();
+        LegacyVerticalLayout layouts = new LegacyVerticalLayout();
         layouts.setId("layouts");
         main.addComponent(layouts);
         main.addComponent(components);
@@ -68,13 +68,13 @@ public class HtmlInCaption extends AbstractReindeerTestUI {
         addWindow(w);
     }
 
-    private void createLayouts(VerticalLayout layouts) {
-        VerticalLayout vl = new VerticalLayout(tf(false), tf(true));
-        vl.setCaption("VerticalLayout");
+    private void createLayouts(LegacyVerticalLayout layouts) {
+        LegacyVerticalLayout vl = new LegacyVerticalLayout(tf(false), tf(true));
+        vl.setCaption("LegacyVerticalLayout");
         layouts.addComponent(vl);
 
-        HorizontalLayout hl = new HorizontalLayout(tf(false), tf(true));
-        hl.setCaption("HorizontalLayout");
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout(tf(false), tf(true));
+        hl.setCaption("LegacyHorizontalLayout");
         layouts.addComponent(hl);
 
         GridLayout gl = new GridLayout(2, 1);
@@ -96,7 +96,7 @@ public class HtmlInCaption extends AbstractReindeerTestUI {
         layouts.addComponent(al);
     }
 
-    private void createComponents(VerticalLayout components) {
+    private void createComponents(LegacyVerticalLayout components) {
         createComponent(components, Button.class);
         createComponent(components, NativeButton.class);
         createComponent(components, CheckBox.class);
@@ -108,7 +108,7 @@ public class HtmlInCaption extends AbstractReindeerTestUI {
 
     }
 
-    private void createComponent(VerticalLayout components,
+    private void createComponent(LegacyVerticalLayout components,
             Class<? extends AbstractComponent> class1) {
         AbstractComponent ac;
         try {

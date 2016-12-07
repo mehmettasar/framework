@@ -19,7 +19,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 /**
@@ -41,7 +41,7 @@ public class ComboboxScrollableWindow extends AbstractReindeerTestUI {
         w.setHeight("300px");
         w.center();
 
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
         w.setContent(content);
         content.setHeight("1000px");
         ComboBox<String> cb = new ComboBox<>();

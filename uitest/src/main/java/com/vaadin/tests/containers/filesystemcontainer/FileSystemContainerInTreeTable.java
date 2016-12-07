@@ -8,7 +8,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.tests.util.Log;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Container.Ordered;
 import com.vaadin.v7.data.util.FilesystemContainer;
@@ -69,7 +69,7 @@ public class FileSystemContainerInTreeTable extends TestBase {
             addComponent(log);
             addComponent(treeTable);
 
-            HorizontalLayout buttonLayout = new HorizontalLayout();
+            LegacyHorizontalLayout buttonLayout = new LegacyHorizontalLayout();
             buttonLayout.setSpacing(true);
             buttonLayout.addComponent(
                     new Button("Create dir11", new Button.ClickListener() {

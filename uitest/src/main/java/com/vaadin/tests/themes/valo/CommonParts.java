@@ -25,35 +25,20 @@ import com.vaadin.server.Page;
 import com.vaadin.server.UserError;
 import com.vaadin.shared.Position;
 import com.vaadin.shared.ui.label.ContentMode;
-import com.vaadin.ui.Alignment;
-import com.vaadin.ui.Button;
+import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.MenuBar;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.MenuBar.Command;
 import com.vaadin.ui.MenuBar.MenuItem;
-import com.vaadin.ui.Notification;
-import com.vaadin.ui.Panel;
-import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TabSheet.SelectedTabChangeEvent;
 import com.vaadin.ui.TabSheet.SelectedTabChangeListener;
-import com.vaadin.ui.TextArea;
-import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.Window;
 import com.vaadin.ui.Window.CloseEvent;
 import com.vaadin.ui.Window.CloseListener;
 import com.vaadin.ui.themes.ValoTheme;
 
 public class CommonParts extends VerticalLayout implements View {
     public CommonParts() {
-        setMargin(true);
 
         Label h1 = new Label("Common UI Elements");
         h1.addStyleName(ValoTheme.LABEL_H1);
@@ -383,7 +368,7 @@ public class CommonParts extends VerticalLayout implements View {
 
     Panel tooltips() {
         Panel p = new Panel("Tooltips");
-        HorizontalLayout content = new HorizontalLayout() {
+        LegacyHorizontalLayout content = new LegacyHorizontalLayout() {
             {
                 setSpacing(true);
                 setMargin(true);
@@ -460,7 +445,7 @@ public class CommonParts extends VerticalLayout implements View {
                     Component toolbar = menuBar;
                     if (toolbarLayout) {
                         menuBar.setWidth(null);
-                        HorizontalLayout toolbarLayout = new HorizontalLayout();
+                        LegacyHorizontalLayout toolbarLayout = new LegacyHorizontalLayout();
                         toolbarLayout.setWidth("100%");
                         toolbarLayout.setSpacing(true);
                         Label label = new Label("Tools");
@@ -528,7 +513,7 @@ public class CommonParts extends VerticalLayout implements View {
                 root.addComponent(content);
 
                 if (footerVisible) {
-                    HorizontalLayout footer = new HorizontalLayout();
+                    LegacyHorizontalLayout footer = new LegacyHorizontalLayout();
                     footer.setWidth("100%");
                     footer.setSpacing(true);
                     footer.addStyleName(ValoTheme.WINDOW_BOTTOM_TOOLBAR);

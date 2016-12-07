@@ -19,6 +19,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import org.apache.commons.io.IOUtils;
 
 import com.vaadin.server.VaadinRequest;
@@ -28,7 +29,6 @@ import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.declarative.Design;
 import com.vaadin.ui.declarative.DesignContext;
 import com.vaadin.v7.data.Property.ReadOnlyException;
@@ -38,7 +38,7 @@ import com.vaadin.v7.data.Property.ValueChangeNotifier;
 
 public class DeclarativeEditor extends UI {
 
-    private VerticalLayout treeHolder;
+    private LegacyVerticalLayout treeHolder;
     private TextArea editor;
     private DesignContext dc;
     private boolean disableEvents = false;
@@ -64,7 +64,7 @@ public class DeclarativeEditor extends UI {
 
         Panel editorPanel = new Panel(editor);
         editorPanel.setSizeFull();
-        treeHolder = new VerticalLayout();
+        treeHolder = new LegacyVerticalLayout();
         treeHolder.setSizeFull();
 
         main.addComponents(editorPanel, treeHolder);

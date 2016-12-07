@@ -6,7 +6,7 @@ import com.vaadin.ui.AbstractSplitPanel.SplitterClickEvent;
 import com.vaadin.ui.AbstractSplitPanel.SplitterClickListener;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.VerticalSplitPanel;
 import com.vaadin.v7.ui.TextArea;
@@ -58,7 +58,7 @@ public class SplitPanelReversePosition extends TestBase {
         area.setSizeFull();
         vsplit.addComponent(area);
 
-        HorizontalLayout buttons = new HorizontalLayout();
+        LegacyHorizontalLayout buttons = new LegacyHorizontalLayout();
         buttons.setSpacing(true);
 
         buttons.addComponent(new Button("Swap horizontal positioning",

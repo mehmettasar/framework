@@ -3,7 +3,7 @@ package com.vaadin.tests.components.combobox;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
@@ -30,13 +30,13 @@ public class ComboBoxDataSourceChange extends TestBase {
             ds2.addItem("ds2-" + i);
         }
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setWidth("100%");
 
         cb2 = new ComboBox();
         cb2.setImmediate(true);
         hl.addComponent(cb2);
-        HorizontalLayout state = new HorizontalLayout();
+        LegacyHorizontalLayout state = new LegacyHorizontalLayout();
         state.setSpacing(true);
         hl.addComponent(state);
 

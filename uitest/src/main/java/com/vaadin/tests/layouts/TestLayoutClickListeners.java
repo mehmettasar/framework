@@ -9,18 +9,18 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 
 public class TestLayoutClickListeners extends AbstractReindeerTestUIWithLog {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout layoutsLayout = new HorizontalLayout();
+        LegacyHorizontalLayout layoutsLayout = new LegacyHorizontalLayout();
         layoutsLayout.setSpacing(true);
         addComponent(layoutsLayout);
 
@@ -145,19 +145,19 @@ public class TestLayoutClickListeners extends AbstractReindeerTestUIWithLog {
 
     private Layout createClickableVerticalLayout() {
 
-        VerticalLayout gl = new VerticalLayout();
+        LegacyVerticalLayout gl = new LegacyVerticalLayout();
         addContent(gl, 5);
 
         gl.addLayoutClickListener(new LayoutClickListener() {
 
             @Override
             public void layoutClick(LayoutClickEvent event) {
-                logLayoutClick("VerticalLayout", event);
+                logLayoutClick("LegacyVerticalLayout", event);
 
             }
         });
 
-        return wrap(gl, "Clickable VerticalLayout");
+        return wrap(gl, "Clickable LegacyVerticalLayout");
     }
 
     private void addContent(Layout gl, int nr) {
@@ -172,7 +172,7 @@ public class TestLayoutClickListeners extends AbstractReindeerTestUIWithLog {
     }
 
     private Layout wrap(Component c, String caption) {
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         Label l = new Label(caption);
         l.setWidth(null);
         vl.addComponent(l);

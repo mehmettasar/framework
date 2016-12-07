@@ -4,7 +4,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -23,7 +23,7 @@ public class TestCurrentPageFirstItem extends TestBase
     public void setup() {
         container.addContainerProperty("row", String.class, "");
 
-        HorizontalLayout baseLayout = new HorizontalLayout();
+        LegacyHorizontalLayout baseLayout = new LegacyHorizontalLayout();
         baseLayout.setHeight("115px");
         getMainWindow().setContent(baseLayout);
 

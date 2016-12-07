@@ -8,7 +8,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.JavaScriptFunction;
 import com.vaadin.ui.Link;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 import elemental.json.JsonArray;
 
@@ -20,7 +20,7 @@ public class LinkInsideDisabledContainer extends AbstractTestUIWithLog {
     @Override
     protected void setup(VaadinRequest request) {
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         final Link link = new Link(CLICK_COUNT_TEXT + 0,
                 new ExternalResource("javascript:__linkClicked()"));
@@ -34,7 +34,7 @@ public class LinkInsideDisabledContainer extends AbstractTestUIWithLog {
                     }
                 });
 
-        final VerticalLayout vlayout = new VerticalLayout();
+        final LegacyVerticalLayout vlayout = new LegacyVerticalLayout();
         vlayout.addComponent(link);
         vlayout.setId("testContainer");
         layout.addComponent(vlayout);

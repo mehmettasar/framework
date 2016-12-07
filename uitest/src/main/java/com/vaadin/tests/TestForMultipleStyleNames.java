@@ -22,7 +22,7 @@ import java.util.Iterator;
 
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -38,7 +38,7 @@ import com.vaadin.v7.ui.TwinColSelect;
 public class TestForMultipleStyleNames extends CustomComponent
         implements ValueChangeListener {
 
-    private final VerticalLayout main = new VerticalLayout();
+    private final LegacyVerticalLayout main = new LegacyVerticalLayout();
 
     private Label l;
 

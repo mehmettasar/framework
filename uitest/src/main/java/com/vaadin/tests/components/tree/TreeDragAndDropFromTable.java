@@ -4,7 +4,7 @@ import com.vaadin.event.dd.DragAndDropEvent;
 import com.vaadin.event.dd.DropHandler;
 import com.vaadin.event.dd.acceptcriteria.AcceptCriterion;
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.event.DataBoundTransferable;
 import com.vaadin.v7.ui.AbstractSelect.AbstractSelectTargetDetails;
@@ -18,7 +18,7 @@ public class TreeDragAndDropFromTable extends TestBase {
     @Override
     protected void setup() {
 
-        HorizontalLayout h = new HorizontalLayout();
+        LegacyHorizontalLayout h = new LegacyHorizontalLayout();
         addComponent(h);
 
         Table table = new Table();

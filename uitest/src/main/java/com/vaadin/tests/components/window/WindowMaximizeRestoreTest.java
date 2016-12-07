@@ -12,7 +12,7 @@ import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.ui.Window.WindowModeChangeEvent;
 import com.vaadin.ui.Window.WindowModeChangeListener;
@@ -49,7 +49,7 @@ public class WindowMaximizeRestoreTest extends AbstractReindeerTestUI {
 
     private Window createNewWindow() {
         final Window w = new Window("Window " + (++windowCount));
-        final VerticalLayout content = new VerticalLayout();
+        final LegacyVerticalLayout content = new LegacyVerticalLayout();
         w.setContent(content);
         w.setData(windowCount);
         w.setWidth("200px");

@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -45,10 +45,10 @@ public class GridInWindowResize extends AbstractTestUI {
         g.setContainerDataSource(cont);
         g.setSizeFull();
 
-        VerticalLayout vl = new VerticalLayout(g);
+        LegacyVerticalLayout vl = new LegacyVerticalLayout(g);
         vl.setSizeFull();
         Button resize = new Button("resize");
-        VerticalLayout vl2 = new VerticalLayout(vl, resize);
+        LegacyVerticalLayout vl2 = new LegacyVerticalLayout(vl, resize);
         vl2.setSizeFull();
 
         final Window w = new Window(null, vl2);

@@ -13,7 +13,7 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.DragAndDropWrapper;
 import com.vaadin.ui.DragAndDropWrapper.DragStartMode;
 import com.vaadin.ui.DragAndDropWrapper.WrapperTransferable;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 
@@ -21,7 +21,7 @@ public class DDTest5 extends TestBase {
 
     java.util.Random r = new java.util.Random(1);
 
-    HorizontalLayout hl = new HorizontalLayout();
+    LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
 
     private DragAndDropWrapper dragAndDropWrapper2;
 

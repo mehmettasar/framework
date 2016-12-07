@@ -24,13 +24,8 @@ import com.vaadin.event.dd.acceptcriteria.AcceptAll;
 import com.vaadin.event.dd.acceptcriteria.AcceptCriterion;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractTestUIWithLog;
-import com.vaadin.ui.AbstractTextField;
-import com.vaadin.ui.DragAndDropWrapper;
+import com.vaadin.ui.*;
 import com.vaadin.ui.DragAndDropWrapper.DragStartMode;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.TextArea;
-import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
 
 /**
  * Test UI for text area inside {@link DragAndDropWrapper}: text area should

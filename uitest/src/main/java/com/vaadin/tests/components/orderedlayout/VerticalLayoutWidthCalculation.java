@@ -3,9 +3,9 @@ package com.vaadin.tests.components.orderedlayout;
 import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.TextField;
 
@@ -20,16 +20,16 @@ public class VerticalLayoutWidthCalculation extends AbstractTestCase {
     }
 
     private Window createSubWindow() {
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
 
-        VerticalLayout vlTF1 = new VerticalLayout();
+        LegacyVerticalLayout vlTF1 = new LegacyVerticalLayout();
         vlTF1.setSizeUndefined();
         final TextField tf1 = new TextField("Text1");
         tf1.setSizeUndefined();
         vlTF1.addComponent(tf1);
         hl.addComponent(vlTF1);
 
-        VerticalLayout vlTF2 = new VerticalLayout();
+        LegacyVerticalLayout vlTF2 = new LegacyVerticalLayout();
         vlTF2.setSizeUndefined();
         final TextField tf2 = new TextField("Text2");
         tf2.setVisible(false);
@@ -37,7 +37,7 @@ public class VerticalLayoutWidthCalculation extends AbstractTestCase {
         vlTF2.addComponent(tf2);
         hl.addComponent(vlTF2);
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         layout.setSizeUndefined();
         Window wnd = new Window("Test", layout);

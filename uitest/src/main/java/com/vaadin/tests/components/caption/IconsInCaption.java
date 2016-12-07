@@ -9,7 +9,7 @@ import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.Embedded;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class IconsInCaption extends TestBase {
 
@@ -29,7 +29,7 @@ public class IconsInCaption extends TestBase {
 
     private static final String[] sizes = new String[] { "16", "32", "64" };
 
-    private ComponentContainer container = new VerticalLayout();
+    private ComponentContainer container = new LegacyVerticalLayout();
 
     private Log log = new Log(5);
 
@@ -54,7 +54,7 @@ public class IconsInCaption extends TestBase {
         addComponent(container);
 
         iconTypeSelect.setValue(TYPE_CAPTION);
-        containerSelect.setValue(VerticalLayout.class);
+        containerSelect.setValue(LegacyVerticalLayout.class);
     }
 
     protected void updateContainer() {

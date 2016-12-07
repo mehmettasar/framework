@@ -24,10 +24,10 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Tree;
 
 /**
@@ -44,12 +44,12 @@ public class TestForTrees extends CustomComponent implements Handler {
             "Smith", "Jones", "Beck", "Sheridan", "Picard", "Hill", "Fielding",
             "Einstein" };
 
-    private final VerticalLayout main = new VerticalLayout();
+    private final LegacyVerticalLayout main = new LegacyVerticalLayout();
 
     private final Action[] actions = new Action[] { new Action("edit"),
             new Action("delete") };
 
-    private VerticalLayout al;
+    private LegacyVerticalLayout al;
 
     private Tree contextTree;
 
@@ -94,7 +94,7 @@ public class TestForTrees extends CustomComponent implements Handler {
         t.addActionHandler(this);
         final AbstractOrderedLayout ol = (AbstractOrderedLayout) createTestBench(
                 t);
-        al = new VerticalLayout();
+        al = new LegacyVerticalLayout();
         al.setMargin(true);
         ol.addComponent(new Panel("action log", al));
         main.addComponent(ol);
@@ -140,11 +140,11 @@ public class TestForTrees extends CustomComponent implements Handler {
     }
 
     public Component createTestBench(Tree t) {
-        final HorizontalLayout ol = new HorizontalLayout();
+        final LegacyHorizontalLayout ol = new LegacyHorizontalLayout();
 
         ol.addComponent(t);
 
-        final VerticalLayout statusLayout = new VerticalLayout();
+        final LegacyVerticalLayout statusLayout = new LegacyVerticalLayout();
         statusLayout.setMargin(true);
         final Panel status = new Panel("Events", statusLayout);
         final Button clear = new Button("c");

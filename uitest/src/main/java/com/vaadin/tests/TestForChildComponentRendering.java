@@ -26,7 +26,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Select;
 
 /**
@@ -38,11 +38,11 @@ import com.vaadin.v7.ui.Select;
  */
 public class TestForChildComponentRendering extends CustomComponent {
 
-    private final VerticalLayout main;
+    private final LegacyVerticalLayout main;
 
     public TestForChildComponentRendering() {
 
-        main = new VerticalLayout();
+        main = new LegacyVerticalLayout();
         setCompositionRoot(main);
         createNewView();
     }
@@ -98,7 +98,7 @@ public class TestForChildComponentRendering extends CustomComponent {
             components.add(it.next());
         }
 
-        final VerticalLayout v = main;
+        final LegacyVerticalLayout v = main;
         v.removeAllComponents();
 
         for (int i = components.size(); i > 0; i--) {

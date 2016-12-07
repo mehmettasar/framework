@@ -5,14 +5,14 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 @Theme("sassy")
 public class SassyUI extends UI {
     @Override
     public void init(VaadinRequest request) {
         Button b = new Button("Reindeer");
-        Layout layout = new VerticalLayout();
+        Layout layout = new LegacyVerticalLayout();
         layout.addComponent(b);
 
         b = new Button("important");

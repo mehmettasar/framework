@@ -2,7 +2,7 @@ package com.vaadin.tests.components.table;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.themes.BaseTheme;
@@ -22,7 +22,7 @@ public class TableRowHeight3 extends TestBase {
     @Override
     protected void setup() {
         setTheme("tests-tickets");
-        HorizontalLayout vl = new HorizontalLayout();
+        LegacyHorizontalLayout vl = new LegacyHorizontalLayout();
         vl.setSizeFull();
 
         Table table = new Table();

@@ -23,7 +23,7 @@ import com.vaadin.shared.ui.datefield.Resolution;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.tests.components.TestDateField;
 import com.vaadin.ui.AbstractDateField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class CustomDateFormatEEE extends AbstractReindeerTestUI {
 
@@ -39,7 +39,7 @@ public class CustomDateFormatEEE extends AbstractReindeerTestUI {
         df.setValue(LocalDate.of(2014, 3, 14)); // Friday
         df.setWidth("200px");
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.addComponent(df);
         layout.setMargin(true);
         setContent(layout);

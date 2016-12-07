@@ -21,29 +21,20 @@ import com.vaadin.server.UserError;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Validator;
 import com.vaadin.v7.data.validator.StringLengthValidator;
-import com.vaadin.v7.ui.AbstractField;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.Field;
-import com.vaadin.v7.ui.ListSelect;
-import com.vaadin.v7.ui.NativeSelect;
-import com.vaadin.v7.ui.PasswordField;
-import com.vaadin.v7.ui.RichTextArea;
-import com.vaadin.v7.ui.TextArea;
-import com.vaadin.v7.ui.TextField;
-import com.vaadin.v7.ui.TwinColSelect;
 
 public class FieldErrorIndication extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         addComponent(hl);
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         hl.addComponent(vl);
 
         ComboBox comboBox = new ComboBox("ComboBox");
@@ -87,7 +78,7 @@ public class FieldErrorIndication extends AbstractReindeerTestUI {
         Class<? extends AbstractField>[] textFields = new Class[] {
                 TextField.class, TextArea.class, RichTextArea.class,
                 PasswordField.class };
-        vl = new VerticalLayout();
+        vl = new LegacyVerticalLayout();
         hl.addComponent(vl);
         for (Class<? extends Field> fieldClass : textFields) {
             vl.addComponent(getField(fieldClass));

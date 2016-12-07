@@ -2,7 +2,7 @@ package com.vaadin.tests.components.orderedlayout;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Alignment;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.ui.TextArea;
 
@@ -10,7 +10,7 @@ public class HorizontalLayoutVerticalAlign extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout p = new HorizontalLayout();
+        LegacyHorizontalLayout p = new LegacyHorizontalLayout();
 
         p.addComponent(new TextArea());
 

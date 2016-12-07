@@ -40,20 +40,20 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.DragAndDropWrapper;
 import com.vaadin.ui.Embedded;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.MenuItem;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  *
  * @since
  * @author Vaadin Ltd
  */
-public class Dragging extends VerticalLayout implements View {
+public class Dragging extends LegacyVerticalLayout implements View {
 
     SortableLayout sample;
 
@@ -151,7 +151,7 @@ public class Dragging extends VerticalLayout implements View {
         }
         components.add(documentLayout);
 
-        final VerticalLayout buttonLayout = new VerticalLayout();
+        final LegacyVerticalLayout buttonLayout = new LegacyVerticalLayout();
         final Button button = new Button("Button");
         button.addClickListener(new Button.ClickListener() {
             @Override
@@ -236,7 +236,7 @@ public class Dragging extends VerticalLayout implements View {
         private final DropHandler dropHandler;
 
         public SortableLayout() {
-            layout = new HorizontalLayout();
+            layout = new LegacyHorizontalLayout();
             layout.setMargin(true);
             dropHandler = new ReorderLayoutDropHandler(layout);
 

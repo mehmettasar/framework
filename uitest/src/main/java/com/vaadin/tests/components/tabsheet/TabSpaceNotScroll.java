@@ -21,7 +21,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * If the space is pressed on the tabs of a tabsheet the browser default scroll
@@ -46,7 +46,7 @@ public class TabSpaceNotScroll extends AbstractReindeerTestUI {
 
         Label dontShowThis = new Label("Page scroll. This is bad.");
 
-        VerticalLayout panel = new VerticalLayout();
+        LegacyVerticalLayout panel = new LegacyVerticalLayout();
         panel.setHeight("2000px");
         panel.addComponent(dontShowThis);
         panel.setComponentAlignment(dontShowThis, Alignment.MIDDLE_CENTER);

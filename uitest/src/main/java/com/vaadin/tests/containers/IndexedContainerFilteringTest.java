@@ -6,7 +6,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.ui.Table;
@@ -45,7 +45,7 @@ public class IndexedContainerFilteringTest extends TestBase {
             table.addItem(new Object[] { "Item " + i }, "Item " + i);
         }
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
 
         // activate & deactivate filtering
         filterString = new TextField("Filter string:", "1");

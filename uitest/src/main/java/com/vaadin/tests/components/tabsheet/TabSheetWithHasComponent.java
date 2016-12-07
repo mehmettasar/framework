@@ -26,8 +26,8 @@ import com.vaadin.ui.Panel;
 import com.vaadin.ui.PopupView;
 import com.vaadin.ui.PopupView.Content;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.data.Item;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.Table.ColumnGenerator;
 
@@ -69,7 +69,7 @@ public class TabSheetWithHasComponent extends AbstractReindeerTestUI {
     }
 
     private Panel createPanel() {
-        return new Panel("Panel containing stuff", new VerticalLayout(
+        return new Panel("Panel containing stuff", new LegacyVerticalLayout(
                 new Label("A Label"), new Button("A button")));
     }
 

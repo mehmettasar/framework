@@ -24,7 +24,7 @@ import com.vaadin.server.UserError;
 import com.vaadin.ui.AbstractDateField;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  *
@@ -32,7 +32,7 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class TestDateField extends CustomComponent {
 
-    VerticalLayout main = new VerticalLayout();
+    LegacyVerticalLayout main = new LegacyVerticalLayout();
 
     AbstractDateField df;
 

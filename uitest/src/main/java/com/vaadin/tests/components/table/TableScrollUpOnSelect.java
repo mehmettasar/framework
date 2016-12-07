@@ -17,7 +17,7 @@ package com.vaadin.tests.components.table;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
@@ -27,7 +27,7 @@ import com.vaadin.v7.ui.TextField;
 /**
  * Test to see if Table appears to scroll up under an obscure set of conditions
  * (Scrolled down, set to expand, selecting updates a TextField that precedes
- * the Table in a VerticalLayout.) (#10106)
+ * the Table in a LegacyVerticalLayout.) (#10106)
  *
  * @author Vaadin Ltd
  */
@@ -49,7 +49,7 @@ public class TableScrollUpOnSelect extends AbstractReindeerTestUI {
         table.setImmediate(true);
         table.setEditable(false);
 
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         table.addValueChangeListener(new ValueChangeListener() {
 

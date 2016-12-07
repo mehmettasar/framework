@@ -19,13 +19,13 @@ import com.vaadin.annotations.DesignRoot;
 import com.vaadin.annotations.PropertyId;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.DateField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.declarative.Design;
 import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.v7.ui.TextField;
 
 @DesignRoot
-public class PotusForm extends VerticalLayout {
+public class PotusForm extends LegacyVerticalLayout {
 
     @PropertyId("firstName")
     public TextField firstName;

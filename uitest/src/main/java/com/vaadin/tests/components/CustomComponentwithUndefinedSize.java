@@ -7,7 +7,7 @@ import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class CustomComponentwithUndefinedSize extends TestBase {
 
@@ -48,8 +48,8 @@ public class CustomComponentwithUndefinedSize extends TestBase {
         }
 
         public Layout buildLayout() {
-            VerticalLayout layout = new VerticalLayout();
-            VerticalLayout panelLayout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
+            LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
             panelLayout.setMargin(true);
             final Panel widePanel = new Panel("too big", panelLayout);
             widePanel.setSizeUndefined();

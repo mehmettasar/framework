@@ -2,7 +2,7 @@ package com.vaadin.tests.components.window;
 
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class SubwindowInvalidLayout extends TestBase {
@@ -19,12 +19,12 @@ public class SubwindowInvalidLayout extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window window = new Window("Sub window", layout);
         window.center();
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setWidth(null);
         Button b = new Button("A 100% wide button, invalid");
         b.setWidth("100%");

@@ -15,30 +15,24 @@
  */
 package com.vaadin.tests.components.window;
 
-import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-
+import com.vaadin.event.ShortcutAction.KeyCode;
+import com.vaadin.server.VaadinRequest;
+import com.vaadin.tests.components.AbstractTestUI;
+import com.vaadin.ui.*;
+import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.Button.ClickListener;
+import com.vaadin.ui.declarative.Design;
+import com.vaadin.ui.declarative.DesignContext;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 
-import com.vaadin.event.ShortcutAction.KeyCode;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.tests.components.AbstractTestUI;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.Panel;
-import com.vaadin.ui.RichTextArea;
-import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.Window;
-import com.vaadin.ui.declarative.Design;
-import com.vaadin.ui.declarative.DesignContext;
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
 
 @SuppressWarnings("serial")
 public class WindowCloseShortcuts extends AbstractTestUI {
@@ -119,7 +113,7 @@ public class WindowCloseShortcuts extends AbstractTestUI {
         Panel designPanel = new Panel();
         designPanel.setCaption("Window design");
         designLabel = new Label("");
-        VerticalLayout designLayout = new VerticalLayout();
+        LegacyVerticalLayout designLayout = new LegacyVerticalLayout();
         designLayout.addComponent(designLabel);
         designPanel.setContent(designLayout);
         addComponent(designPanel);

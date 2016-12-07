@@ -18,6 +18,7 @@ package com.vaadin.tests.integration;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import org.eclipse.jetty.proxy.ProxyServlet;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
@@ -33,7 +34,6 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Link;
-import com.vaadin.ui.VerticalLayout;
 
 @PreserveOnRefresh
 public class ProxyTest extends AbstractReindeerTestUI {
@@ -56,7 +56,7 @@ public class ProxyTest extends AbstractReindeerTestUI {
                     startButton.setEnabled(true);
                 }
             });
-    private VerticalLayout linkHolder = new VerticalLayout();
+    private LegacyVerticalLayout linkHolder = new LegacyVerticalLayout();
 
     @Override
     protected void setup(VaadinRequest request) {

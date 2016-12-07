@@ -5,7 +5,7 @@ import com.vaadin.ui.AbsoluteLayout;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MoveComponentsFromAbsoluteLayoutToInnerLayout extends TestBase {
 
@@ -30,7 +30,7 @@ public class MoveComponentsFromAbsoluteLayoutToInnerLayout extends TestBase {
 
         al.addComponent(testButton);
 
-        vl = new VerticalLayout();
+        vl = new LegacyVerticalLayout();
         al.addComponent(vl, "top: 100px");
 
         addComponent(al);

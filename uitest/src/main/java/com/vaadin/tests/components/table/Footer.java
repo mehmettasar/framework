@@ -5,9 +5,9 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -17,7 +17,7 @@ public class Footer extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setSpacing(true);
 
         final Table table = new Table();
@@ -42,7 +42,7 @@ public class Footer extends AbstractReindeerTestUI {
         layout.addComponent(table);
 
         // Add some options to play with
-        VerticalLayout options = new VerticalLayout();
+        LegacyVerticalLayout options = new LegacyVerticalLayout();
         options.setSpacing(true);
 
         final CheckBox visible = new CheckBox("Footers Visible", true);
@@ -59,7 +59,7 @@ public class Footer extends AbstractReindeerTestUI {
                         ? "" : footer1Value.getValue());
             }
         });
-        HorizontalLayout footer1 = new HorizontalLayout();
+        LegacyHorizontalLayout footer1 = new LegacyHorizontalLayout();
         footer1.addComponent(footer1Value);
         footer1.addComponent(footer1Btn);
         options.addComponent(footer1);
@@ -72,7 +72,7 @@ public class Footer extends AbstractReindeerTestUI {
                         ? "" : footer2Value.getValue());
             }
         });
-        HorizontalLayout footer2 = new HorizontalLayout();
+        LegacyHorizontalLayout footer2 = new LegacyHorizontalLayout();
         footer2.addComponent(footer2Value);
         footer2.addComponent(footer2Btn);
         options.addComponent(footer2);
@@ -85,7 +85,7 @@ public class Footer extends AbstractReindeerTestUI {
                         ? "" : footer3Value.getValue());
             }
         });
-        HorizontalLayout footer3 = new HorizontalLayout();
+        LegacyHorizontalLayout footer3 = new LegacyHorizontalLayout();
         footer3.addComponent(footer3Value);
         footer3.addComponent(footer3Btn);
         options.addComponent(footer3);

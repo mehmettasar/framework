@@ -38,20 +38,13 @@ import com.vaadin.ui.RichTextArea;
 import com.vaadin.ui.Slider;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.Upload;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
-import com.vaadin.v7.ui.NativeSelect;
-import com.vaadin.v7.ui.OptionGroup;
-import com.vaadin.v7.ui.ProgressIndicator;
-import com.vaadin.v7.ui.Select;
-import com.vaadin.v7.ui.Table;
-import com.vaadin.v7.ui.TextField;
-import com.vaadin.v7.ui.Tree;
-import com.vaadin.v7.ui.TwinColSelect;
 
 public class TestCaptionWrapper extends CustomComponent implements Listener {
 
-    VerticalLayout main = new VerticalLayout();
+    LegacyVerticalLayout main = new LegacyVerticalLayout();
 
     final String eventListenerString = "Component.Listener feedback: ";
     Label eventListenerFeedback = new Label(
@@ -82,7 +75,7 @@ public class TestCaptionWrapper extends CustomComponent implements Listener {
         test(main);
         populateLayout(main);
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         final Panel panel = new Panel("Panel", panelLayout);
         test(panel);
@@ -90,15 +83,15 @@ public class TestCaptionWrapper extends CustomComponent implements Listener {
 
         final TabSheet tabsheet = new TabSheet();
         test(tabsheet);
-        final VerticalLayout tab1 = new VerticalLayout();
+        final LegacyVerticalLayout tab1 = new LegacyVerticalLayout();
         tab1.addComponent(new Label("try tab2"));
-        final VerticalLayout tab2 = new VerticalLayout();
+        final LegacyVerticalLayout tab2 = new LegacyVerticalLayout();
         test(tab2);
         populateLayout(tab2);
         tabsheet.addTab(tab1, "TabSheet tab1", new ClassResource("m.gif"));
         tabsheet.addTab(tab2, "TabSheet tab2", new ClassResource("m.gif"));
 
-        final VerticalLayout expandLayout = new VerticalLayout();
+        final LegacyVerticalLayout expandLayout = new LegacyVerticalLayout();
         test(expandLayout);
         populateLayout(expandLayout);
 
@@ -106,7 +99,7 @@ public class TestCaptionWrapper extends CustomComponent implements Listener {
         test(gridLayout);
         populateLayout(gridLayout);
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         final Window window = new Window("TEST: Window", layout);
         test(window);
@@ -129,7 +122,7 @@ public class TestCaptionWrapper extends CustomComponent implements Listener {
         final Embedded emb = new Embedded("Embedded " + count++);
         test(layout, emb);
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         final Panel panel = new Panel("Panel " + count++, panelLayout);
         test(layout, panel);

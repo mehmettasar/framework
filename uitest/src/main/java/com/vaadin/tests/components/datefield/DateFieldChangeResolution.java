@@ -23,7 +23,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.DateField;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 
 public class DateFieldChangeResolution extends AbstractReindeerTestUI {
@@ -41,7 +41,7 @@ public class DateFieldChangeResolution extends AbstractReindeerTestUI {
 
         Label l = new Label("Select resolution");
         addComponent(l);
-        HorizontalLayout hlayout = new HorizontalLayout();
+        LegacyHorizontalLayout hlayout = new LegacyHorizontalLayout();
         addComponent(hlayout);
         for (final Resolution value : Resolution.values()) {
             String resolutionString = value.toString().toLowerCase();

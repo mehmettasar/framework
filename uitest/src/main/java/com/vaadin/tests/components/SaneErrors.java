@@ -6,7 +6,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
 import com.vaadin.v7.ui.Table;
@@ -39,7 +39,7 @@ public class SaneErrors extends AbstractReindeerTestUI {
             }
         });
 
-        final VerticalLayout content = new VerticalLayout(b, table);
+        final LegacyVerticalLayout content = new LegacyVerticalLayout(b, table);
 
         /**
          * Button that shows reported exception for TB integration test
@@ -53,7 +53,7 @@ public class SaneErrors extends AbstractReindeerTestUI {
             }
 
             private void reportException(final AbstractComponent b,
-                    final VerticalLayout content) {
+                    final LegacyVerticalLayout content) {
                 String message = b.getErrorMessage().getFormattedHtmlMessage();
                 message = message.replaceAll("&#46;", ".");
                 message = message.substring(message.indexOf("h2>") + 3,

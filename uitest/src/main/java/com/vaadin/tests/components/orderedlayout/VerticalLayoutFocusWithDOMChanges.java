@@ -18,7 +18,7 @@ package com.vaadin.tests.components.orderedlayout;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.TextField;
@@ -32,7 +32,7 @@ public class VerticalLayoutFocusWithDOMChanges extends AbstractReindeerTestUI
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
         setSizeFull();
         listenedTextField.addValueChangeListener(this);
         listenedTextField.setImmediate(true);

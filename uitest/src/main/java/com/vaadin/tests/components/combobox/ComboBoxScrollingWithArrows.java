@@ -22,7 +22,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.AbstractLayout;
 import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Test UI verifying navigating in combobox via arrow keys.
@@ -38,7 +38,7 @@ public class ComboBoxScrollingWithArrows extends AbstractReindeerTestUI {
      */
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         addComponent(layout);
         addComboBox(layout);
     }

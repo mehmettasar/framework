@@ -6,7 +6,7 @@ import java.util.List;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.Table;
 
@@ -29,7 +29,7 @@ public class ColumnWidthsAfterChangeTableColumnsCountOrOrder
         BeanItemContainer<TestBean> container = new BeanItemContainer<>(
                 TestBean.class, beanList);
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         final Table table = new Table("Test Table");
         table.setContainerDataSource(container);

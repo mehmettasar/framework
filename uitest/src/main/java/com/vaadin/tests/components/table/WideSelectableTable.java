@@ -1,7 +1,7 @@
 package com.vaadin.tests.components.table;
 
 import com.vaadin.tests.components.TestBase;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class WideSelectableTable extends TestBase {
@@ -28,7 +28,7 @@ public class WideSelectableTable extends TestBase {
         ptable.setWidth("100%");
         ptable.setPageLength(5);
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.addComponent(ptable);
         addComponent(vl);
     }

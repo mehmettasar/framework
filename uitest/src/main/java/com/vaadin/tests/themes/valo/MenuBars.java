@@ -18,16 +18,16 @@ package com.vaadin.tests.themes.valo;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.FontAwesome;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.Command;
 import com.vaadin.ui.MenuBar.MenuItem;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
-public class MenuBars extends VerticalLayout implements View {
+public class MenuBars extends LegacyVerticalLayout implements View {
     public MenuBars() {
         setMargin(true);
         setSpacing(true);
@@ -60,7 +60,7 @@ public class MenuBars extends VerticalLayout implements View {
         h2.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h2);
 
-        HorizontalLayout wrap = new HorizontalLayout();
+        LegacyHorizontalLayout wrap = new LegacyHorizontalLayout();
         wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         wrap.setSpacing(true);
         addComponent(wrap);
@@ -88,7 +88,7 @@ public class MenuBars extends VerticalLayout implements View {
         h2.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h2);
 
-        wrap = new HorizontalLayout();
+        wrap = new LegacyHorizontalLayout();
         wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         wrap.setSpacing(true);
         addComponent(wrap);

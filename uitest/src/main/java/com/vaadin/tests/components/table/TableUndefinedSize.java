@@ -7,7 +7,7 @@ import com.vaadin.tests.util.Log;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
@@ -22,11 +22,11 @@ public class TableUndefinedSize extends TestBase {
     @Override
     protected void setup() {
 
-        HorizontalLayout controls = new HorizontalLayout();
+        LegacyHorizontalLayout controls = new LegacyHorizontalLayout();
         controls.setSpacing(true);
         addComponent(controls);
 
-        HorizontalLayout visibilities = new HorizontalLayout();
+        LegacyHorizontalLayout visibilities = new LegacyHorizontalLayout();
         visibilities.setSpacing(true);
         addComponent(visibilities);
 

@@ -3,7 +3,7 @@ package com.vaadin.tests.components.orderedlayout;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 public class OrderedLayoutComponentOrdering extends TestBase {
 
@@ -15,7 +15,7 @@ public class OrderedLayoutComponentOrdering extends TestBase {
         // Initially horizontal layout has a,b
         Button a = new Button(String.valueOf(++counter));
         Button b = new Button(String.valueOf(++counter));
-        final HorizontalLayout hl = new HorizontalLayout(a, b);
+        final LegacyHorizontalLayout hl = new LegacyHorizontalLayout(a, b);
         hl.setCaption("Horizontal layout");
         hl.setSpacing(true);
         addComponent(hl);

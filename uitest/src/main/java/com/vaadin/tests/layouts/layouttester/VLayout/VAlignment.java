@@ -16,10 +16,10 @@
 package com.vaadin.tests.layouts.layouttester.VLayout;
 
 import com.vaadin.tests.layouts.layouttester.BaseAlignment;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class VAlignment extends BaseAlignment {
     public VAlignment() {
-        super(VerticalLayout.class);
+        super(LegacyVerticalLayout.class);
     }
 }

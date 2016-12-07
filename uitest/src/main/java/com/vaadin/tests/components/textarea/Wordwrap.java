@@ -3,14 +3,14 @@ package com.vaadin.tests.components.textarea;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.tests.util.LoremIpsum;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.TextArea;
 
 public class Wordwrap extends TestBase {
 
     @Override
     public void setup() {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
 
         TextArea area1 = new TextArea("Wrapping");
         area1.setWordWrap(true); // The default

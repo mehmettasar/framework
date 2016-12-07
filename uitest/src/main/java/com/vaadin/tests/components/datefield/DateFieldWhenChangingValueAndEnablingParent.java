@@ -8,15 +8,15 @@ import com.vaadin.tests.components.TestDateField;
 import com.vaadin.ui.AbstractDateField;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.DateField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class DateFieldWhenChangingValueAndEnablingParent
         extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout main = new VerticalLayout();
-        final VerticalLayout sub = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
+        final LegacyVerticalLayout sub = new LegacyVerticalLayout();
         final CheckBox chk = new CheckBox("Parent layout enabled");
 
         main.setMargin(true);

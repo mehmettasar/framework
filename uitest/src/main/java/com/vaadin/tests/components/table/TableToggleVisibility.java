@@ -4,11 +4,11 @@ import java.text.DecimalFormat;
 
 import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class TableToggleVisibility extends AbstractTestCase {
@@ -22,13 +22,13 @@ public class TableToggleVisibility extends AbstractTestCase {
         Table[] tables = new Table[3];
         Button[] buttons = new Button[3];
 
-        VerticalLayout leftComponent = new VerticalLayout();
+        LegacyVerticalLayout leftComponent = new LegacyVerticalLayout();
         leftComponent.setMargin(true);
         leftComponent.setSpacing(true);
 
         // Toolbar with buttons to hide or show lists
 
-        HorizontalLayout toolBar = new HorizontalLayout();
+        LegacyHorizontalLayout toolBar = new LegacyHorizontalLayout();
         toolBar.setSpacing(true);
         toolBar.setMargin(true);
 
@@ -100,14 +100,14 @@ public class TableToggleVisibility extends AbstractTestCase {
         HorizontalSplitPanel split = new HorizontalSplitPanel();
         split.setFirstComponent(leftComponent);
 
-        VerticalLayout rightComponent = new VerticalLayout();
+        LegacyVerticalLayout rightComponent = new LegacyVerticalLayout();
         rightComponent.setMargin(true);
         rightComponent.addComponent(new Label("Left blank!"));
         split.setSecondComponent(rightComponent);
 
         split.setSizeFull();
 
-        VerticalLayout mainLayout = new VerticalLayout();
+        LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
         mainLayout.setSizeFull();
         mainLayout.addComponent(split);
         mainLayout.setExpandRatio(split, 1.0f);

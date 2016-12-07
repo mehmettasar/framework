@@ -15,8 +15,8 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.NativeSelect;
@@ -27,7 +27,7 @@ public class OrderedLayoutCases extends AbstractReindeerTestUI {
     private static final String[] dimensionValues = { "-1px", "5px", "350px",
             "800px", "100%", "50%" };
 
-    private static class SampleChild extends VerticalLayout {
+    private static class SampleChild extends LegacyVerticalLayout {
         public SampleChild(int i) {
             addStyleName("sampleChild");
             addStyleName("sampleChild" + i);
@@ -117,7 +117,7 @@ public class OrderedLayoutCases extends AbstractReindeerTestUI {
     }
 
     private AbstractOrderedLayout currentLayout;
-    private HorizontalLayout sizeBar;
+    private LegacyHorizontalLayout sizeBar;
 
     @Override
     protected void setup(VaadinRequest request) {
@@ -127,12 +127,12 @@ public class OrderedLayoutCases extends AbstractReindeerTestUI {
                         + ".sampleChild2 {background: yellow;}"
                         + ".sampleChild3 {background: lightgrey;}");
 
-        currentLayout = new HorizontalLayout();
+        currentLayout = new LegacyHorizontalLayout();
         for (int i = 0; i < 3; i++) {
             currentLayout.addComponent(new SampleChild(i + 1));
         }
 
-        sizeBar = new HorizontalLayout();
+        sizeBar = new LegacyHorizontalLayout();
         sizeBar.setSpacing(true);
 
         sizeBar.addComponent(
@@ -175,9 +175,9 @@ public class OrderedLayoutCases extends AbstractReindeerTestUI {
 
                         AbstractOrderedLayout newLayout;
                         if (value.equals("Horizontal")) {
-                            newLayout = new HorizontalLayout();
+                            newLayout = new LegacyHorizontalLayout();
                         } else {
-                            newLayout = new VerticalLayout();
+                            newLayout = new LegacyVerticalLayout();
                         }
 
                         while (currentLayout.getComponentCount() > 0) {
@@ -207,7 +207,7 @@ public class OrderedLayoutCases extends AbstractReindeerTestUI {
                     }
                 }, "Horizontal", "Vertical"));
 
-        HorizontalLayout caseBar = new HorizontalLayout();
+        LegacyHorizontalLayout caseBar = new LegacyHorizontalLayout();
         caseBar.addComponent(
                 new Button("Undefined without relative", new ClickListener() {
                     @Override
@@ -438,7 +438,7 @@ public class OrderedLayoutCases extends AbstractReindeerTestUI {
 
     @Override
     protected String getTestDescription() {
-        return "Tester application for exploring how Horizontal/VerticalLayout reacts to various settings ";
+        return "Tester application for exploring how Horizontal/LegacyVerticalLayout reacts to various settings ";
     }
 
 }

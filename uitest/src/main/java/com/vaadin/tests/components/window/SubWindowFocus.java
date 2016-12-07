@@ -6,7 +6,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.TextField;
 
@@ -44,7 +44,7 @@ public class SubWindowFocus extends TestBase {
         Button b = new Button("new", new Button.ClickListener() {
             @Override
             public void buttonClick(ClickEvent event) {
-                VerticalLayout layout = new VerticalLayout();
+                LegacyVerticalLayout layout = new LegacyVerticalLayout();
                 layout.setMargin(true);
                 final Window win = new Window("Subwin", layout);
                 layout.setWidth(null);

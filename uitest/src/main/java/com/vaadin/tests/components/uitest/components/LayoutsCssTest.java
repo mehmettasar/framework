@@ -14,7 +14,7 @@ import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 import com.vaadin.v7.ui.themes.ChameleonTheme;
 import com.vaadin.v7.ui.themes.Reindeer;
@@ -30,8 +30,8 @@ public class LayoutsCssTest extends GridLayout {
         setColumns(4);
         setWidth("100%");
 
-        VerticalLayout vl = new VerticalLayout();
-        vl.setCaption("VerticalLayout");
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
+        vl.setCaption("LegacyVerticalLayout");
         vl.setMargin(true);
         vl.setSpacing(true);
         vl.setComponentError(new UserError("A error message..."));
@@ -133,7 +133,7 @@ public class LayoutsCssTest extends GridLayout {
      * Helper to create panels for different theme variants...
      */
     private Panel createPanelWith(String caption, String styleName) {
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         Panel panel = new Panel(caption, panelLayout);
         panelLayout.addComponent(new Label("Some content"));

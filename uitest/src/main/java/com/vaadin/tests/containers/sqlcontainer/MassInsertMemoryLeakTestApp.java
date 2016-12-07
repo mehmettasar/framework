@@ -8,7 +8,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.sqlcontainer.SQLContainer;
 import com.vaadin.v7.data.util.sqlcontainer.connection.JDBCConnectionPool;
 import com.vaadin.v7.data.util.sqlcontainer.connection.SimpleJDBCConnectionPool;
@@ -107,7 +107,7 @@ public class MassInsertMemoryLeakTestApp extends LegacyApplication {
     }
 
     private ComponentContainer buildLayout() {
-        VerticalLayout lo = new VerticalLayout();
+        LegacyVerticalLayout lo = new LegacyVerticalLayout();
         lo.setSizeFull();
         lo.addComponent(proggress);
         lo.addComponent(process);

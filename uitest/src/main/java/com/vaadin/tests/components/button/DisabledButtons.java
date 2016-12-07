@@ -4,8 +4,8 @@ import com.vaadin.server.ThemeResource;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class DisabledButtons extends TestBase {
 
@@ -25,7 +25,7 @@ public class DisabledButtons extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.addComponent(createButtons(true));
         hl.addComponent(createButtons(false));
 
@@ -34,7 +34,7 @@ public class DisabledButtons extends TestBase {
     }
 
     private Component createButtons(boolean enabled) {
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         Button b;
 
         // Button w/ text

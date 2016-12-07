@@ -3,7 +3,7 @@ package com.vaadin.tests.components.combobox;
 import com.vaadin.server.LegacyApplication;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
@@ -23,7 +23,7 @@ public class ComboBoxReapperingOldValue extends LegacyApplication
         LegacyWindow mainWindow = new LegacyWindow("ComboBoxCacheTest");
         setMainWindow(mainWindow);
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         Label lbl = new Label(
                 "try selecting value 1 from the first combo box, so that the second combo box will be populated. select a value in second combo box."

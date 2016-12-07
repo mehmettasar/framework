@@ -15,7 +15,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 
 @Push
@@ -67,7 +67,7 @@ public class PushRemoveConnectors extends AbstractTestUIWithLog {
 
             }
         });
-        verticalLayout = new HorizontalLayout();
+        verticalLayout = new LegacyHorizontalLayout();
         populate();
         addComponents(pollingEnabled, start, stop, verticalLayout);
     }

@@ -20,7 +20,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.ListSelect;
 
@@ -29,7 +29,7 @@ public class ModalWindowInitialLocation extends AbstractReindeerTestUI {
     @Override
     protected void setup(VaadinRequest request) {
         final Window w = new Window();
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         // Add lots of contents so that it is easier to see whether the
         // window first appears in the wrong location.
         for (int i = 0; i < 50; i++) {

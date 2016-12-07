@@ -16,7 +16,7 @@
 package com.vaadin.tests.layouts.layouttester.VLayout;
 
 import com.vaadin.tests.layouts.layouttester.BaseComponentSizing;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  *
@@ -30,7 +30,7 @@ public class VLayoutSizing extends BaseComponentSizing {
      * @param layoutClass
      */
     public VLayoutSizing() {
-        super(VerticalLayout.class);
+        super(LegacyVerticalLayout.class);
     }
 
 }

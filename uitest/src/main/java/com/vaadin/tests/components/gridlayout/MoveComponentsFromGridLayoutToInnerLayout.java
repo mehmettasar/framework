@@ -7,7 +7,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MoveComponentsFromGridLayoutToInnerLayout extends AbstractReindeerTestUI {
 
@@ -33,7 +33,7 @@ public class MoveComponentsFromGridLayoutToInnerLayout extends AbstractReindeerT
 
         gl.addComponent(testButton);
 
-        vl = new VerticalLayout();
+        vl = new LegacyVerticalLayout();
         vl.addComponent(new Label("I'm inside the inner layout"));
         gl.addComponent(vl);
 

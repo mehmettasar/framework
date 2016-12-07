@@ -4,9 +4,9 @@ import com.vaadin.event.Action;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 /*
@@ -20,7 +20,7 @@ public class TableContextMenuTouch extends AbstractReindeerTestUI {
     @Override
     protected void setup(VaadinRequest req) {
 
-        HorizontalLayout hlay = new HorizontalLayout();
+        LegacyHorizontalLayout hlay = new LegacyHorizontalLayout();
         addComponent(hlay);
         hlay.setSpacing(true);
 
@@ -52,7 +52,7 @@ public class TableContextMenuTouch extends AbstractReindeerTestUI {
 
         hlay.addComponent(table);
 
-        VerticalLayout vlay = new VerticalLayout();
+        LegacyVerticalLayout vlay = new LegacyVerticalLayout();
         hlay.addComponent(vlay);
 
         final CheckBox immediateCheckBox = new CheckBox("Immediate");

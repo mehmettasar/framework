@@ -10,7 +10,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class NavigatorListenerModifiesListeners extends AbstractReindeerTestUI {
 
@@ -47,7 +47,7 @@ public class NavigatorListenerModifiesListeners extends AbstractReindeerTestUI {
         navigator.navigateTo(MainView.NAME);
     }
 
-    class MainView extends VerticalLayout implements View {
+    class MainView extends LegacyVerticalLayout implements View {
 
         public static final String NAME = "mainview";
 
@@ -73,7 +73,7 @@ public class NavigatorListenerModifiesListeners extends AbstractReindeerTestUI {
 
     }
 
-    class AnotherView extends VerticalLayout implements View {
+    class AnotherView extends LegacyVerticalLayout implements View {
 
         public static final String NAME = "another";
 

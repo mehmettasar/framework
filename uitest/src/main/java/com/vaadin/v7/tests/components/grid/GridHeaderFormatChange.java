@@ -21,7 +21,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.Grid;
 import com.vaadin.v7.ui.Grid.HeaderRow;
@@ -168,7 +168,7 @@ public class GridHeaderFormatChange extends AbstractReindeerTestUI {
                     }
                 });
         join.setId("join");
-        addComponent(new HorizontalLayout(showHide, selectionMode, join));
+        addComponent(new LegacyHorizontalLayout(showHide, selectionMode, join));
     }
 
     @Override

@@ -10,14 +10,14 @@ import com.vaadin.ui.HasComponents.ComponentAttachEvent;
 import com.vaadin.ui.HasComponents.ComponentAttachListener;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.OptionGroup;
 
 public class LayoutAttachListenerInfo extends TestBase {
 
-    private VerticalLayout content = new VerticalLayout();
+    private LegacyVerticalLayout content = new LegacyVerticalLayout();
 
     @Override
     protected void setup() {
@@ -92,14 +92,14 @@ public class LayoutAttachListenerInfo extends TestBase {
     private void testOrderedLayout() {
         content.removeAllComponents();
 
-        final VerticalLayout v = new VerticalLayout();
+        final LegacyVerticalLayout v = new LegacyVerticalLayout();
         v.setWidth("300px");
         v.setHeight("300px");
         v.addComponentAttachListener(new ComponentAttachListener() {
             @Override
             public void componentAttachedToContainer(
                     ComponentAttachEvent event) {
-                VerticalLayout layout = (VerticalLayout) event.getContainer();
+                LegacyVerticalLayout layout = (LegacyVerticalLayout) event.getContainer();
                 getMainWindow().showNotification(
                         "Attached to index " + layout.getComponentIndex(
                                 event.getAttachedComponent()),

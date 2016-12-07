@@ -16,13 +16,13 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.HasComponents;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.SingleComponentContainer;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 
 public class MovingComponentsWhileOldParentInvisible extends TestBase {
@@ -95,11 +95,11 @@ public class MovingComponentsWhileOldParentInvisible extends TestBase {
         list.add(CssLayout.class);
         list.add(FormLayout.class);
         list.add(GridLayout.class);
-        list.add(HorizontalLayout.class);
+        list.add(LegacyHorizontalLayout.class);
         list.add(HorizontalSplitPanel.class);
         list.add(Panel.class);
         list.add(TabSheet.class);
-        list.add(VerticalLayout.class);
+        list.add(LegacyVerticalLayout.class);
         list.add(VerticalSplitPanel.class);
         return list;
     }

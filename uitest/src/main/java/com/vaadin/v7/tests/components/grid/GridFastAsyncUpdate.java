@@ -11,8 +11,8 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.event.SelectionEvent;
@@ -70,12 +70,12 @@ public class GridFastAsyncUpdate extends AbstractTestUI {
 
     @Override
     protected void setup(VaadinRequest vaadinRequest) {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSizeFull();
         layout.setMargin(true);
         addComponent(layout);
 
-        HorizontalLayout buttons = new HorizontalLayout();
+        LegacyHorizontalLayout buttons = new LegacyHorizontalLayout();
         layout.addComponent(buttons);
 
         final ExecutorService logExecutor = Executors.newSingleThreadExecutor();

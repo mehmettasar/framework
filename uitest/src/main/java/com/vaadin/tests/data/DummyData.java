@@ -18,7 +18,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.tests.widgetset.TestingWidgetSet;
 import com.vaadin.ui.AbstractSingleSelect;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 @Widgetset(TestingWidgetSet.NAME)
 public class DummyData extends AbstractTestUIWithLog {
@@ -96,7 +96,7 @@ public class DummyData extends AbstractTestUIWithLog {
         dummy.setDataProvider(new LoggingDataProvider(items));
         dummy.setValue("Foo 200");
 
-        HorizontalLayout controls = new HorizontalLayout();
+        LegacyHorizontalLayout controls = new LegacyHorizontalLayout();
         addComponent(controls);
         controls.addComponent(new Button("Select Foo 20", e -> {
             dummy.setValue("Foo " + 20);

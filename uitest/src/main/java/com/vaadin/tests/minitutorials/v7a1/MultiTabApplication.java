@@ -21,7 +21,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Mini tutorial code for
@@ -32,7 +32,7 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class MultiTabApplication extends UI {
 
-    private class MainView extends VerticalLayout {
+    private class MainView extends LegacyVerticalLayout {
         public MainView() {
             addComponent(new Link("Edit person 1",
                     new ExternalResource("?editPerson=person1")));
@@ -41,7 +41,7 @@ public class MultiTabApplication extends UI {
         }
     }
 
-    private class EditPersonView extends VerticalLayout {
+    private class EditPersonView extends LegacyVerticalLayout {
 
         public EditPersonView(String person) {
             addComponent(new Label("Editor for " + person));

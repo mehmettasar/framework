@@ -16,7 +16,7 @@ import com.vaadin.server.ThemeResource;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.tests.util.Person;
 import com.vaadin.tests.util.PersonContainer;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Container;
@@ -36,7 +36,7 @@ public class DDTest2 extends TestBase {
 
     java.util.Random r = new java.util.Random(1);
 
-    HorizontalLayout hl = new HorizontalLayout();
+    LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
     Tree tree1 = new Tree("Tree that accepts table rows to folders");
     Table table = new Table("Drag rows to Tree on left or right");
     Tree tree2 = new Tree("Accepts items, copies values");

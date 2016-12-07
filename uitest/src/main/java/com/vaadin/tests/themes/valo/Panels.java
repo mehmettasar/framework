@@ -21,15 +21,15 @@ import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.MenuItem;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
-public class Panels extends VerticalLayout implements View {
+public class Panels extends LegacyVerticalLayout implements View {
     public Panels() {
         setMargin(true);
 
@@ -37,7 +37,7 @@ public class Panels extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        HorizontalLayout row = new HorizontalLayout();
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         row.setSpacing(true);
         addComponent(row);
@@ -103,7 +103,7 @@ public class Panels extends VerticalLayout implements View {
         layout = new CssLayout();
         layout.addStyleName(ValoTheme.LAYOUT_CARD);
         row.addComponent(layout);
-        HorizontalLayout panelCaption = new HorizontalLayout();
+        LegacyHorizontalLayout panelCaption = new LegacyHorizontalLayout();
         panelCaption.addStyleName("v-panel-caption");
         panelCaption.setWidth("100%");
         // panelCaption.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
@@ -141,7 +141,7 @@ public class Panels extends VerticalLayout implements View {
     }
 
     Component panelContent() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSizeFull();
         layout.setMargin(true);
         layout.setSpacing(true);
@@ -156,7 +156,7 @@ public class Panels extends VerticalLayout implements View {
     }
 
     Component panelContentScroll() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         layout.setSpacing(true);
         Label content = new Label(

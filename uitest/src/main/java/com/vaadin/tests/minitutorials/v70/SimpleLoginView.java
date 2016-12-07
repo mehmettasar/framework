@@ -7,7 +7,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.validator.AbstractValidator;
 import com.vaadin.v7.data.validator.EmailValidator;
 import com.vaadin.v7.ui.PasswordField;
@@ -49,7 +49,7 @@ public class SimpleLoginView extends CustomComponent
         loginButton = new Button("Login", this);
 
         // Add both to a panel
-        VerticalLayout fields = new VerticalLayout(user, password, loginButton);
+        LegacyVerticalLayout fields = new LegacyVerticalLayout(user, password, loginButton);
         fields.setCaption(
                 "Please login to access the application. (test@test.com/passw0rd)");
         fields.setSpacing(true);
@@ -57,7 +57,7 @@ public class SimpleLoginView extends CustomComponent
         fields.setSizeUndefined();
 
         // The view root layout
-        VerticalLayout viewLayout = new VerticalLayout(fields);
+        LegacyVerticalLayout viewLayout = new LegacyVerticalLayout(fields);
         viewLayout.setSizeFull();
         viewLayout.setComponentAlignment(fields, Alignment.MIDDLE_CENTER);
         viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);

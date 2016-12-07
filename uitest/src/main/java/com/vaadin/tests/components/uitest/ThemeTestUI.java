@@ -4,7 +4,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class ThemeTestUI extends AbstractReindeerTestUI {
@@ -20,7 +20,7 @@ public class ThemeTestUI extends AbstractReindeerTestUI {
 
         createCustomStyleStringField();
 
-        HorizontalLayout selectors = new HorizontalLayout();
+        LegacyHorizontalLayout selectors = new LegacyHorizontalLayout();
         selectors.setSpacing(true);
 
         selectors.addComponent(customStyle);

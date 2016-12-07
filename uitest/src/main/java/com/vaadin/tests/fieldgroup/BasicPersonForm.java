@@ -12,7 +12,7 @@ import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.fieldgroup.BeanFieldGroup;
 import com.vaadin.v7.data.fieldgroup.FieldGroup;
 import com.vaadin.v7.data.fieldgroup.FieldGroup.CommitEvent;
@@ -67,8 +67,8 @@ public class BasicPersonForm extends AbstractTestUIWithLog {
                 configuration.isPostCommitFails());
 
         public ConfigurationPanel() {
-            super("Configuration", new VerticalLayout());
-            ((VerticalLayout) getContent()).setMargin(true);
+            super("Configuration", new LegacyVerticalLayout());
+            ((LegacyVerticalLayout) getContent()).setMargin(true);
             preCommitCheckBox.addValueChangeListener(
                     event -> configuration.setPreCommitFails(event.getValue()));
             postCommitCheckBox.addValueChangeListener(event -> configuration

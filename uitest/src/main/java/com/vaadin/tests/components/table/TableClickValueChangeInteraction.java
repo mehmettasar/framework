@@ -5,11 +5,11 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class TableClickValueChangeInteraction extends TestBase {
@@ -79,7 +79,7 @@ public class TableClickValueChangeInteraction extends TestBase {
             });
         }
 
-        Layout result = new VerticalLayout();
+        Layout result = new LegacyVerticalLayout();
         result.addComponent(table);
         result.addComponent(clickLabel);
         result.addComponent(valueChangeLabel);

@@ -11,15 +11,12 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.shared.ui.datefield.Resolution;
-import com.vaadin.v7.ui.DateField;
-import com.vaadin.v7.ui.InlineDateField;
-import com.vaadin.v7.ui.NativeSelect;
 
 public class LegacyDateFieldRanges extends AbstractReindeerTestUI {
 
@@ -174,7 +171,7 @@ public class LegacyDateFieldRanges extends AbstractReindeerTestUI {
         gl.addComponent(dynamicDateField);
         gl.addComponent(inlineDynamicDateField);
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setSpacing(true);
         hl.addComponent(resoSelect);
         hl.addComponent(fromRange);
@@ -207,7 +204,7 @@ public class LegacyDateFieldRanges extends AbstractReindeerTestUI {
                 null, Resolution.DAY, true);
         gl.addComponent(inline);
         inline.setId("staticInline");
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
 
         return gl;
     }

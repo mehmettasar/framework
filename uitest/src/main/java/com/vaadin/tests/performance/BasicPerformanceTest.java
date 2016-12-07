@@ -9,11 +9,11 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 import com.vaadin.v7.ui.themes.Reindeer;
 
@@ -21,7 +21,7 @@ public class BasicPerformanceTest extends UI {
 
     private int updateOneCount = 0;
 
-    private final VerticalLayout contentLayout = new VerticalLayout();
+    private final LegacyVerticalLayout contentLayout = new LegacyVerticalLayout();
 
     private int clientLimit;
     private int serverLimit;
@@ -66,7 +66,7 @@ public class BasicPerformanceTest extends UI {
         performanceReportArea.setWidth("200px");
         TestUtils.installPerformanceReporting(performanceReportArea);
 
-        VerticalLayout leftBar = new VerticalLayout();
+        LegacyVerticalLayout leftBar = new LegacyVerticalLayout();
         leftBar.setWidth("250px");
         leftBar.addComponent(new Label("This is the left bar"));
         leftBar.addComponent(performanceReportArea);
@@ -115,7 +115,7 @@ public class BasicPerformanceTest extends UI {
                                         .getComponentIterator();
                             }
                             while (columHolderIterator.hasNext()) {
-                                VerticalLayout column = (VerticalLayout) columHolderIterator
+                                LegacyVerticalLayout column = (LegacyVerticalLayout) columHolderIterator
                                         .next();
                                 Iterator<Component> columnIterator = column
                                         .getComponentIterator();
@@ -159,13 +159,13 @@ public class BasicPerformanceTest extends UI {
                     }
                 }));
 
-        HorizontalLayout intermediateLayout = new HorizontalLayout();
+        LegacyHorizontalLayout intermediateLayout = new LegacyHorizontalLayout();
         intermediateLayout.setSizeFull();
         intermediateLayout.addComponent(leftBar);
         intermediateLayout.addComponent(contentScroller);
         intermediateLayout.setExpandRatio(contentScroller, 1);
 
-        VerticalLayout mainLayout = new VerticalLayout();
+        LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
         mainLayout.setSizeFull();
         mainLayout.addComponent(new Label("This is a header"));
         mainLayout.addComponent(intermediateLayout);
@@ -174,21 +174,21 @@ public class BasicPerformanceTest extends UI {
         return mainLayout;
     }
 
-    private void popupateContent(VerticalLayout contentLayout, int childCount,
-            boolean wrapInPanel) {
+    private void popupateContent(LegacyVerticalLayout contentLayout, int childCount,
+                                 boolean wrapInPanel) {
         contentLayout.removeAllComponents();
         for (int i = 0; i < childCount; i++) {
-            VerticalLayout left = new VerticalLayout();
+            LegacyVerticalLayout left = new LegacyVerticalLayout();
             left.addComponent(new Label("Label 1"));
             left.addComponent(new Label("Label 2"));
             left.addComponent(new Label("Label 3"));
 
-            VerticalLayout right = new VerticalLayout();
+            LegacyVerticalLayout right = new LegacyVerticalLayout();
             right.addComponent(new Label("Label 4"));
             right.addComponent(new Label("Label 5"));
             right.addComponent(new Label("Label 6"));
 
-            HorizontalLayout columns = new HorizontalLayout();
+            LegacyHorizontalLayout columns = new LegacyHorizontalLayout();
             columns.addComponent(left);
             columns.addComponent(right);
             columns.setHeight(null);

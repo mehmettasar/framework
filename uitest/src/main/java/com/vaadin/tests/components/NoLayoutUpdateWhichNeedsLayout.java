@@ -5,15 +5,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.Button;
+import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.ProgressBar;
-import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.Window;
 
 @SuppressWarnings("serial")
 public class NoLayoutUpdateWhichNeedsLayout extends UI {
@@ -24,7 +18,6 @@ public class NoLayoutUpdateWhichNeedsLayout extends UI {
     @Override
     protected void init(VaadinRequest request) {
         final VerticalLayout layout = new VerticalLayout();
-        layout.setMargin(true);
         setContent(layout);
 
         setPollInterval(1000);

@@ -3,7 +3,7 @@ package com.vaadin.tests.components;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.HierarchicalContainer;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -23,7 +23,7 @@ public class HierarchicalContainerSorting extends TestBase {
         sort(indexedContainer);
         sort(hierarchicalContainer);
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
 
         Tree tree1 = new Tree("Tree with IndexedContainer");
         tree1.setContainerDataSource(indexedContainer);

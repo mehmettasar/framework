@@ -9,7 +9,7 @@ import com.vaadin.ui.Layout;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.PasswordField;
 import com.vaadin.v7.ui.TextField;
 
@@ -19,7 +19,7 @@ public class LoginView extends Panel implements View {
 
     public LoginView(final Navigator navigator,
             final String fragmentAndParameters) {
-        Layout layout = new VerticalLayout();
+        Layout layout = new LegacyVerticalLayout();
 
         final TextField email = new TextField("Email");
         layout.addComponent(email);

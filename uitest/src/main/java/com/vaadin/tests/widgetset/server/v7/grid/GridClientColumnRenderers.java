@@ -30,7 +30,7 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.AbstractSelect.ItemCaptionMode;
 import com.vaadin.v7.ui.NativeSelect;
 
@@ -86,7 +86,7 @@ public class GridClientColumnRenderers extends UI {
     protected void init(VaadinRequest request) {
         final GridController controller = new GridController();
         final CssLayout controls = new CssLayout();
-        final VerticalLayout content = new VerticalLayout();
+        final LegacyVerticalLayout content = new LegacyVerticalLayout();
 
         content.addComponent(controller);
         content.addComponent(controls);

@@ -42,7 +42,7 @@ import com.vaadin.ui.Panel;
 import com.vaadin.ui.SingleSelect;
 import com.vaadin.ui.StyleGenerator;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.components.grid.MultiSelectionModelImpl;
 import com.vaadin.ui.components.grid.MultiSelectionModelImpl.SelectAllCheckBoxVisible;
 import com.vaadin.ui.components.grid.SingleSelectionModelImpl;
@@ -106,7 +106,7 @@ public class GridBasics extends AbstractTestUIWithLog {
 
         @Override
         public Component apply(DataObject dataObj) {
-            VerticalLayout cssLayout = new VerticalLayout();
+            LegacyVerticalLayout cssLayout = new LegacyVerticalLayout();
             cssLayout.setHeight("200px");
             cssLayout.setWidth("100%");
 
@@ -179,7 +179,7 @@ public class GridBasics extends AbstractTestUIWithLog {
     protected void setup(VaadinRequest request) {
         data = DataObject.generateObjects();
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSpacing(true);
         layout.setSizeFull();
 

@@ -9,7 +9,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
@@ -45,7 +45,7 @@ public class LargeSelectionCausesNPE extends TestBase {
         return 8519;
     }
 
-    public class SelectionExample extends VerticalLayout {
+    public class SelectionExample extends LegacyVerticalLayout {
 
         Table table = new Table();
         Button button = new Button("Update the first item");

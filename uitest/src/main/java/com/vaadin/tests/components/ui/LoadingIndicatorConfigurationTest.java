@@ -5,7 +5,7 @@ import com.vaadin.tests.components.AbstractTestUIWithLog;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.v7.data.Property;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
@@ -66,7 +66,7 @@ public class LoadingIndicatorConfigurationTest extends AbstractTestUIWithLog {
 
         getLayout().addComponents(firstDelay, secondDelay, thirdDelay);
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setMargin(true);
         hl.setDefaultComponentAlignment(Alignment.BOTTOM_RIGHT);
         hl.addComponents(delayField, delayButton);

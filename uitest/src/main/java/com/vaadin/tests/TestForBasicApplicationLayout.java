@@ -30,7 +30,7 @@ import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.themes.Reindeer;
 
@@ -66,7 +66,7 @@ public class TestForBasicApplicationLayout extends CustomComponent {
         final HorizontalSplitPanel sp2 = new HorizontalSplitPanel();
         sp2.setSplitPosition(255, Sizeable.UNITS_PIXELS);
 
-        VerticalLayout pl = new VerticalLayout();
+        LegacyVerticalLayout pl = new LegacyVerticalLayout();
         pl.setMargin(true);
         final Panel p = new Panel("Accordion Panel", pl);
         p.setSizeFull();
@@ -74,9 +74,9 @@ public class TestForBasicApplicationLayout extends CustomComponent {
         tab = new TabSheet();
         tab.setSizeFull();
 
-        VerticalLayout reportLayout = new VerticalLayout();
+        LegacyVerticalLayout reportLayout = new LegacyVerticalLayout();
         final Panel report = new Panel("Monthly Program Runs", reportLayout);
-        final VerticalLayout controls = reportLayout;
+        final LegacyVerticalLayout controls = reportLayout;
         controls.setMargin(true);
         controls.addComponent(new Label("Report tab"));
         controls.addComponent(click);

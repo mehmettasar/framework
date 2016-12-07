@@ -29,22 +29,18 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.RichTextArea;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.OptionGroup;
-import com.vaadin.v7.ui.TextArea;
-import com.vaadin.v7.ui.TextField;
 
 /**
  *
  * @since
  * @author Vaadin Ltd
  */
-public class Forms extends VerticalLayout implements View {
+public class Forms extends LegacyVerticalLayout implements View {
 
     private boolean readOnly = true;
 
@@ -111,7 +107,7 @@ public class Forms extends VerticalLayout implements View {
         phone.setWidth("50%");
         form.addComponent(phone);
 
-        HorizontalLayout wrap = new HorizontalLayout();
+        LegacyHorizontalLayout wrap = new LegacyHorizontalLayout();
         wrap.setSpacing(true);
         wrap.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
         wrap.setCaption("Newsletter");
@@ -173,7 +169,7 @@ public class Forms extends VerticalLayout implements View {
             }
         });
 
-        HorizontalLayout footer = new HorizontalLayout();
+        LegacyHorizontalLayout footer = new LegacyHorizontalLayout();
         footer.setMargin(new MarginInfo(true, false));
         footer.setSpacing(true);
         footer.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);

@@ -5,10 +5,10 @@ import java.util.Map;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 import com.vaadin.v7.ui.themes.Reindeer;
 
@@ -28,13 +28,13 @@ public class BasicPanelTest extends TestBase {
         getLayout().setWidth("600px");
         getLayout().setHeight("100%");
 
-        HorizontalLayout actions = new HorizontalLayout();
+        LegacyHorizontalLayout actions = new LegacyHorizontalLayout();
         actions.setSpacing(true);
 
         actions.addComponent(scrollPosition);
         actions.addComponent(new Button("Sync"));
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         panel.setContent(panelLayout);
 

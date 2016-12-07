@@ -3,7 +3,7 @@ package com.vaadin.tests.components.window;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.Table;
 
@@ -21,7 +21,7 @@ public class SubWindowWithUndefinedHeight extends TestBase {
 
     @Override
     protected void setup() {
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         final Window subwindow = new Window("subwindow", layout);
         subwindow.center();

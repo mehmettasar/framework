@@ -4,10 +4,10 @@ import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TreeTable;
 
 public class ComponentsInTreeTable extends TestBase {
@@ -22,15 +22,15 @@ public class ComponentsInTreeTable extends TestBase {
         tt.addContainerProperty("component", Component.class, "");
         tt.addContainerProperty("type", String.class, "bar");
 
-        Layout l = new HorizontalLayout();
+        Layout l = new LegacyHorizontalLayout();
         l.addComponent(new Label("bar"));
         l.addComponent(new Label("bar"));
-        tt.addItem(new Object[] { l, "HorizontalLayout" }, 1);
+        tt.addItem(new Object[] { l, "LegacyHorizontalLayout" }, 1);
 
-        l = new VerticalLayout();
+        l = new LegacyVerticalLayout();
         l.addComponent(new Label("baz"));
         l.addComponent(new Label("baz"));
-        tt.addItem(new Object[] { l, "VerticalLayout" }, 2);
+        tt.addItem(new Object[] { l, "LegacyVerticalLayout" }, 2);
 
         Label lbl = new Label("<b>foo</b><br/><i>bar</i>");
         lbl.setContentMode(ContentMode.HTML);

@@ -2,7 +2,7 @@ package com.vaadin.tests.components.table;
 
 import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class SortLongTable extends AbstractTestCase {
@@ -25,7 +25,7 @@ public class SortLongTable extends AbstractTestCase {
         ptable.setWidth("100%");
         ptable.setPageLength(NUMBER_OF_ROWS);
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.addComponent(ptable);
         mainWindow.addComponent(vl);
     }

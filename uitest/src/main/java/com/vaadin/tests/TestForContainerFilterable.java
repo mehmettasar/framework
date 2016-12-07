@@ -19,17 +19,17 @@ package com.vaadin.tests;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.TextField;
 
 public class TestForContainerFilterable extends CustomComponent {
 
-    VerticalLayout lo = new VerticalLayout();
+    LegacyVerticalLayout lo = new LegacyVerticalLayout();
     IndexedContainer ic = new IndexedContainer();
     Table t = new Table();
     private static String parts[] = { "Neo", "Sa", "rem", "the", "adi", "za",
@@ -52,7 +52,7 @@ public class TestForContainerFilterable extends CustomComponent {
         }
 
         // Init filtering view
-        final HorizontalLayout filterLayout = new HorizontalLayout();
+        final LegacyHorizontalLayout filterLayout = new LegacyHorizontalLayout();
         final Panel filterPanel = new Panel("Filter", filterLayout);
         filterPanel.setWidth(100, Panel.UNITS_PERCENTAGE);
         lo.addComponent(filterPanel);

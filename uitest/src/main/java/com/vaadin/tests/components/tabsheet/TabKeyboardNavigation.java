@@ -17,7 +17,7 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TabSheet.Tab;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 /**
@@ -100,7 +100,7 @@ public class TabKeyboardNavigation extends AbstractReindeerTestUI {
     }
 
     private Tab addTab() {
-        Layout content = new VerticalLayout();
+        Layout content = new LegacyVerticalLayout();
         tabs.add(content);
         Label label = new Label("Tab " + index);
         label.setId(labelID(index));

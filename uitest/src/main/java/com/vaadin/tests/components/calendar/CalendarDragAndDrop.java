@@ -28,7 +28,7 @@ import com.vaadin.event.dd.acceptcriteria.AcceptAll;
 import com.vaadin.event.dd.acceptcriteria.AcceptCriterion;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Calendar;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.Table.TableDragMode;
@@ -71,7 +71,7 @@ public class CalendarDragAndDrop extends AbstractReindeerTestUI {
         getContent().setSizeFull();
         getLayout().setSizeFull();
 
-        HorizontalLayout root = new HorizontalLayout();
+        LegacyHorizontalLayout root = new LegacyHorizontalLayout();
         root.setSizeFull();
         addComponent(root);
 

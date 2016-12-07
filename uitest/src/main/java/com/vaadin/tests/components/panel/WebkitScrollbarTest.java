@@ -20,7 +20,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.ListSelect;
 
 @SuppressWarnings("serial")
@@ -30,7 +30,7 @@ public class WebkitScrollbarTest extends AbstractReindeerTestUI {
     protected void setup(VaadinRequest request) {
         Panel panel = new Panel();
 
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
         panel.setContent(content);
 
         GridLayout gridLayout = new GridLayout();

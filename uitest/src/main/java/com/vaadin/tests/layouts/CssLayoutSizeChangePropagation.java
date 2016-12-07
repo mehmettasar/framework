@@ -7,14 +7,14 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class CssLayoutSizeChangePropagation extends TestBase {
 
     @Override
     protected void setup() {
         getLayout().setSizeFull();
-        final VerticalLayout sp = new VerticalLayout();
+        final LegacyVerticalLayout sp = new LegacyVerticalLayout();
 
         sp.setHeight("100%");
 

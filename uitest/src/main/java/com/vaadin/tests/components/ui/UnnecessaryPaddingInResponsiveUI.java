@@ -19,10 +19,10 @@ import com.vaadin.server.Responsive;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
@@ -36,7 +36,7 @@ public class UnnecessaryPaddingInResponsiveUI extends UI {
     protected void init(VaadinRequest request) {
         Responsive.makeResponsive(this);
 
-        HorizontalLayout root = new HorizontalLayout();
+        LegacyHorizontalLayout root = new LegacyHorizontalLayout();
         root.setSpacing(true);
 
         MenuLayout menu = new MenuLayout();
@@ -55,7 +55,7 @@ public class UnnecessaryPaddingInResponsiveUI extends UI {
         // addStyleName(ValoTheme.UI_WITH_MENU);
     }
 
-    class MenuLayout extends VerticalLayout {
+    class MenuLayout extends LegacyVerticalLayout {
         public MenuLayout() {
             setSizeFull();
             setPrimaryStyleName(ValoTheme.MENU_ROOT);

@@ -25,7 +25,6 @@ import com.vaadin.ui.themes.ValoTheme;
 
 public class Accordions extends VerticalLayout implements View {
     public Accordions() {
-        setMargin(true);
 
         Label h1 = new Label("Accordions");
         h1.addStyleName(ValoTheme.LABEL_H1);

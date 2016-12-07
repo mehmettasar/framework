@@ -1,7 +1,7 @@
 package com.vaadin.tests.components.window;
 
 import com.vaadin.tests.components.panel.PanelTest;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class WindowTest extends PanelTest<Window> {
@@ -13,7 +13,7 @@ public class WindowTest extends PanelTest<Window> {
 
     @Override
     protected void addTestComponent(Window w) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         w.setContent(layout);
         addWindow(w);

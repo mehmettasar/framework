@@ -11,7 +11,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.tests.util.Person;
 import com.vaadin.tests.util.PersonContainer;
 import com.vaadin.tests.util.TestUtils;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.UI;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -23,7 +23,7 @@ public class DDTest4 extends TestBase {
 
     java.util.Random r = new java.util.Random(1);
 
-    HorizontalLayout hl = new HorizontalLayout();
+    LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
     Table table = new Table("Drag and drop sortable table");
 
     @Override

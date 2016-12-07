@@ -7,7 +7,7 @@ import com.vaadin.tests.components.AbstractReindeerTestUIWithLog;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.Table.ColumnCollapseEvent;
 import com.vaadin.v7.ui.Table.ColumnCollapseListener;
@@ -66,7 +66,7 @@ public class ColumnCollapsingAndColumnExpansion
         addComponent(table);
 
         for (int i = 1; i <= 3; i++) {
-            HorizontalLayout hl = new HorizontalLayout();
+            LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
             final String id = "Col" + i;
             Button hide = new Button("Collapse " + id, new ClickListener() {
                 @Override

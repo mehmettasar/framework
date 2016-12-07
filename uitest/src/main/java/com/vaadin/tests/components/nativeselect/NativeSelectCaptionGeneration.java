@@ -3,19 +3,19 @@ package com.vaadin.tests.components.nativeselect;
 import com.vaadin.annotations.DesignRoot;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.ItemCaptionGenerator;
 import com.vaadin.ui.NativeSelect;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.declarative.Design;
 
 public class NativeSelectCaptionGeneration extends UI {
 
     @DesignRoot
-    public static class TestComponent extends VerticalLayout {
+    public static class TestComponent extends LegacyVerticalLayout {
 
-        HorizontalLayout buttons;
+        LegacyHorizontalLayout buttons;
         NativeSelect<String> nativeSelect;
 
         public TestComponent() {

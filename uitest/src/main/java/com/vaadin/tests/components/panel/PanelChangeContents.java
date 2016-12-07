@@ -20,17 +20,17 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class PanelChangeContents extends AbstractReindeerTestUI
         implements ClickListener {
 
-    VerticalLayout stats = new VerticalLayout();
-    VerticalLayout companies = new VerticalLayout();
-    VerticalLayout settings = new VerticalLayout();
+    LegacyVerticalLayout stats = new LegacyVerticalLayout();
+    LegacyVerticalLayout companies = new LegacyVerticalLayout();
+    LegacyVerticalLayout settings = new LegacyVerticalLayout();
 
     Button statsButton = new Button("Stats", this);
     Button companiesButton = new Button("Companies", this);
@@ -40,9 +40,9 @@ public class PanelChangeContents extends AbstractReindeerTestUI
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout content = new VerticalLayout();
+        LegacyVerticalLayout content = new LegacyVerticalLayout();
         setSizeFull();
-        HorizontalLayout buttons = new HorizontalLayout();
+        LegacyHorizontalLayout buttons = new LegacyHorizontalLayout();
         stats.addComponent(new Label("stats"));
         companies.addComponent(new Label("companies"));
         settings.addComponent(new Label("settings"));

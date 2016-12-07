@@ -6,7 +6,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class NestedTabSheetsHideTabs extends TestBase {
 
@@ -32,7 +32,7 @@ public class NestedTabSheetsHideTabs extends TestBase {
     }
 
     private static ComponentContainer newPage(final int number) {
-        final VerticalLayout vl = new VerticalLayout();
+        final LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.addComponent(new Label("Page " + number));
         return vl;
     }

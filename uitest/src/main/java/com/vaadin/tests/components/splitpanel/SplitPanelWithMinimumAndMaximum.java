@@ -4,11 +4,11 @@ import com.vaadin.server.Sizeable;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 
 public class SplitPanelWithMinimumAndMaximum extends AbstractReindeerTestUI {
@@ -17,7 +17,7 @@ public class SplitPanelWithMinimumAndMaximum extends AbstractReindeerTestUI {
     protected void setup(VaadinRequest request) {
         TabSheet tabs = new TabSheet();
 
-        VerticalLayout horizontalSplitsLayout = new VerticalLayout();
+        LegacyVerticalLayout horizontalSplitsLayout = new LegacyVerticalLayout();
         horizontalSplitsLayout.setCaption("Horizontal splits");
 
         HorizontalSplitPanel percentagePositionWithPercentageLimitsHorizontal = new HorizontalSplitPanel();
@@ -136,7 +136,7 @@ public class SplitPanelWithMinimumAndMaximum extends AbstractReindeerTestUI {
         horizontalSplitsLayout.setSizeFull();
         tabs.addComponent(horizontalSplitsLayout);
 
-        HorizontalLayout verticalSplitsLayout = new HorizontalLayout();
+        LegacyHorizontalLayout verticalSplitsLayout = new LegacyHorizontalLayout();
         verticalSplitsLayout.setCaption("Vertical splits");
 
         VerticalSplitPanel percentagePositionWithPercentageLimitsVertical = new VerticalSplitPanel();
@@ -254,7 +254,7 @@ public class SplitPanelWithMinimumAndMaximum extends AbstractReindeerTestUI {
         tabs.addComponent(verticalSplitsLayout);
         verticalSplitsLayout.setSizeFull();
 
-        final VerticalLayout togglableSplitPanelLayout = new VerticalLayout();
+        final LegacyVerticalLayout togglableSplitPanelLayout = new LegacyVerticalLayout();
         togglableSplitPanelLayout.setCaption("Togglable minimum/maximum");
 
         final HorizontalSplitPanel togglableSplitPanel = new HorizontalSplitPanel();
@@ -267,7 +267,7 @@ public class SplitPanelWithMinimumAndMaximum extends AbstractReindeerTestUI {
         togglableSplitPanel.setHeight("250px");
         togglableSplitPanelLayout.addComponent(togglableSplitPanel);
 
-        final HorizontalLayout buttonLayout = new HorizontalLayout();
+        final LegacyHorizontalLayout buttonLayout = new LegacyHorizontalLayout();
 
         Button disableMinimum = new Button("Disable min limit",
                 new Button.ClickListener() {

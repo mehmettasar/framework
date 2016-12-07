@@ -9,7 +9,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 import com.vaadin.v7.ui.TextField;
 
@@ -20,7 +20,7 @@ public class DisableEnableCascadeStyles extends TestBase {
     private Button button;
     private TextArea textArea;
     private TextField textField;
-    private VerticalLayout layout;
+    private LegacyVerticalLayout layout;
     private NativeButton nativeButton;
     private Button enableDisablePanelButton;
     private Button enableDisableTabSheetButton;
@@ -40,8 +40,8 @@ public class DisableEnableCascadeStyles extends TestBase {
         textField.setValue("Text");
         textArea = new TextArea("TextArea with caption and value, enabled");
         textArea.setValue("Text");
-        layout = new VerticalLayout();
-        layout.setCaption("VerticalLayout, enabled");
+        layout = new LegacyVerticalLayout();
+        layout.setCaption("LegacyVerticalLayout, enabled");
         layout.addComponent(button);
         layout.addComponent(nativeButton);
         layout.addComponent(textField);

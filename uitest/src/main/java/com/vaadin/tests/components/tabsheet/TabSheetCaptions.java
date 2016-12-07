@@ -10,7 +10,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class TabSheetCaptions extends TestBase {
 
@@ -35,7 +35,7 @@ public class TabSheetCaptions extends TestBase {
         final Date date = new Date();
         date.setTime((long) 1000000000000.0);
 
-        VerticalLayout layout1 = new VerticalLayout();
+        LegacyVerticalLayout layout1 = new LegacyVerticalLayout();
         layout1.setMargin(true);
         layout1.setSizeFull();
         panel1 = new Panel("Panel initial caption (should also be tab caption)",

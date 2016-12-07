@@ -2,11 +2,7 @@ package com.vaadin.tests.components.gridlayout;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
 
 /**
  * Main UI class
@@ -22,7 +18,7 @@ public class GridLayoutWithNonIntegerWidth extends AbstractReindeerTestUI {
         p1.setContent(grid);
         p1.setWidth("354.390625px");
 
-        Panel p2 = new Panel("Panel with HorizontalLayout");
+        Panel p2 = new Panel("Panel with LegacyHorizontalLayout");
         HorizontalLayout hl = new HorizontalLayout(new Label("A"));
         hl.setWidth(100, Unit.PERCENTAGE);
         p2.setContent(hl);

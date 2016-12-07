@@ -8,7 +8,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.tests.util.Log;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class WindowClickEvents extends TestBase {
@@ -27,7 +27,7 @@ public class WindowClickEvents extends TestBase {
 
     @Override
     protected void setup() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.addLayoutClickListener(new LayoutClickListener() {
             @Override
             public void layoutClick(LayoutClickEvent event) {
@@ -35,7 +35,7 @@ public class WindowClickEvents extends TestBase {
             }
         });
 
-        ((VerticalLayout) getMainWindow().getContent())
+        ((LegacyVerticalLayout) getMainWindow().getContent())
                 .addLayoutClickListener(new LayoutClickListener() {
                     @Override
                     public void layoutClick(LayoutClickEvent event) {

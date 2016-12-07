@@ -3,7 +3,7 @@ package com.vaadin.tests.components.table;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.ui.Table;
@@ -31,7 +31,7 @@ public class RowAdditionTest extends TestBase {
             table.addItem();
         }
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.addComponent(new Button("Add first", new Button.ClickListener() {
             @Override
             public void buttonClick(ClickEvent event) {

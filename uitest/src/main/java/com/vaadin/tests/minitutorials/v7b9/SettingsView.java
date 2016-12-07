@@ -12,12 +12,12 @@ import com.vaadin.ui.Layout;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Notification.Type;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.data.util.ObjectProperty;
 import com.vaadin.v7.ui.DateField;
 import com.vaadin.v7.ui.InlineDateField;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.themes.Reindeer;
 
 public class SettingsView extends Panel implements View {
@@ -33,7 +33,7 @@ public class SettingsView extends Panel implements View {
 
     public SettingsView(final Navigator navigator) {
         this.navigator = navigator;
-        Layout layout = new VerticalLayout();
+        Layout layout = new LegacyVerticalLayout();
 
         date = new InlineDateField("Birth date");
         date.setImmediate(true);

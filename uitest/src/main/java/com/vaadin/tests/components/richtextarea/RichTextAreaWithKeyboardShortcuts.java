@@ -8,7 +8,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.AbstractField;
 import com.vaadin.ui.RichTextArea;
@@ -52,14 +52,14 @@ public class RichTextAreaWithKeyboardShortcuts extends TestBase {
         getLayout().getUI().addActionHandler(actionHandler);
         getLayout().addComponent(createRichTextArea("InMainLayout"));
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         Panel panel = new Panel("RTA Panel", panelLayout);
         panel.addActionHandler(actionHandler);
         panelLayout.addComponent(createRichTextArea("InPanel"));
         getLayout().addComponent(panel);
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         Window w = new Window("SubWindow", layout);
         w.addActionHandler(actionHandler);

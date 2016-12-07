@@ -5,6 +5,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  *
@@ -38,9 +39,9 @@ public abstract class TestBase extends AbstractTestCase {
         label.setWidth("100%");
         window.addComponent(label);
 
-        layout = new VerticalLayout();
+        layout = new LegacyVerticalLayout();
         window.addComponent(layout);
-        ((VerticalLayout) window.getContent()).setExpandRatio(layout, 1);
+        ((LegacyVerticalLayout) window.getContent()).setExpandRatio(layout, 1);
 
         setup();
     }
@@ -56,13 +57,13 @@ public abstract class TestBase extends AbstractTestCase {
         super.setMainWindow(mainWindow);
     }
 
-    private VerticalLayout layout;
+    private LegacyVerticalLayout layout;
 
     public TestBase() {
 
     }
 
-    protected VerticalLayout getLayout() {
+    protected LegacyVerticalLayout getLayout() {
         return layout;
     }
 

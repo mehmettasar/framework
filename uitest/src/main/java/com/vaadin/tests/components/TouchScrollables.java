@@ -23,7 +23,7 @@ import com.vaadin.ui.Layout;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.IndexedContainer;
@@ -63,7 +63,7 @@ public class TouchScrollables extends TestBase {
         Layout cssLayout = new CssLayout();
         cssLayout.setCaption("Panel");
 
-        final VerticalLayout pl = new VerticalLayout();
+        final LegacyVerticalLayout pl = new LegacyVerticalLayout();
         pl.setMargin(true);
         final Panel p = new Panel(pl);
         p.setHeight("400px");
@@ -165,7 +165,7 @@ public class TouchScrollables extends TestBase {
         Button b = new Button("Open subwindow", new Button.ClickListener() {
             @Override
             public void buttonClick(ClickEvent event) {
-                VerticalLayout layout = new VerticalLayout();
+                LegacyVerticalLayout layout = new LegacyVerticalLayout();
                 layout.setMargin(true);
                 Window w = new Window("Subwindow", layout);
                 w.center();
@@ -308,7 +308,7 @@ public class TouchScrollables extends TestBase {
     }
 
     private Component getBigComponent() {
-        Layout l = new VerticalLayout();
+        Layout l = new LegacyVerticalLayout();
         for (int i = 0; i < 100; i++) {
             Label c = new Label("Label" + i);
             l.addComponent(c);

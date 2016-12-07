@@ -310,8 +310,8 @@ public abstract class AbstractComponentContainerTest<T extends AbstractComponent
         noVerticalSize.add("Button");
 
         // addCommands.put("AbsoluteLayout", addAbsoluteLayoutCommand);
-        // addCommands.put("HorizontalLayout", addHorizontalLayoutCommand);
-        // addCommands.put("VerticalLayout", addVerticalLayoutCommand);
+        // addCommands.put("LegacyHorizontalLayout", addHorizontalLayoutCommand);
+        // addCommands.put("LegacyVerticalLayout", addVerticalLayoutCommand);
 
         ComponentSize[] sizes = new ComponentSize[] {
                 new ComponentSize(null, null), new ComponentSize("200px", null),

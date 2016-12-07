@@ -30,13 +30,16 @@ import com.vaadin.shared.ui.orderedlayout.VerticalLayoutState;
 @SuppressWarnings("serial")
 public class VerticalLayout extends AbstractOrderedLayout {
 
+    protected VerticalLayout(boolean margin, boolean spacing) {
+        setWidth("100%");
+        setSpacing(spacing);
+        setMargin(margin);
+    }
     /**
      * Constructs an empty VerticalLayout.
      */
     public VerticalLayout() {
-        setWidth("100%");
-        setSpacing(true);
-        setMargin(true);
+        this(true, true);
     }
 
     /**

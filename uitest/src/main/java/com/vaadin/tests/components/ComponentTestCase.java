@@ -11,7 +11,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.ui.Field;
 import com.vaadin.v7.ui.NativeSelect;
@@ -21,7 +21,7 @@ public abstract class ComponentTestCase<T extends AbstractComponent>
 
     protected static final Object CAPTION = "caption";
 
-    private HorizontalLayout actionLayout;
+    private LegacyHorizontalLayout actionLayout;
 
     @Override
     protected final void setup(VaadinRequest request) {
@@ -82,8 +82,8 @@ public abstract class ComponentTestCase<T extends AbstractComponent>
         return actions;
     }
 
-    private HorizontalLayout createActionLayout() {
-        HorizontalLayout actionLayout = new HorizontalLayout();
+    private LegacyHorizontalLayout createActionLayout() {
+        LegacyHorizontalLayout actionLayout = new LegacyHorizontalLayout();
         actionLayout.setSpacing(true);
         actionLayout.setMargin(true);
 

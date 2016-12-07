@@ -6,7 +6,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 
 public class SplitPanelSplitterWidth extends TestBase {
@@ -65,7 +65,7 @@ public class SplitPanelSplitterWidth extends TestBase {
     }
 
     private Panel buildPanel(String caption) {
-        VerticalLayout pl = new VerticalLayout();
+        LegacyVerticalLayout pl = new LegacyVerticalLayout();
         pl.setMargin(true);
         return new Panel(caption, pl);
     }

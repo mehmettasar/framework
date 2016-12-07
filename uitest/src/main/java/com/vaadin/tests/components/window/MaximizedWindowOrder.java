@@ -7,7 +7,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class MaximizedWindowOrder extends AbstractReindeerTestUI {
@@ -24,7 +24,7 @@ public class MaximizedWindowOrder extends AbstractReindeerTestUI {
 
     private void openWindow(boolean maximized) {
         Window window = new Window();
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         Label label = new Label(maximized ? "Maximized" : "Normal");
 

@@ -7,12 +7,12 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.PasswordField;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class ErrorInUnloadEvent extends AbstractTestCase {
 
@@ -69,14 +69,14 @@ public class ErrorInUnloadEvent extends AbstractTestCase {
         } else {
             mainWindow.removeAllComponents();
         }
-        VerticalLayout root = new VerticalLayout();
+        LegacyVerticalLayout root = new LegacyVerticalLayout();
         root.addComponent(createHeader());
 
         mainWindow.addComponent(root);
     }
 
     private Component createHeader() {
-        HorizontalLayout header = new HorizontalLayout();
+        LegacyHorizontalLayout header = new LegacyHorizontalLayout();
         header.addStyleName("header-background");
         Label title = new Label("...Title...");
         title.addStyleName("header-title");

@@ -9,18 +9,18 @@ import com.vaadin.ui.AbstractField;
 import com.vaadin.ui.AbstractTextField;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.HasValueChangeMode;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.RichTextArea;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class TextFieldsValueChangeMode extends AbstractTestUIWithLog {
 
     @Override
     protected void setup(VaadinRequest request) {
         log.setNumberLogRows(false);
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.addComponent(createFields(TextField.class));
         hl.addComponent(createFields(TextArea.class));
         hl.addComponent(createFields(RichTextArea.class));
@@ -28,7 +28,7 @@ public class TextFieldsValueChangeMode extends AbstractTestUIWithLog {
     }
 
     private Component createFields(Class<?> fieldClass) {
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         String id = fieldClass.getSimpleName().toLowerCase();
         try {
             AbstractField<String> f = (AbstractField<String>) fieldClass

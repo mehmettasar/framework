@@ -3,7 +3,7 @@ package com.vaadin.tests.components.tabsheet;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.TabSheet;
 
 public class AddAndRemoveTabs extends TestBase {
@@ -30,7 +30,7 @@ public class AddAndRemoveTabs extends TestBase {
     }
 
     private void addTab() {
-        final HorizontalLayout layout = new HorizontalLayout();
+        final LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setCaption("Test " + counter);
 
         Button closeTab = new Button("Close tab", new Button.ClickListener() {

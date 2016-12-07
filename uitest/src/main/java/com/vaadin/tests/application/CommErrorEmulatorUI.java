@@ -24,10 +24,10 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.TextField;
@@ -92,7 +92,7 @@ public class CommErrorEmulatorUI extends AbstractTestUIWithLog {
      */
     private Component createServerConfigPanel() {
         Panel p = new Panel("Server config (NOTE: affects all users)");
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setSpacing(true);
         vl.setMargin(true);
         p.setContent(vl);
@@ -208,7 +208,7 @@ public class CommErrorEmulatorUI extends AbstractTestUIWithLog {
                 event -> getReconnectDialogConfiguration()
                         .setDialogModal(reconnectDialogModal.getValue()));
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setMargin(true);
         vl.setSpacing(true);
         p.setContent(vl);
@@ -222,7 +222,7 @@ public class CommErrorEmulatorUI extends AbstractTestUIWithLog {
     private Component createTemporaryResponseCodeSetters(String type,
             final Response response) {
 
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setSpacing(true);
         hl.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
         Label l1 = new Label("Respond to " + type + " requests with code");

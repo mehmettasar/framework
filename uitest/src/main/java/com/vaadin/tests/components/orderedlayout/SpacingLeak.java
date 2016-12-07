@@ -2,12 +2,12 @@ package com.vaadin.tests.components.orderedlayout;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
- * HorizontalLayout and VerticalLayout should not leak .v-spacing elements via
+ * LegacyHorizontalLayout and LegacyVerticalLayout should not leak .v-spacing elements via
  * listeners when removing components from a layout.
  *
  * @since 7.1.12
@@ -15,11 +15,11 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class SpacingLeak extends UI {
 
-    private HorizontalLayout spacingLayout;
+    private LegacyHorizontalLayout spacingLayout;
 
     @Override
     public void init(VaadinRequest req) {
-        final VerticalLayout root = new VerticalLayout();
+        final LegacyVerticalLayout root = new LegacyVerticalLayout();
         setContent(root);
         root.setSizeUndefined();
 
@@ -29,7 +29,7 @@ public class SpacingLeak extends UI {
         spacingButton.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent event) {
-                spacingLayout = new HorizontalLayout();
+                spacingLayout = new LegacyHorizontalLayout();
                 spacingLayout.setSpacing(true);
                 spacingLayout.setWidth("100%");
 

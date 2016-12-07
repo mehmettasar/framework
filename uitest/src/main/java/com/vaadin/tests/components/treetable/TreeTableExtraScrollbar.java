@@ -4,7 +4,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.TreeTable;
@@ -24,7 +24,7 @@ public class TreeTableExtraScrollbar extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setWidth("310px");
         layout.setHeight("300px");
 

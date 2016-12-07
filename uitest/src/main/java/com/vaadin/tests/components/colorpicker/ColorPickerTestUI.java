@@ -40,10 +40,10 @@ import com.vaadin.ui.ColorPicker;
 import com.vaadin.ui.ColorPickerArea;
 import com.vaadin.ui.Embedded;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 @Widgetset("com.vaadin.DefaultWidgetSet")
 public class ColorPickerTestUI extends AbstractReindeerTestUI {
@@ -203,7 +203,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
         display.setHeight("270px");
 
         // Add the foreground and background colorpickers to a layout
-        HorizontalLayout mainLayout = new HorizontalLayout();
+        LegacyHorizontalLayout mainLayout = new LegacyHorizontalLayout();
         mainLayout.addStyleName("colorpicker-mainlayout");
         mainLayout.setWidth("100%");
         mainLayout.setHeight(null);
@@ -211,7 +211,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
         mainLayout.setSpacing(true);
         getLayout().addComponent(mainLayout);
 
-        VerticalLayout layoutLeft = new VerticalLayout();
+        LegacyVerticalLayout layoutLeft = new LegacyVerticalLayout();
         layoutLeft.setWidth("450px");
         layoutLeft.setHeight(null);
         layoutLeft.setSpacing(true);
@@ -266,7 +266,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
                 optLayout);
         layoutLeft.addComponent(optPanel);
 
-        HorizontalLayout layout1 = createHorizontalLayout();
+        LegacyHorizontalLayout layout1 = createHorizontalLayout();
 
         colorpicker1 = new ColorPicker("Foreground", foregroundColor);
         colorpicker1.setCaptionAsHtml(true);
@@ -286,7 +286,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
                 layout1);
         layoutLeft.addComponent(panel1);
 
-        HorizontalLayout layout2 = createHorizontalLayout();
+        LegacyHorizontalLayout layout2 = createHorizontalLayout();
 
         colorpicker3 = new ColorPicker("Foreground", foregroundColor);
         colorpicker3.addValueChangeListener(this::colorChanged);
@@ -309,7 +309,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
                 layout2);
         layoutLeft.addComponent(panel2);
 
-        HorizontalLayout layout3 = createHorizontalLayout();
+        LegacyHorizontalLayout layout3 = createHorizontalLayout();
 
         colorpicker5 = new ColorPickerArea("Foreground", foregroundColor);
         colorpicker5.setCaption("Foreground");
@@ -338,7 +338,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
         Label divider2 = new Label("<hr>", ContentMode.HTML);
         layoutLeft.addComponent(divider2);
 
-        HorizontalLayout layout4 = createHorizontalLayout();
+        LegacyHorizontalLayout layout4 = createHorizontalLayout();
 
         addShadeButton(new Color(Integer.parseInt("000000", 16)), layout4);
         addShadeButton(new Color(Integer.parseInt("333333", 16)), layout4);
@@ -352,7 +352,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
                 layout4);
         layoutLeft.addComponent(panel4);
 
-        HorizontalLayout layout5 = createHorizontalLayout();
+        LegacyHorizontalLayout layout5 = createHorizontalLayout();
 
         addShadeArea(new Color(Integer.parseInt("000000", 16)), layout5);
         addShadeArea(new Color(Integer.parseInt("111111", 16)), layout5);
@@ -383,8 +383,8 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
         updateDisplay(foregroundColor, backgroundColor);
     }
 
-    private HorizontalLayout createHorizontalLayout() {
-        HorizontalLayout layout = new HorizontalLayout();
+    private LegacyHorizontalLayout createHorizontalLayout() {
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         layout.setWidth("100%");
         layout.setHeight(null);
         layout.setMargin(true);
@@ -393,7 +393,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
 
     private int shadeButtonCounter = 1;
 
-    private void addShadeButton(Color color, HorizontalLayout layout) {
+    private void addShadeButton(Color color, LegacyHorizontalLayout layout) {
         AbstractColorPicker colorPicker = new ColorPicker(color.toString(),
                 color);
         colorPicker.setDefaultCaptionEnabled(false);
@@ -407,7 +407,7 @@ public class ColorPickerTestUI extends AbstractReindeerTestUI {
 
     private int shadeAreaCounter = 1;
 
-    private void addShadeArea(Color color, HorizontalLayout layout) {
+    private void addShadeArea(Color color, LegacyHorizontalLayout layout) {
         AbstractColorPicker colorPicker = new ColorPickerArea(color.toString(),
                 color);
         colorPicker.setWidth("20px");

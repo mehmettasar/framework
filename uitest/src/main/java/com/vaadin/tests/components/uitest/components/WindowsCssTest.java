@@ -4,13 +4,13 @@ import com.vaadin.tests.components.uitest.TestSampler;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.themes.ChameleonTheme;
 import com.vaadin.v7.ui.themes.Reindeer;
 import com.vaadin.v7.ui.themes.Runo;
 
-public class WindowsCssTest extends VerticalLayout {
+public class WindowsCssTest extends LegacyVerticalLayout {
 
     private TestSampler parent;
     private String styleName = null;
@@ -86,7 +86,7 @@ public class WindowsCssTest extends VerticalLayout {
             String styleName) {
 
         Window window = new Window();
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         window.setContent(layout);
         layout.addComponent(new Label("Some content"));

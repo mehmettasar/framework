@@ -23,7 +23,7 @@ import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.Select;
@@ -44,11 +44,11 @@ public class UsingObjectsInSelect extends com.vaadin.server.LegacyApplication
         final LegacyWindow main = new LegacyWindow("Select demo");
         setMainWindow(main);
 
-        VerticalLayout panelLayout = new VerticalLayout();
+        LegacyVerticalLayout panelLayout = new LegacyVerticalLayout();
         panelLayout.setMargin(true);
         final Panel panel = new Panel("Select demo", panelLayout);
         panelLayout.addComponent(select);
-        VerticalLayout panel2Layout = new VerticalLayout();
+        LegacyVerticalLayout panel2Layout = new LegacyVerticalLayout();
         panel2Layout.setMargin(true);
         final Panel panel2 = new Panel("Selection", panel2Layout);
         panel2Layout.addComponent(selectedTask);

@@ -23,7 +23,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Grid;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class GridDefaultSelectionMode extends AbstractTestUI {
 
@@ -47,7 +47,7 @@ public class GridDefaultSelectionMode extends AbstractTestUI {
                 .setCaption("First Name");
         grid.addColumn(person -> person.getLastName()).setCaption("Last Name");
 
-        VerticalLayout v = new VerticalLayout();
+        LegacyVerticalLayout v = new LegacyVerticalLayout();
 
         v.addComponent(new Button("Deselect on server", new ClickListener() {
 

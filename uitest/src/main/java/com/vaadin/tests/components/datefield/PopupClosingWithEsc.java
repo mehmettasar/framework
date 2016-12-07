@@ -20,7 +20,7 @@ import com.vaadin.shared.ui.datefield.Resolution;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.tests.components.TestDateField;
 import com.vaadin.ui.AbstractDateField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class PopupClosingWithEsc extends AbstractReindeerTestUI {
 
@@ -38,7 +38,7 @@ public class PopupClosingWithEsc extends AbstractReindeerTestUI {
         df3.setId("year");
         df3.setResolution(Resolution.YEAR);
 
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         layout.setSpacing(true);
         layout.addComponents(df1, df2, df3);

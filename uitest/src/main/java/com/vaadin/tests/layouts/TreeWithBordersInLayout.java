@@ -3,7 +3,7 @@ package com.vaadin.tests.layouts;
 import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Tree;
 
 public class TreeWithBordersInLayout extends AbstractTestCase {
@@ -12,7 +12,7 @@ public class TreeWithBordersInLayout extends AbstractTestCase {
 
     @Override
     public void init() {
-        Layout mainLayout = new VerticalLayout();
+        Layout mainLayout = new LegacyVerticalLayout();
         mainLayout.setSizeUndefined();
         setMainWindow(new LegacyWindow("main window", mainLayout));
 

@@ -193,8 +193,6 @@ public class ScreenshotBrowser extends UI {
             preview.setWidth("1500px");
             preview.setHeight("100%");
 
-            left.setMargin(true);
-            left.setSpacing(true);
             left.setSizeFull();
 
             left.addComponent(
@@ -312,6 +310,8 @@ public class ScreenshotBrowser extends UI {
         VerticalLayout mainLayout = new VerticalLayout(table, viewer);
         mainLayout.setExpandRatio(table, 1);
         mainLayout.setSizeFull();
+        mainLayout.setMargin(false);
+        mainLayout.setSpacing(false);
 
         setSizeFull();
         setContent(mainLayout);

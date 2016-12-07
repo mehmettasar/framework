@@ -7,7 +7,7 @@ import java.util.List;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.data.Container.Filter;
 import com.vaadin.v7.data.Item;
@@ -38,7 +38,7 @@ public class TableReduceContainerSize extends TestBase {
         }
     }
 
-    private static class TestView extends HorizontalLayout {
+    private static class TestView extends LegacyHorizontalLayout {
 
         private Filter filter = null;
 

@@ -15,7 +15,7 @@ import com.vaadin.event.dd.acceptcriteria.SourceIsTarget;
 import com.vaadin.event.dd.acceptcriteria.TargetDetailIs;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.DragAndDropWrapper;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Window;
 
@@ -29,7 +29,7 @@ public class HorizontalLayoutSortableWithWrappers extends Window {
 
     static int count;
 
-    private HorizontalLayout layout = new HorizontalLayout();
+    private LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
 
     class WrappedLabel extends DragAndDropWrapper {
 

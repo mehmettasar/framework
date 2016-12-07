@@ -20,7 +20,7 @@ import com.vaadin.server.LegacyApplication;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 import com.vaadin.v7.ui.Table;
 
@@ -29,7 +29,7 @@ public class TestForApplicationLayoutThatUsesWholeBrosersSpace
 
     LegacyWindow main = new LegacyWindow("Windowing test");
 
-    VerticalLayout rootLayout;
+    LegacyVerticalLayout rootLayout;
 
     VerticalSplitPanel firstLevelSplit;
 
@@ -37,7 +37,7 @@ public class TestForApplicationLayoutThatUsesWholeBrosersSpace
     public void init() {
         setMainWindow(main);
 
-        rootLayout = new VerticalLayout();
+        rootLayout = new LegacyVerticalLayout();
         main.setContent(rootLayout);
 
         rootLayout.addComponent(new Label("header"));
@@ -47,7 +47,7 @@ public class TestForApplicationLayoutThatUsesWholeBrosersSpace
         final HorizontalSplitPanel secondSplitPanel = new HorizontalSplitPanel();
         secondSplitPanel.setFirstComponent(new Label("left"));
 
-        final VerticalLayout topRight = new VerticalLayout();
+        final LegacyVerticalLayout topRight = new LegacyVerticalLayout();
         topRight.addComponent(new Label("topright header"));
 
         final Table t = TestForTablesInitialColumnWidthLogicRendering
@@ -60,7 +60,7 @@ public class TestForApplicationLayoutThatUsesWholeBrosersSpace
 
         secondSplitPanel.setSecondComponent(topRight);
 
-        final VerticalLayout el = new VerticalLayout();
+        final LegacyVerticalLayout el = new LegacyVerticalLayout();
         el.addComponent(new Label("B��"));
 
         firstLevelSplit.setFirstComponent(secondSplitPanel);

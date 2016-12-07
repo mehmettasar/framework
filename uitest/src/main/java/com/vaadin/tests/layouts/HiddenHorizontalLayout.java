@@ -4,9 +4,9 @@ import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class HiddenHorizontalLayout extends TestBase {
 
@@ -23,11 +23,11 @@ public class HiddenHorizontalLayout extends TestBase {
     @Override
     public void setup() {
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         vl.setSizeFull();
         getLayout().addComponent(vl);
 
-        final HorizontalLayout hl = new HorizontalLayout();
+        final LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setWidth("100%");
         hl.setHeight("30px");
         hl.addComponent(new Label("label1"));

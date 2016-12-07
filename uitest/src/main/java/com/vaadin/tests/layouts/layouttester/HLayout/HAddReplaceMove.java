@@ -16,7 +16,7 @@
 package com.vaadin.tests.layouts.layouttester.HLayout;
 
 import com.vaadin.tests.layouts.layouttester.BaseAddReplaceMove;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 
 public class HAddReplaceMove extends BaseAddReplaceMove {
 
@@ -24,7 +24,7 @@ public class HAddReplaceMove extends BaseAddReplaceMove {
      * @param layoutClass
      */
     public HAddReplaceMove() {
-        super(HorizontalLayout.class);
+        super(LegacyHorizontalLayout.class);
     }
 
 }

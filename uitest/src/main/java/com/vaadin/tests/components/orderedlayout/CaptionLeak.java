@@ -5,13 +5,13 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 /**
- * HorizontalLayout and VerticalLayout should not leak caption elements via
+ * LegacyHorizontalLayout and LegacyVerticalLayout should not leak caption elements via
  * listeners when removing components from a layout.
  *
  * @since 7.1.13
@@ -27,15 +27,15 @@ public class CaptionLeak extends AbstractReindeerTestUI {
      */
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout root = new VerticalLayout();
+        LegacyVerticalLayout root = new LegacyVerticalLayout();
         root.setSizeFull();
         root.setMargin(false);
         root.setSpacing(false);
 
-        HorizontalLayout layout = new HorizontalLayout();
+        LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
         Panel parent = new Panel();
         Button setLeakyContent = makeButton("Set leaky content", parent,
-                VerticalLayout.class);
+                LegacyVerticalLayout.class);
         Button setNonLeakyContent = makeButton("Set non leaky content", parent,
                 CssLayout.class);
         layout.addComponent(setLeakyContent);

@@ -29,9 +29,9 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Layout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * @author Vaadin Ltd
@@ -110,8 +110,8 @@ public abstract class HasValueRequiredIndicator<C extends HasValue & Component>
     private static List<Class<? extends Layout>> getVaadinLayouts() {
         List<Class<? extends Layout>> layouts = new ArrayList<>();
         layouts.add(AbsoluteLayout.class);
-        layouts.add(VerticalLayout.class);
-        layouts.add(HorizontalLayout.class);
+        layouts.add(LegacyVerticalLayout.class);
+        layouts.add(LegacyHorizontalLayout.class);
         layouts.add(FormLayout.class);
         layouts.add(CssLayout.class);
         layouts.add(GridLayout.class);

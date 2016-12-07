@@ -22,7 +22,7 @@ import com.vaadin.ui.AbstractLayout;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.TextField;
@@ -52,7 +52,7 @@ public class BaseAddReplaceMove extends BaseLayoutTestUI {
         // Set undefined height to avoid expanding
         l2.setHeight(null);
         // extra layout from which components will be moved
-        final HorizontalLayout source = new HorizontalLayout();
+        final LegacyHorizontalLayout source = new LegacyHorizontalLayout();
         Label label1 = new Label("OTHER LABEL 1");
         label1.setWidth("100%"); // Only to make test backwards compatible
         source.addComponent(label1);

@@ -21,7 +21,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class TableChangingDatasource extends CustomComponent
@@ -31,7 +31,7 @@ public class TableChangingDatasource extends CustomComponent
     private int mode = 0;
 
     public TableChangingDatasource() {
-        final VerticalLayout main = new VerticalLayout();
+        final LegacyVerticalLayout main = new LegacyVerticalLayout();
 
         main.addComponent(
                 new Label("Table should look sane after data source changes"));

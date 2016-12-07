@@ -21,14 +21,14 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.tests.util.TestUtils;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 public class ExpandChangeReattach extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        final VerticalLayout verticalLayout = new VerticalLayout();
+        final LegacyVerticalLayout verticalLayout = new LegacyVerticalLayout();
         verticalLayout.setHeight(null);
 
         Table table = new Table("Table", TestUtils.getISO3166Container());

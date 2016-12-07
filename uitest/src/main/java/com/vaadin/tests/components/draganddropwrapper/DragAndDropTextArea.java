@@ -19,7 +19,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.DragAndDropWrapper;
 import com.vaadin.ui.DragAndDropWrapper.DragStartMode;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextArea;
 
 /**
@@ -32,7 +32,7 @@ public class DragAndDropTextArea extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout dndLayout = new VerticalLayout();
+        LegacyVerticalLayout dndLayout = new LegacyVerticalLayout();
 
         TextArea area = new TextArea();
         area.setValue("text");

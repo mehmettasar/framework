@@ -18,7 +18,7 @@ package com.vaadin.v7.tests.components.grid;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.v7.event.ItemClickEvent;
 import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
@@ -27,7 +27,7 @@ import com.vaadin.v7.ui.Grid.DetailsGenerator;
 import com.vaadin.v7.ui.Grid.RowReference;
 
 /**
- * Tests the layouting of Grid's details row when it contains a HorizontalLayout
+ * Tests the layouting of Grid's details row when it contains a LegacyHorizontalLayout
  * with expand ratios.
  *
  * @author Vaadin Ltd
@@ -51,7 +51,7 @@ public class GridDetailsLayoutExpand extends AbstractReindeerTestUI {
         grid.setDetailsGenerator(new DetailsGenerator() {
             @Override
             public Component getDetails(final RowReference rowReference) {
-                final HorizontalLayout detailsLayout = new HorizontalLayout();
+                final LegacyHorizontalLayout detailsLayout = new LegacyHorizontalLayout();
                 detailsLayout.setSizeFull();
                 detailsLayout.setHeightUndefined();
 
@@ -62,7 +62,7 @@ public class GridDetailsLayoutExpand extends AbstractReindeerTestUI {
 
                 // layout2 second element of the detailsLayout, taking the rest
                 // of the available space
-                final HorizontalLayout layout2 = new HorizontalLayout();
+                final LegacyHorizontalLayout layout2 = new LegacyHorizontalLayout();
                 layout2.setSizeFull();
                 layout2.setHeightUndefined();
                 detailsLayout.addComponent(layout2);

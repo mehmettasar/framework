@@ -22,11 +22,11 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class InsertComponentInHorizontalLayout extends AbstractReindeerTestUI {
-    private VerticalLayout layout;
+    private LegacyVerticalLayout layout;
     int added = 1;
 
     private Component getTestLayout() {
@@ -38,7 +38,7 @@ public class InsertComponentInHorizontalLayout extends AbstractReindeerTestUI {
                 layout.markAsDirty();
             }
         });
-        final HorizontalLayout hl = new HorizontalLayout(a, b);
+        final LegacyHorizontalLayout hl = new LegacyHorizontalLayout(a, b);
         hl.setSpacing(true);
         Button add = new Button(
                 "Insert 2 comboboxes between combobox(es) and button 'x'");
@@ -49,7 +49,7 @@ public class InsertComponentInHorizontalLayout extends AbstractReindeerTestUI {
                 hl.addComponent(new ComboBox("Added " + added++), 2);
             }
         });
-        layout = new VerticalLayout(hl, add);
+        layout = new LegacyVerticalLayout(hl, add);
         return layout;
     }
 

@@ -6,7 +6,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.BeanItemContainer;
 import com.vaadin.v7.ui.Table;
@@ -78,7 +78,7 @@ public class BeanItemContainerFilteringTest extends TestBase {
                 container.addItem(new TestBean("Item " + i, "Value for " + i));
             }
 
-            VerticalLayout vl = new VerticalLayout();
+            LegacyVerticalLayout vl = new LegacyVerticalLayout();
 
             // activate & deactivate filtering
             filterString = new TextField("Filter string:", "1");

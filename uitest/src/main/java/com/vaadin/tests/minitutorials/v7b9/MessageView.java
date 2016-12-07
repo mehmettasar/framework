@@ -5,14 +5,14 @@ import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MessageView extends Panel implements View {
     public static final String NAME = "message";
     private Layout layout;
 
     public MessageView() {
-        super(new VerticalLayout());
+        super(new LegacyVerticalLayout());
         setCaption("Messages");
     }
 

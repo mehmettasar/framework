@@ -23,9 +23,9 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.event.ItemClickEvent;
@@ -54,7 +54,7 @@ public class GridHeight extends AbstractReindeerTestUI {
     static final String[] detailsRowHeights = { FULL, UNDEFINED, PX100 };
 
     private Grid grid;
-    private Map<Object, VerticalLayout> detailsLayouts = new HashMap<>();
+    private Map<Object, LegacyVerticalLayout> detailsLayouts = new HashMap<>();
     private OptionGroup detailsHeightSelector;
 
     @Override
@@ -93,7 +93,7 @@ public class GridHeight extends AbstractReindeerTestUI {
     }
 
     private void createDetailsLayout(Object itemId) {
-        VerticalLayout detailsLayout = new VerticalLayout();
+        LegacyVerticalLayout detailsLayout = new LegacyVerticalLayout();
         setDetailsHeight(detailsLayout, detailsHeightSelector.getValue());
         detailsLayout.setWidth("100%");
 
@@ -107,7 +107,7 @@ public class GridHeight extends AbstractReindeerTestUI {
     }
 
     private Component createOptionLayout() {
-        HorizontalLayout optionLayout = new HorizontalLayout();
+        LegacyHorizontalLayout optionLayout = new LegacyHorizontalLayout();
         OptionGroup gridHeightSelector = new OptionGroup("Grid height",
                 Arrays.<Object> asList(gridHeights));
         gridHeightSelector.setId("gridHeightSelector");
@@ -155,7 +155,7 @@ public class GridHeight extends AbstractReindeerTestUI {
             @Override
             public void valueChange(ValueChangeEvent event) {
                 Object value = event.getProperty().getValue();
-                for (VerticalLayout detailsLayout : detailsLayouts.values()) {
+                for (LegacyVerticalLayout detailsLayout : detailsLayouts.values()) {
                     setDetailsHeight(detailsLayout, value);
                 }
             }
@@ -165,7 +165,7 @@ public class GridHeight extends AbstractReindeerTestUI {
         return optionLayout;
     }
 
-    private void setDetailsHeight(VerticalLayout detailsLayout, Object value) {
+    private void setDetailsHeight(LegacyVerticalLayout detailsLayout, Object value) {
         if (UNDEFINED.equals(value)) {
             detailsLayout.setHeightUndefined();
         } else if (FULL.equals(value)) {

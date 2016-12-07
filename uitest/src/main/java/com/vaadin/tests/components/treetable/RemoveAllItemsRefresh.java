@@ -19,7 +19,7 @@ import com.vaadin.tests.components.TestBase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.Item;
 import com.vaadin.v7.data.util.HierarchicalContainer;
 import com.vaadin.v7.ui.Table;
@@ -29,7 +29,7 @@ public class RemoveAllItemsRefresh extends TestBase {
     protected static final String NAME_PROPERTY = "Name";
     protected static final String TITLE_PROPERTY = "Title";
 
-    private VerticalLayout treeLayout = new VerticalLayout();
+    private LegacyVerticalLayout treeLayout = new LegacyVerticalLayout();
     private Table treetable;
 
     private HierarchicalContainer treeContainer;

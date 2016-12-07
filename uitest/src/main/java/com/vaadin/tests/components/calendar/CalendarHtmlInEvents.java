@@ -23,7 +23,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUIWithLog;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.ui.Calendar;
@@ -62,7 +62,7 @@ public class CalendarHtmlInEvents extends AbstractReindeerTestUIWithLog {
             calendar.setEventCaptionAsHtml(event.getValue());
             log("HTML in event caption: " + event.getValue());
         });
-        HorizontalLayout hl = new HorizontalLayout();
+        LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         hl.setDefaultComponentAlignment(Alignment.BOTTOM_LEFT);
         hl.addComponents(ns, allowHtml);
         hl.setSpacing(true);

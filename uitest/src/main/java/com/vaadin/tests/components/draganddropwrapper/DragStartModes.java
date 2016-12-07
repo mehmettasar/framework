@@ -7,7 +7,7 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.DragAndDropWrapper;
 import com.vaadin.ui.DragAndDropWrapper.DragStartMode;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class DragStartModes extends TestBase {
 
@@ -27,7 +27,7 @@ public class DragStartModes extends TestBase {
     }
 
     private Component makeOtherComponentWrapper(DragStartMode componentOther) {
-        VerticalLayout parent = new VerticalLayout();
+        LegacyVerticalLayout parent = new LegacyVerticalLayout();
         parent.setWidth("200px");
         parent.setSpacing(true);
 

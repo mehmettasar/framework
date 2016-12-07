@@ -43,19 +43,10 @@ import com.vaadin.ui.Slider;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.Upload;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.v7.ui.AbstractSelect;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.ListSelect;
-import com.vaadin.v7.ui.NativeSelect;
-import com.vaadin.v7.ui.OptionGroup;
-import com.vaadin.v7.ui.PopupDateField;
-import com.vaadin.v7.ui.Table;
+import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table.Align;
 import com.vaadin.v7.ui.Table.RowHeaderMode;
-import com.vaadin.v7.ui.TextArea;
-import com.vaadin.v7.ui.Tree;
-import com.vaadin.v7.ui.TwinColSelect;
 
 public class FontIcons extends AbstractReindeerTestUI {
 
@@ -65,7 +56,7 @@ public class FontIcons extends AbstractReindeerTestUI {
     }
 
     private void buildUI(final Resource icon) {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
         setContent(layout);
         layout.setMargin(true);
 

@@ -5,7 +5,7 @@ import com.vaadin.tests.components.AbstractTestCase;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class ComplexGLColumnExpansionWithColSpan extends AbstractTestCase {
@@ -23,7 +23,7 @@ public class ComplexGLColumnExpansionWithColSpan extends AbstractTestCase {
 
     @Override
     public void init() {
-        final VerticalLayout mainLayout = new VerticalLayout();
+        final LegacyVerticalLayout mainLayout = new LegacyVerticalLayout();
 
         mainLayout.setSpacing(true);
         mainLayout.setMargin(true);

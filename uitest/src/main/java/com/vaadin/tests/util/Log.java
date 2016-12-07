@@ -5,9 +5,9 @@ import java.util.List;
 
 import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
-public class Log extends VerticalLayout {
+public class Log extends LegacyVerticalLayout {
     List<Label> eventLabels = new ArrayList<>();
     private boolean numberLogRows = true;
     private int nextLogNr = 1;

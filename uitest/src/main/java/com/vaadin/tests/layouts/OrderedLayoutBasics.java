@@ -13,13 +13,13 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.ListSelect;
 
 public class OrderedLayoutBasics extends TestBase {
@@ -32,7 +32,7 @@ public class OrderedLayoutBasics extends TestBase {
 
     @Override
     protected String getDescription() {
-        return "Various layout tests for VerticalLayout and HorizontalLayout";
+        return "Various layout tests for LegacyVerticalLayout and LegacyHorizontalLayout";
     }
 
     @Override
@@ -44,74 +44,74 @@ public class OrderedLayoutBasics extends TestBase {
     public void setup() {
         getMainWindow().getContent().setHeight(null);
 
-        layoutContainer = new VerticalLayout();
+        layoutContainer = new LegacyVerticalLayout();
         createUI(layoutContainer);
         addComponent(layoutContainer);
     }
 
     private void createUI(Layout layout) {
         layout.addComponent(wrapLayout(
-                layout_field_100pct_button_field(new HorizontalLayout())));
+                layout_field_100pct_button_field(new LegacyHorizontalLayout())));
         layout.addComponent(wrapLayout(
-                layout_field_100pct_button_field(new VerticalLayout())));
+                layout_field_100pct_button_field(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_overfilled(new HorizontalLayout())));
+                wrapLayout(layout_overfilled(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_overfilled(new VerticalLayout())));
+                wrapLayout(layout_overfilled(new LegacyVerticalLayout())));
         layout.addComponent(wrapLayout(
-                layout_overfilled_dynamic_height(new HorizontalLayout())));
+                layout_overfilled_dynamic_height(new LegacyHorizontalLayout())));
         layout.addComponent(wrapLayout(
-                layout_overfilled_dynamic_height(new VerticalLayout())));
+                layout_overfilled_dynamic_height(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_symmetric_fields(new HorizontalLayout())));
+                wrapLayout(layout_symmetric_fields(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_symmetric_fields(new VerticalLayout())));
+                wrapLayout(layout_symmetric_fields(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_leftAndRight(new HorizontalLayout())));
+                wrapLayout(layout_leftAndRight(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_leftAndRight(new VerticalLayout())));
+                wrapLayout(layout_leftAndRight(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_fixed_filled(new HorizontalLayout())));
+                wrapLayout(layout_fixed_filled(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_fixed_filled(new VerticalLayout())));
-        layout.addComponent(wrapLayout(layout_dynamic(new HorizontalLayout())));
-        layout.addComponent(wrapLayout(layout_dynamic(new VerticalLayout())));
-        layout.addComponent(wrapLayout(layout_labels(new HorizontalLayout())));
-        layout.addComponent(wrapLayout(layout_labels(new VerticalLayout())));
+                wrapLayout(layout_fixed_filled(new LegacyVerticalLayout())));
+        layout.addComponent(wrapLayout(layout_dynamic(new LegacyHorizontalLayout())));
+        layout.addComponent(wrapLayout(layout_dynamic(new LegacyVerticalLayout())));
+        layout.addComponent(wrapLayout(layout_labels(new LegacyHorizontalLayout())));
+        layout.addComponent(wrapLayout(layout_labels(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_captions(new HorizontalLayout())));
-        layout.addComponent(wrapLayout(layout_captions(new VerticalLayout())));
+                wrapLayout(layout_captions(new LegacyHorizontalLayout())));
+        layout.addComponent(wrapLayout(layout_captions(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_captions_fixed_size(new HorizontalLayout())));
+                wrapLayout(layout_captions_fixed_size(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_captions_fixed_size(new VerticalLayout())));
+                wrapLayout(layout_captions_fixed_size(new LegacyVerticalLayout())));
         layout.addComponent(
                 wrapLayout(layout_captions_fixed_size_and_relative_size(
-                        new HorizontalLayout())));
+                        new LegacyHorizontalLayout())));
         layout.addComponent(
                 wrapLayout(layout_captions_fixed_size_and_relative_size(
-                        new VerticalLayout())));
+                        new LegacyVerticalLayout())));
         layout.addComponent(
                 wrapLayout(layout_captions_fixed_size_and_fixed_size(
-                        new HorizontalLayout())));
+                        new LegacyHorizontalLayout())));
         layout.addComponent(
                 wrapLayout(layout_captions_fixed_size_and_fixed_size(
-                        new VerticalLayout())));
+                        new LegacyVerticalLayout())));
         layout.addComponent(wrapLayout(
-                layout_add_remove_components(new HorizontalLayout())));
+                layout_add_remove_components(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_add_remove_components(new VerticalLayout())));
+                wrapLayout(layout_add_remove_components(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_pctFilled(new HorizontalLayout())));
-        layout.addComponent(wrapLayout(layout_pctFilled(new VerticalLayout())));
+                wrapLayout(layout_pctFilled(new LegacyHorizontalLayout())));
+        layout.addComponent(wrapLayout(layout_pctFilled(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_underFilled(new HorizontalLayout())));
+                wrapLayout(layout_underFilled(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_underFilled(new VerticalLayout())));
+                wrapLayout(layout_underFilled(new LegacyVerticalLayout())));
         layout.addComponent(
-                wrapLayout(layout_basic_test(new HorizontalLayout())));
+                wrapLayout(layout_basic_test(new LegacyHorizontalLayout())));
         layout.addComponent(
-                wrapLayout(layout_basic_test(new VerticalLayout())));
+                wrapLayout(layout_basic_test(new LegacyVerticalLayout())));
     }
 
     private Layout wrapLayout(Layout ol) {
@@ -120,7 +120,7 @@ public class OrderedLayoutBasics extends TestBase {
         p.setCaption(ol.getCaption());
         ol.setCaption(null);
 
-        VerticalLayout l = new VerticalLayout();
+        LegacyVerticalLayout l = new LegacyVerticalLayout();
         l.setSizeUndefined();
         l.addComponent(p);
         // p.setWidth("600px");
@@ -135,7 +135,7 @@ public class OrderedLayoutBasics extends TestBase {
 
     @SuppressWarnings({ "unused", "deprecation" })
     private Layout layout1() {
-        HorizontalLayout ol = new HorizontalLayout();
+        LegacyHorizontalLayout ol = new LegacyHorizontalLayout();
         ol.setHeight("200px");
         ol.setWidth("");
         ol.setCaption("Fixed height (200px) and dynamic width");
@@ -176,7 +176,7 @@ public class OrderedLayoutBasics extends TestBase {
 
     @SuppressWarnings({ "unused", "deprecation" })
     private Layout layout2() {
-        HorizontalLayout ol = new HorizontalLayout();
+        LegacyHorizontalLayout ol = new LegacyHorizontalLayout();
         ol.setHeight("70px");
         ol.setWidth("");
         ol.setCaption("Fixed height (50px) and dynamic width");
@@ -224,7 +224,7 @@ public class OrderedLayoutBasics extends TestBase {
 
     @SuppressWarnings({ "unused", "deprecation" })
     private Layout layout3() {
-        HorizontalLayout ol = new HorizontalLayout();
+        LegacyHorizontalLayout ol = new LegacyHorizontalLayout();
         ol.setHeight("");
         ol.setWidth("500px");
         ol.setCaption("Fixed width (500px) and dynamic height");
@@ -278,7 +278,7 @@ public class OrderedLayoutBasics extends TestBase {
 
     @SuppressWarnings({ "unused", "deprecation" })
     private Layout layout3New() {
-        HorizontalLayout ol = new HorizontalLayout();
+        LegacyHorizontalLayout ol = new LegacyHorizontalLayout();
         ol.setHeight("300px");
         // ol.setWidth("500px");
         ol.setWidth("");
@@ -1019,7 +1019,7 @@ public class OrderedLayoutBasics extends TestBase {
         Button b = createAddButton(ol);
         Button wb = createWideAddButton(ol);
         Button r = createRemoveButton(ol, buttonSuffix);
-        VerticalLayout inner = new VerticalLayout();
+        LegacyVerticalLayout inner = new LegacyVerticalLayout();
         inner.setCaption("Width: " + width);
         inner.setWidth(width);
 

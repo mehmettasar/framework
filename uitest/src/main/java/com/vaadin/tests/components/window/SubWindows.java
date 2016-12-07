@@ -6,8 +6,8 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.TextArea;
 import com.vaadin.v7.ui.TextField;
@@ -46,7 +46,7 @@ public class SubWindows extends TestBase {
 
     @Override
     protected void setup() {
-        final HorizontalLayout hl = new HorizontalLayout();
+        final LegacyHorizontalLayout hl = new LegacyHorizontalLayout();
         autoWideWindow = new Window("Dialog - width by contents", hl);
         hl.setSizeUndefined();
         hl.addComponent(new TextField("Field 1"));
@@ -64,7 +64,7 @@ public class SubWindows extends TestBase {
         getMainWindow().addWindow(autoWideWindow);
 
         {
-            VerticalLayout vl = new VerticalLayout();
+            LegacyVerticalLayout vl = new LegacyVerticalLayout();
             vl.setMargin(true);
             Window dialog = new Window("Dialog - undefined width", vl);
             vl.addComponent(new TextField("Field 1"));
@@ -79,7 +79,7 @@ public class SubWindows extends TestBase {
         }
 
         {
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             Window dialog = new Window("Dialog - width defined by content",
                     layout);
@@ -99,7 +99,7 @@ public class SubWindows extends TestBase {
         }
 
         {
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             layout.setMargin(true);
             Window dialog = new Window("Dialog - size defined by content",
                     layout);

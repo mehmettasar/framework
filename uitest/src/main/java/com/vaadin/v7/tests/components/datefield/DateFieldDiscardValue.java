@@ -9,8 +9,8 @@ import com.vaadin.tests.components.AbstractReindeerTestUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.ObjectProperty;
 import com.vaadin.v7.ui.DateField;
 
@@ -54,8 +54,8 @@ public class DateFieldDiscardValue extends AbstractReindeerTestUI {
             }
 
         });
-        VerticalLayout layout = new VerticalLayout();
-        HorizontalLayout hLayout = new HorizontalLayout(df, button);
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
+        LegacyHorizontalLayout hLayout = new LegacyHorizontalLayout(df, button);
         layout.addComponent(hLayout);
 
         final DateField df1 = new DateField(PROP_NULL_VALUE);
@@ -73,7 +73,7 @@ public class DateFieldDiscardValue extends AbstractReindeerTestUI {
             }
 
         });
-        hLayout = new HorizontalLayout(df1, button);
+        hLayout = new LegacyHorizontalLayout(df1, button);
         layout.addComponent(hLayout);
 
         final DateField df2 = new DateField(PROP_NULL);
@@ -89,7 +89,7 @@ public class DateFieldDiscardValue extends AbstractReindeerTestUI {
             }
 
         });
-        hLayout = new HorizontalLayout(df2, button);
+        hLayout = new LegacyHorizontalLayout(df2, button);
         layout.addComponent(hLayout);
 
         setContent(layout);

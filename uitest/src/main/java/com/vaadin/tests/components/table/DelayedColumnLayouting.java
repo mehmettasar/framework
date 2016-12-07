@@ -20,7 +20,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.Table;
 
 /**
@@ -35,9 +35,9 @@ public class DelayedColumnLayouting extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        VerticalLayout verticalLayout = new VerticalLayout();
+        LegacyVerticalLayout verticalLayout = new LegacyVerticalLayout();
         verticalLayout.setSizeFull();
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setSizeFull();
         layout.setSpacing(true);
 
@@ -58,7 +58,7 @@ public class DelayedColumnLayouting extends UI {
         setContent(verticalLayout);
     }
 
-    private void fillLayout(VerticalLayout layout) {
+    private void fillLayout(LegacyVerticalLayout layout) {
         layout.removeAllComponents();
 
         Table table = new Table();

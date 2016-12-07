@@ -4,7 +4,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomField;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * An example of a custom field for editing a boolean value. The field is
@@ -17,7 +17,7 @@ public class BooleanField extends CustomField<Boolean> {
 
     @Override
     protected Component initContent() {
-        VerticalLayout layout = new VerticalLayout();
+        LegacyVerticalLayout layout = new LegacyVerticalLayout();
 
         layout.addComponent(new Label("Please click the button"));
 

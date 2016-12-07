@@ -31,7 +31,7 @@ import com.vaadin.ui.Upload.FailedListener;
 import com.vaadin.ui.Upload.Receiver;
 import com.vaadin.ui.Upload.SucceededEvent;
 import com.vaadin.ui.Upload.SucceededListener;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 public class MultiFileUploadTest extends AbstractTestUIWithLog {
 
@@ -47,7 +47,7 @@ public class MultiFileUploadTest extends AbstractTestUIWithLog {
 
         }
     };
-    private VerticalLayout uploadsLayout = new VerticalLayout();
+    private LegacyVerticalLayout uploadsLayout = new LegacyVerticalLayout();
 
     @Override
     protected void setup(VaadinRequest request) {

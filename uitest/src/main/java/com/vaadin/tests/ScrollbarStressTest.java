@@ -6,12 +6,12 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.ui.OptionGroup;
@@ -95,7 +95,7 @@ public class ScrollbarStressTest extends LegacyApplication {
             }
         });
 
-        HorizontalLayout ol = new HorizontalLayout();
+        LegacyHorizontalLayout ol = new LegacyHorizontalLayout();
         ol.addComponent(context);
         ol.addComponent(testComponent);
         ol.addComponent(width);
@@ -113,9 +113,9 @@ public class ScrollbarStressTest extends LegacyApplication {
         main.removeAllComponents();
         main.getContent().setSizeFull();
 
-        VerticalLayout ol = new VerticalLayout();
+        LegacyVerticalLayout ol = new LegacyVerticalLayout();
 
-        VerticalLayout el = new VerticalLayout();
+        LegacyVerticalLayout el = new LegacyVerticalLayout();
 
         el.removeAllComponents();
 
@@ -135,9 +135,9 @@ public class ScrollbarStressTest extends LegacyApplication {
         main.removeAllComponents();
         main.getContent().setSizeFull();
 
-        VerticalLayout ol = new VerticalLayout();
+        LegacyVerticalLayout ol = new LegacyVerticalLayout();
         ol.setCaption("Tab 1");
-        VerticalLayout ol2 = new VerticalLayout();
+        LegacyVerticalLayout ol2 = new LegacyVerticalLayout();
         ol2.setCaption("Tab 2");
 
         TabSheet ts = (verticalAkaAccordion ? accordion : tabsheet);
@@ -165,8 +165,8 @@ public class ScrollbarStressTest extends LegacyApplication {
         main.removeAllComponents();
         main.getContent().setSizeFull();
 
-        VerticalLayout ol = new VerticalLayout();
-        VerticalLayout ol2 = new VerticalLayout();
+        LegacyVerticalLayout ol = new LegacyVerticalLayout();
+        LegacyVerticalLayout ol2 = new LegacyVerticalLayout();
 
         splitPanel.setFirstComponent(ol);
         splitPanel.setSecondComponent(ol2);
@@ -188,7 +188,7 @@ public class ScrollbarStressTest extends LegacyApplication {
         main.removeAllComponents();
         main.getContent().setSizeFull();
 
-        VerticalLayout ol = new VerticalLayout();
+        LegacyVerticalLayout ol = new LegacyVerticalLayout();
         panel.setSizeFull();
         panel.setContent(ol);
 
@@ -203,7 +203,7 @@ public class ScrollbarStressTest extends LegacyApplication {
     private void drawInSubwindow() {
         main.removeAllComponents();
         main.getContent().setSizeFull();
-        VerticalLayout ol = new VerticalLayout();
+        LegacyVerticalLayout ol = new LegacyVerticalLayout();
         ol.setWidth((String) width.getValue());
         ol.setHeight((String) height.getValue());
 
@@ -214,7 +214,7 @@ public class ScrollbarStressTest extends LegacyApplication {
 
     private void drawInMainWindow() {
         main.removeAllComponents();
-        VerticalLayout ol = new VerticalLayout();
+        LegacyVerticalLayout ol = new LegacyVerticalLayout();
         main.setContent(ol);
         ol.setWidth((String) width.getValue());
         ol.setHeight((String) height.getValue());

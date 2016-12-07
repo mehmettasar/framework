@@ -10,7 +10,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.DateField;
 import com.vaadin.ui.InlineDateField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Main UI class
@@ -21,7 +21,7 @@ public class DynamicallyChangeDateRange extends AbstractReindeerTestUI {
     @Override
     protected void setup(VaadinRequest request) {
         setLocale(Locale.ENGLISH);
-        final VerticalLayout layout = new VerticalLayout();
+        final LegacyVerticalLayout layout = new LegacyVerticalLayout();
         layout.setMargin(true);
         setContent(layout);
 

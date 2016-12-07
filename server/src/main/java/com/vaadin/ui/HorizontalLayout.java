@@ -29,12 +29,16 @@ import com.vaadin.shared.ui.orderedlayout.HorizontalLayoutState;
 @SuppressWarnings("serial")
 public class HorizontalLayout extends AbstractOrderedLayout {
 
+    protected HorizontalLayout(boolean margin, boolean spacing) {
+        setSpacing(spacing);
+        setMargin(margin);
+    }
+
     /**
      * Constructs an empty HorizontalLayout.
      */
     public HorizontalLayout() {
-        setSpacing(true);
-        setMargin(false);
+        this(false, true);
     }
 
     /**

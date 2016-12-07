@@ -13,10 +13,10 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.NativeSelect;
 import com.vaadin.v7.ui.TextField;
 
@@ -83,7 +83,7 @@ public class LayoutPerformanceTests extends TestBase {
         protected AbstractOrderedLayout createOrderedLayout(int depth,
                 boolean fullHeight) {
             AbstractOrderedLayout layout = (depth % 2) == 0
-                    ? new VerticalLayout() : new HorizontalLayout();
+                    ? new LegacyVerticalLayout() : new LegacyHorizontalLayout();
             layout.setWidth("100%");
             if (fullHeight) {
                 layout.setHeight("100%");
@@ -96,7 +96,7 @@ public class LayoutPerformanceTests extends TestBase {
 
         public ComponentContainer buildInnerLayout(int leafs,
                 SampleType leafType, boolean fullHeight) {
-            VerticalLayout layout = new VerticalLayout();
+            LegacyVerticalLayout layout = new LegacyVerticalLayout();
             if (fullHeight) {
                 layout.setHeight("100%");
                 layout.setWidth("100%");
@@ -144,7 +144,7 @@ public class LayoutPerformanceTests extends TestBase {
         HORIZONTAL_LAYOUT {
             @Override
             public Component createContent() {
-                HorizontalLayout layout = new HorizontalLayout();
+                LegacyHorizontalLayout layout = new LegacyHorizontalLayout();
                 layout.addComponent(new Label("Left"));
                 layout.addComponent(new Label("Right"));
                 layout.setComponentAlignment(layout.getComponent(1),
@@ -156,19 +156,19 @@ public class LayoutPerformanceTests extends TestBase {
         WRAPPED_PANEL {
             @Override
             public Component createContent() {
-                HorizontalLayout horizontal = new HorizontalLayout();
+                LegacyHorizontalLayout horizontal = new LegacyHorizontalLayout();
                 horizontal.setWidth("100%");
                 horizontal.setHeight(null);
                 horizontal.setMargin(true);
 
-                VerticalLayout left = new VerticalLayout();
+                LegacyVerticalLayout left = new LegacyVerticalLayout();
                 left.setWidth("100%");
                 left.addComponent(new Label("Text 1"));
                 left.addComponent(new Label("Text 2"));
                 left.addComponent(new Label("Text 3"));
                 horizontal.addComponent(left);
 
-                VerticalLayout right = new VerticalLayout();
+                LegacyVerticalLayout right = new LegacyVerticalLayout();
                 right.setWidth("100%");
                 right.addComponent(new Label("Text 1"));
                 right.addComponent(new Label("Text 2"));
@@ -203,7 +203,7 @@ public class LayoutPerformanceTests extends TestBase {
 
     @Override
     protected void setup() {
-        HorizontalLayout controls = new HorizontalLayout();
+        LegacyHorizontalLayout controls = new LegacyHorizontalLayout();
         controls.setSpacing(true);
 
         controls.addComponent(wrapInPanel);
@@ -261,7 +261,7 @@ public class LayoutPerformanceTests extends TestBase {
             controls.setComponentAlignment(component, Alignment.BOTTOM_LEFT);
         }
 
-        VerticalLayout layout = getLayout();
+        LegacyVerticalLayout layout = getLayout();
         layout.addComponent(controls);
         layout.addComponent(testLayout);
         layout.setExpandRatio(testLayout, 1);

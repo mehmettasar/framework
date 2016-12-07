@@ -25,7 +25,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 
 public class TestForNativeWindowing extends LegacyApplication {
@@ -41,7 +41,7 @@ public class TestForNativeWindowing extends LegacyApplication {
                 new Button("Add new subwindow", new Button.ClickListener() {
                     @Override
                     public void buttonClick(ClickEvent event) {
-                        VerticalLayout layout = new VerticalLayout();
+                        LegacyVerticalLayout layout = new LegacyVerticalLayout();
                         layout.setMargin(true);
                         final Window w = new Window(
                                 "sw " + System.currentTimeMillis(), layout);

@@ -6,27 +6,27 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LegacyWindow;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.ui.TextField;
 
 public class VerticalLayoutExpandRatioModification extends TestBase
         implements ClickListener {
 
     private boolean isVisible = false;
-    private VerticalLayout mainLayout;
-    private VerticalLayout vl1;
-    private VerticalLayout vl2;
+    private LegacyVerticalLayout mainLayout;
+    private LegacyVerticalLayout vl1;
+    private LegacyVerticalLayout vl2;
     private Button button;
 
     @Override
     public void setup() {
         LegacyWindow main = getMainWindow();
 
-        mainLayout = new VerticalLayout();
+        mainLayout = new LegacyVerticalLayout();
         main.setContent(mainLayout);
 
         // The upper layout
-        vl1 = new VerticalLayout();
+        vl1 = new LegacyVerticalLayout();
         Label label1 = new Label("The upper layout");
         vl1.addComponent(label1);
 
@@ -34,7 +34,7 @@ public class VerticalLayoutExpandRatioModification extends TestBase
         button = new Button("show / hide", this);
 
         // The bottom layout
-        vl2 = new VerticalLayout();
+        vl2 = new LegacyVerticalLayout();
         TextField tf = new TextField("The bottom field");
         tf.setHeight("100%");
         vl2.addComponent(tf);

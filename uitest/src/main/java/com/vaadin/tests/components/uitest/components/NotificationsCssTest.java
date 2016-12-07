@@ -4,9 +4,9 @@ import com.vaadin.tests.components.uitest.TestSampler;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
-public class NotificationsCssTest extends VerticalLayout {
+public class NotificationsCssTest extends LegacyVerticalLayout {
 
     private TestSampler parent;
     private String styleName = null;

@@ -11,7 +11,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.tests.util.AlwaysLockedVaadinSession;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.v7.data.util.converter.StringToIntegerConverter;
 import com.vaadin.v7.ui.TextField;
 
@@ -55,7 +55,7 @@ public class AbsFieldDataSourceLocaleChangeTest {
         tf.setConvertedValue(10000);
         Assert.assertEquals("0000010000", tf.getValue());
 
-        VerticalLayout vl = new VerticalLayout();
+        LegacyVerticalLayout vl = new LegacyVerticalLayout();
         ui.setContent(vl);
         ui.setLocale(new Locale("en", "US"));
 

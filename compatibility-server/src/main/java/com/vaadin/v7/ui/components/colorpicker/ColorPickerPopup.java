@@ -31,10 +31,10 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.TabSheet;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.v7.data.Property.ValueChangeEvent;
 import com.vaadin.v7.data.Property.ValueChangeListener;
@@ -76,7 +76,7 @@ public class ColorPickerPopup extends Window
     private Component swatchesTab;
 
     /** The layout. */
-    private final VerticalLayout layout;
+    private final LegacyVerticalLayout layout;
 
     /** The ok button. */
     private final Button ok = new Button("OK");
@@ -146,7 +146,7 @@ public class ColorPickerPopup extends Window
 
     private ColorPickerPopup() {
         // Set the layout
-        layout = new VerticalLayout();
+        layout = new LegacyVerticalLayout();
         layout.setSpacing(false);
         layout.setMargin(false);
         layout.setWidth("100%");
@@ -216,12 +216,12 @@ public class ColorPickerPopup extends Window
         defaultColors.add(Color.WHITE);
 
         // Create the history
-        VerticalLayout innerContainer = new VerticalLayout();
+        LegacyVerticalLayout innerContainer = new LegacyVerticalLayout();
         innerContainer.setWidth("100%");
         innerContainer.setHeight(null);
         innerContainer.addComponent(history);
 
-        VerticalLayout outerContainer = new VerticalLayout();
+        LegacyVerticalLayout outerContainer = new LegacyVerticalLayout();
         outerContainer.setWidth("99%");
         outerContainer.setHeight("27px");
         outerContainer.addComponent(innerContainer);
@@ -244,7 +244,7 @@ public class ColorPickerPopup extends Window
         cancel.setWidth("70px");
         cancel.addClickListener(this);
 
-        HorizontalLayout buttons = new HorizontalLayout();
+        LegacyHorizontalLayout buttons = new LegacyHorizontalLayout();
         buttons.addComponent(ok);
         buttons.addComponent(cancel);
         buttons.setWidth("100%");
@@ -260,7 +260,7 @@ public class ColorPickerPopup extends Window
      * @return the component
      */
     private Component createRGBTab(Color color) {
-        VerticalLayout rgbLayout = new VerticalLayout();
+        LegacyVerticalLayout rgbLayout = new LegacyVerticalLayout();
         rgbLayout.setMargin(new MarginInfo(false, false, true, false));
         rgbLayout.addComponent(rgbPreview);
         rgbLayout.setStyleName("rgbtab");
@@ -273,7 +273,7 @@ public class ColorPickerPopup extends Window
         selectors.add(rgbGradient);
 
         // Add the RGB sliders
-        VerticalLayout sliders = new VerticalLayout();
+        LegacyVerticalLayout sliders = new LegacyVerticalLayout();
         sliders.setStyleName("rgb-sliders");
 
         redSlider = createRGBSlider("Red", "red");
@@ -341,7 +341,7 @@ public class ColorPickerPopup extends Window
      * @return the component
      */
     private Component createHSVTab(Color color) {
-        VerticalLayout hsvLayout = new VerticalLayout();
+        LegacyVerticalLayout hsvLayout = new LegacyVerticalLayout();
         hsvLayout.setMargin(new MarginInfo(false, false, true, false));
         hsvLayout.addComponent(hsvPreview);
         hsvLayout.setStyleName("hsvtab");
@@ -353,7 +353,7 @@ public class ColorPickerPopup extends Window
         hsvLayout.addComponent(hsvGradient);
         selectors.add(hsvGradient);
 
-        VerticalLayout sliders = new VerticalLayout();
+        LegacyVerticalLayout sliders = new LegacyVerticalLayout();
         sliders.setStyleName("hsv-sliders");
 
         hueSlider = new Slider("Hue", 0, 360);
@@ -449,7 +449,7 @@ public class ColorPickerPopup extends Window
      * @return the component
      */
     private Component createSelectTab() {
-        VerticalLayout selLayout = new VerticalLayout();
+        LegacyVerticalLayout selLayout = new LegacyVerticalLayout();
         selLayout.setMargin(new MarginInfo(false, false, true, false));
         selLayout.addComponent(selPreview);
         selLayout.addStyleName("seltab");

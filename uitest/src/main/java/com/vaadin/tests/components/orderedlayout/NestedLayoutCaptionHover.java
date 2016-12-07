@@ -17,7 +17,7 @@ package com.vaadin.tests.components.orderedlayout;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.tests.components.AbstractReindeerTestUI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 
 /**
  * Test hovering over nested layout caption
@@ -28,10 +28,10 @@ public class NestedLayoutCaptionHover extends AbstractReindeerTestUI {
 
     @Override
     protected void setup(VaadinRequest request) {
-        VerticalLayout test = new VerticalLayout();
+        LegacyVerticalLayout test = new LegacyVerticalLayout();
         test.setCaption("inner layout");
-        addComponent(new VerticalLayout(
-                new VerticalLayout(new VerticalLayout(test))));
+        addComponent(new LegacyVerticalLayout(
+                new LegacyVerticalLayout(new LegacyVerticalLayout(test))));
     }
 
     @Override

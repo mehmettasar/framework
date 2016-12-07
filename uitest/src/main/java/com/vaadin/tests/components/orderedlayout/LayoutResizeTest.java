@@ -7,10 +7,10 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Embedded;
-import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.v7.ui.LegacyHorizontalLayout;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.LegacyVerticalLayout;
 import com.vaadin.ui.VerticalSplitPanel;
 import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.themes.Reindeer;
@@ -25,7 +25,7 @@ public class LayoutResizeTest extends TestBase {
         split1.setSizeFull();
         addComponent(split1);
 
-        VerticalLayout left = new VerticalLayout();
+        LegacyVerticalLayout left = new LegacyVerticalLayout();
         left.setSizeFull();
         split1.setFirstComponent(left);
 
@@ -83,7 +83,7 @@ public class LayoutResizeTest extends TestBase {
         }
         split2.setFirstComponent(table2);
 
-        VerticalLayout rows = new VerticalLayout();
+        LegacyVerticalLayout rows = new LegacyVerticalLayout();
         rows.setWidth("100%");
         rows.setSpacing(true);
         rows.setMargin(true);
@@ -93,8 +93,8 @@ public class LayoutResizeTest extends TestBase {
         split2.setSecondComponent(rows);
     }
 
-    private HorizontalLayout getRow(int i) {
-        HorizontalLayout row = new HorizontalLayout();
+    private LegacyHorizontalLayout getRow(int i) {
+        LegacyHorizontalLayout row = new LegacyHorizontalLayout();
         row.setWidth("100%");
         row.setSpacing(true);
 
